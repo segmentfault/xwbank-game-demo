@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.segmentfault.openapi.statistics.mapper.StatisticsMapper">
+
+    <resultMap type="Statistics" id="StatisticsResult">
+        <result property="id"    column="id"    />
+        <result property="teamId"    column="team_id"    />
+        <result property="loadTime"    column="load_time"    />
+        <result property="responseTime"    column="response_time"    />
+        <result property="fps"    column="fps"    />
+        <result property="pv"    column="pv"    />
+        <result property="uv"    column="uv"    />
+        <result property="pageviews"    column="pageviews"    />
+        <result property="registrations"    column="registrations"    />
+        <result property="playTime"    column="play_time"    />
+        <result property="createTime"    column="create_time"    />        
+        <result property="openid"    column="openid"    />        
+    </resultMap>
+
+    <sql id="selectStatisticsVo">
+        select id, team_id, load_time, response_time, fps, pv, uv, pageviews, registrations, play_time, create_time,openid from t_statistics
+    </sql>    
+
+	<insert id="insert" parameterType="Statistics">
+		insert into t_statistics (
+			id,
+	        team_id,
+	        load_time,
+	        interface_name,
+	        response_time,
+	        fps,
+	        pv,
+	        uv,
+	        pageviews,
+	        registrations,
+	        play_time,
+	        create_time,
+	        openid
+		)
+		values(
+			#{id},
+	        #{teamId},
+	        #{loadTime},
+	        #{interfaceName},
+	        #{responseTime},
+	        #{fps},
+	        #{pv},
+	        #{uv},
+	        #{pageviews},
+	        #{registrations},
+	        #{playTime},
+			sysdate(),
+			#{openid}
+		)
+		
+	</insert>
+</mapper>

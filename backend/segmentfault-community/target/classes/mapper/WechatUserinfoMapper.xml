@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.segmentfault.openapi.wechat.mapper.WechatUserinfoMapper">
+    <resultMap type="WechatUserinfo" id="WechatUserinfoResult">
+        <result property="openid"    column="openid"    />
+        <result property="nickname"    column="nickname"    />
+        <result property="sex"    column="sex"    />
+        <result property="province"    column="province"    />
+        <result property="city"    column="city"    />
+        <result property="country"    column="country"    />
+        <result property="headimgurl"    column="headimgurl"    />
+        <result property="unionid"    column="unionid"    />
+        <result property="createtime"    column="createtime"    />
+        <result property="updatetime"    column="updatetime"    />
+    </resultMap>
+
+    <sql id="selectWechatUserinfoVo">
+        select openid, nickname, sex, province, city, country, headimgurl, unionid, createtime, updatetime from twechat_userinfo
+    </sql>
+
+    <select id="selectWechatUserinfoById" parameterType="String" resultMap="WechatUserinfoResult">
+        <include refid="selectWechatUserinfoVo"/>
+        where openid = #{openid}
+    </select>
+        
+    <select id="listOfWechatUserinfo" parameterType="String" resultMap="WechatUserinfoResult">
+        <include refid="selectWechatUserinfoVo"/>
+        <where>  
+            <if test="openid != null  and openid != ''"> and openid = #{openid}</if>
+            <if test="nickname != null  and nickname != ''"> and from_base64(nickname) like concat('%',#{nickname},'%')</if>
+            <if test="sex != null  and sex != ''"> and sex = #{sex}</if>
+            <if test="province != null  and province != ''"> and province = #{province}</if>
+            <if test="city != null  and city != ''"> and city = #{city}</if>
+            <if test="country != null  and country != ''"> and country = #{country}</if>
+            <if test="headimgurl != null  and headimgurl != ''"> and headimgurl = #{headimgurl}</if>
+        </where>
+    </select>
+        
+    <insert id="insertWechatUserinfo" parameterType="WechatUserinfo">
+        insert into twechat_userinfo (
+          openid,
+          nickname,
+          sex,
+          province,
+          city,
+          country,
+          headimgurl,
+          unionid,
+          createtime,
+          updatetime
+      		)
+        values (
+           #{openid},
+           #{nickname},
+           #{sex},
+           #{province},
+           #{city},
+           #{country},
+           #{headimgurl},
+           #{unionid},
+           sysdate(),
+           sysdate()
+            )
+    </insert>
+
+    <update id="updateWechatUserinfo" parameterType="WechatUserinfo">
+        update twechat_userinfo
+        <set> 
+            <if test="nickname != null  and nickname != ''">nickname = #{nickname},</if>
+            <if test="sex != null  and sex != ''">sex = #{sex},</if>
+            <if test="province != null  and province != ''">province = #{province},</if>
+            <if test="city != null  and city != ''">city = #{city},</if>
+            <if test="country != null  and country != ''">country = #{country},</if>
+            <if test="headimgurl != null  and headimgurl != ''">headimgurl = #{headimgurl},</if>
+            <if test="unionid != null  and unionid != ''">unionid = #{unionid},</if>
+            <if test="updatetime != null ">updatetime = sysdate(),</if>
+       </set> 
+        where openid = #{openid}
+    </update>
+</mapper>

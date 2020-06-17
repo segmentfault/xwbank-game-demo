@@ -1,0 +1,912 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>DataModel | EasyGame API手册 - v1.0.1</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<ul class="results-priority" style="display:none">
+					</ul>
+					<a href="../index.html" class="title">EasyGame API手册 - v1.0.1</a>
+					&emsp;<a href="readme.html" class="title">引擎使用说明</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules/_commontypes_.html">CommonTypes</a>
+				</li>
+				<li>
+					<a href="../modules/_commontypes_.ez.html">ez</a>
+				</li>
+				<li>
+					<a href="_commontypes_.ez.datamodel.html">DataModel</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-3 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation outline primary">
+				<a style="margin-left:0em" href="../globals.html">Globals</a>
+				<ul style="display:none">
+					{&quot;ez.core&quot;:{&quot;Overview&quot;:&quot;./index&quot;,&quot;全局设置&quot;:&quot;_ez_core_&quot;,&quot;基本类型&quot;:&quot;_commontypes_.ez&quot;,&quot;基础功能&quot;:&quot;_ezgame_.ez&quot;,&quot;Audio&quot;:&quot;_audio_.ez&quot;,&quot;Renderer&quot;:&quot;_renderer_.ez&quot;,&quot;Texture&quot;:&quot;_texture_.ez&quot;,&quot;Visual&quot;:&quot;_visual_.ez&quot;,&quot;Resource&quot;:&quot;_resource_.ez&quot;,&quot;GUI&quot;:&quot;_gui_.ez.ui&quot;,&quot;Animation&quot;:&quot;_animation_.ez&quot;},&quot;ez.3d&quot;:{&quot;3d render&quot;:&quot;_ez_3d_.ez&quot;,&quot;Stage3D&quot;:&quot;classes/_ez_3d_.ez.stage3dsprite&quot;,&quot;model&quot;:&quot;_model_.ez&quot;,&quot;material&quot;:&quot;_material_.ez&quot;},&quot;ez.ext&quot;:{&quot;Highlight Effect&quot;:&quot;_highlighteffect_.ez.effect&quot;,&quot;Fan Effect&quot;:&quot;_faneffect_.ez.effect&quot;,&quot;ui.Hyperlink&quot;:&quot;classes/_hyperlink_.ez.ui.hyperlink&quot;,&quot;ui.BlurGroup&quot;:&quot;classes/_blureffect_.ez.ui.blurgroup&quot;,&quot;BMFontLabel&quot;:&quot;_bmfontlabel_.ez&quot;,&quot;Spine&quot;:&quot;classes/_spine_.ez.spinesprite&quot;,&quot;Inspector&quot;:&quot;_inspector_.inspector&quot;,&quot;Protocol&quot;:&quot;_protocol_.easygame&quot;}}
+				</ul>
+			</nav>
+		</div>
+		<div class="col-7 offset-3 col-content">
+			<h1>Class DataModel</h1>
+			<section class="tsd-panel tsd-comment"><div class="tsd-comment tsd-typography tsd-comment-shorttext">
+					<div class="lead">
+						<p>数据模型对象</p>
+					</div></div><div class="tsd-comment tsd-typography tsd-comment-tags">
+					<dl class="tsd-comment-tags">
+						<!--<dt>remark</dt>-->
+						<dd><p>可以动态添加/删除/修改属性，属性的修改可以添加观察者来获得通知，可以添加数据绑定来同步2个对象间的属性值</p>
+					</dd></dl>
+			</div></section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">DataModel</span>
+						<ul class="tsd-hierarchy">
+							<li>
+								<a href="_gui_.ez.ui.element.html" class="tsd-signature-type">Element</a>
+							</li>
+							<li>
+								<a href="../interfaces/_gui_.ez.uiroot.html" class="tsd-signature-type">UIRoot</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implements</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../interfaces/_commontypes_.ez.idispose.html" class="tsd-signature-type">IDispose</a></li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<table style="display:inline-table;" width="100%">
+									<tr class="tsd-kind-constructor tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#constructor"
+												class="tsd-kind-icon">constructor</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#constructor" class="tsd-kind-icon">constructor</a></li> -->
+								</table>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<table style="display:inline-table;" width="100%">
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#disposed"
+												class="tsd-kind-icon">disposed</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												对象是否已销毁
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#disposed" class="tsd-kind-icon">disposed</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#ondispose"
+												class="tsd-kind-icon">onDispose</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												销毁时回调函数
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#ondispose" class="tsd-kind-icon">onDispose</a></li> -->
+								</table>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<table style="display:inline-table;" width="100%">
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#addobserver"
+												class="tsd-kind-icon">addObserver</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												在属性上添加一个观察者获取属性变化通知
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#addobserver" class="tsd-kind-icon">addObserver</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#bind"
+												class="tsd-kind-icon">bind</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												属性绑定
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#bind" class="tsd-kind-icon">bind</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#bind2way"
+												class="tsd-kind-icon">bind2way</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												两个DataModel双向属性绑定
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#bind2way" class="tsd-kind-icon">bind2way</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#clearobserver"
+												class="tsd-kind-icon">clearObserver</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												清除这个属性上的所有观察者
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#clearobserver" class="tsd-kind-icon">clearObserver</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#dispose"
+												class="tsd-kind-icon">dispose</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												销毁对象
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#dispose" class="tsd-kind-icon">dispose</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#getprop"
+												class="tsd-kind-icon">getProp</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												获取属性
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#getprop" class="tsd-kind-icon">getProp</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#hasprop"
+												class="tsd-kind-icon">hasProp</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												是否具有某个属性
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#hasprop" class="tsd-kind-icon">hasProp</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#removeprop"
+												class="tsd-kind-icon">removeProp</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												删除属性
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#removeprop" class="tsd-kind-icon">removeProp</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#setdata"
+												class="tsd-kind-icon">setData</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												将source里的所有属性设置到DataModel上
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#setdata" class="tsd-kind-icon">setData</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#setdefaults"
+												class="tsd-kind-icon">setDefaults</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												设置属性默认值，当属性值不存在或为undefined时使用default中的值
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#setdefaults" class="tsd-kind-icon">setDefaults</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#setprop"
+												class="tsd-kind-icon">setProp</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												设置属性
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#setprop" class="tsd-kind-icon">setProp</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#setpropconverters"
+												class="tsd-kind-icon">setPropConverters</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												设置一组属性转换器，当设置属性值时会先经过转换器转换
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_commontypes_.ez.datamodel.html#setpropconverters" class="tsd-kind-icon">setPropConverters</a></li> -->
+								</table>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Data<wbr>Model<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_commontypes_.ez.datamodel.html" class="tsd-signature-type">DataModel</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> data: <span class="tsd-signature-type">Object</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_commontypes_.ez.datamodel.html" class="tsd-signature-type">DataModel</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="disposed" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> disposed</h3>
+					<div class="tsd-signature tsd-kind-icon">disposed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/_commontypes_.ez.idispose.html">IDispose</a>.<a href="../interfaces/_commontypes_.ez.idispose.html#disposed">disposed</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>对象是否已销毁</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="ondispose" class="tsd-anchor"></a>
+					<h3>on<wbr>Dispose</h3>
+					<div class="tsd-signature tsd-kind-icon">on<wbr>Dispose<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_inspector_.inspector.testcase.html#function" class="tsd-signature-type">Function</a></div>
+					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/_commontypes_.ez.idispose.html">IDispose</a>.<a href="../interfaces/_commontypes_.ez.idispose.html#ondispose">onDispose</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>销毁时回调函数</p>
+					</div></div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="addobserver" class="tsd-anchor"></a>
+					<h3>add<wbr>Observer</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Observer<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, func<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, thisArg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_commontypes_.ez.idispose.html" class="tsd-signature-type">IDispose</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>在属性上添加一个观察者获取属性变化通知</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>属性名</p>
+									</div>
+								</li>
+								<li>
+									<h5>func: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>属性变更处理函数</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>newVal<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, oldVal<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>newVal: <span class="tsd-signature-type">any</span></h5>
+														</li>
+														<li>
+															<h5><span class="tsd-flag ts-flagOptional">Optional</span> oldVal: <span class="tsd-signature-type">any</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisArg: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_commontypes_.ez.idispose.html" class="tsd-signature-type">IDispose</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="bind" class="tsd-anchor"></a>
+					<h3>bind</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">bind<span class="tsd-signature-symbol">(</span>propName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, target<span class="tsd-signature-symbol">: </span><a href="_commontypes_.ez.datamodel.html" class="tsd-signature-type">DataModel</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Object</span>, targetProp<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span>, converter<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_commontypes_.ez.idispose.html" class="tsd-signature-type">IDispose</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>属性绑定</p>
+								</div></div><div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags">
+									<!--<dt>remark</dt>-->
+									<dd><p>当DataModel的属性变化时自动将目标对象的属性更新为最新的值，通过转换器可以将值进行相应的修改后在设置到目标对象上</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>propName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>属性名</p>
+									</div>
+								</li>
+								<li>
+									<h5>target: <a href="_commontypes_.ez.datamodel.html" class="tsd-signature-type">DataModel</a><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">Object</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>目标对象，目标对象可以为DataModel或者普通JS对象</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> targetProp: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>目标对象的属性</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> converter: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>属性转换器</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>val: <span class="tsd-signature-type">any</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_commontypes_.ez.idispose.html" class="tsd-signature-type">IDispose</a></h4>
+							<p>绑定对象，可调用dispose()方法解除绑定</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="bind2way" class="tsd-anchor"></a>
+					<h3>bind2way</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">bind2way<span class="tsd-signature-symbol">(</span>propName<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, target<span class="tsd-signature-symbol">: </span><a href="_commontypes_.ez.datamodel.html" class="tsd-signature-type">DataModel</a>, targetProp<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_commontypes_.ez.idispose.html" class="tsd-signature-type">IDispose</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>两个DataModel双向属性绑定</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>propName: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>属性名</p>
+									</div>
+								</li>
+								<li>
+									<h5>target: <a href="_commontypes_.ez.datamodel.html" class="tsd-signature-type">DataModel</a></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>目标对象</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> targetProp: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>目标对象的属性</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_commontypes_.ez.idispose.html" class="tsd-signature-type">IDispose</a></h4>
+							<p>绑定对象，可调用对象的dispose()方法解除绑定</p>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="clearobserver" class="tsd-anchor"></a>
+					<h3>clear<wbr>Observer</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">clear<wbr>Observer<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>清除这个属性上的所有观察者</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="dispose" class="tsd-anchor"></a>
+					<h3>dispose</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">dispose<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Implementation of <a href="../interfaces/_commontypes_.ez.idispose.html">IDispose</a>.<a href="../interfaces/_commontypes_.ez.idispose.html#dispose">dispose</a></p>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>销毁对象</p>
+							</div></div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="getprop" class="tsd-anchor"></a>
+					<h3>get<wbr>Prop</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Prop<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>获取属性</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>属性名</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="hasprop" class="tsd-anchor"></a>
+					<h3>has<wbr>Prop</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">has<wbr>Prop<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>是否具有某个属性</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>属性名</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">boolean</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="removeprop" class="tsd-anchor"></a>
+					<h3>remove<wbr>Prop</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">remove<wbr>Prop<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>删除属性</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>属性名</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setdata" class="tsd-anchor"></a>
+					<h3>set<wbr>Data</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Data<span class="tsd-signature-symbol">(</span>source<span class="tsd-signature-symbol">: </span><a href="../modules/_commontypes_.ez.html#dictionary" class="tsd-signature-type">Dictionary</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>将source里的所有属性设置到DataModel上</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>source: <a href="../modules/_commontypes_.ez.html#dictionary" class="tsd-signature-type">Dictionary</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setdefaults" class="tsd-anchor"></a>
+					<h3>set<wbr>Defaults</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Defaults<span class="tsd-signature-symbol">(</span>vals<span class="tsd-signature-symbol">: </span><a href="../modules/_commontypes_.ez.html#dictionary" class="tsd-signature-type">Dictionary</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>设置属性默认值，当属性值不存在或为undefined时使用default中的值</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>vals: <a href="../modules/_commontypes_.ez.html#dictionary" class="tsd-signature-type">Dictionary</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setprop" class="tsd-anchor"></a>
+					<h3>set<wbr>Prop</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Prop<span class="tsd-signature-symbol">(</span>name<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, val<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>设置属性</p>
+								</div></div><div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags">
+									<!--<dt>remark</dt>-->
+									<dd><p>当属性发生改变时observer将会得到通知</p>
+								</dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>name: <span class="tsd-signature-type">string</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>属性名</p>
+									</div>
+								</li>
+								<li>
+									<h5>val: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>属性值</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="setpropconverters" class="tsd-anchor"></a>
+					<h3>set<wbr>Prop<wbr>Converters</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<wbr>Prop<wbr>Converters<span class="tsd-signature-symbol">(</span>conterters<span class="tsd-signature-symbol">: </span><a href="../modules/_commontypes_.ez.html#dictionary" class="tsd-signature-type">Dictionary</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">&gt;</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>设置一组属性转换器，当设置属性值时会先经过转换器转换</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>conterters: <a href="../modules/_commontypes_.ez.html#dictionary" class="tsd-signature-type">Dictionary</a><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">&gt;</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<!--{&quot;options&quot;:&quot;D:\\projects\\EZ\\EasyGame-client&quot;,&quot;tsconfig&quot;:&quot;D:\\projects\\EZ\\EasyGame-client&quot;,&quot;inputFiles&quot;:[],&quot;mode&quot;:1,&quot;includeDeclarations&quot;:false,&quot;entryPoint&quot;:&quot;&quot;,&quot;exclude&quot;:[],&quot;externalPattern&quot;:[],&quot;excludeExternals&quot;:true,&quot;excludeNotExported&quot;:true,&quot;excludeNotDocumented&quot;:false,&quot;excludePrivate&quot;:true,&quot;excludeProtected&quot;:true,&quot;ignoreCompilerErrors&quot;:true,&quot;disableSources&quot;:true,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;src/doc/media&quot;,&quot;out&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;,&quot;theme&quot;:&quot;typedoc-neo-theme/bin/default&quot;,&quot;name&quot;:&quot;EasyGame API手册&quot;,&quot;includeVersion&quot;:true,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;src/doc/ezgame API.md&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:true,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:true,&quot;help&quot;:false,&quot;version&quot;:false,&quot;plugin&quot;:[&quot;typedoc-neo-theme&quot;],&quot;listInvalidSymbolLinks&quot;:false,&quot;links&quot;:[{&quot;label&quot;:&quot;引擎使用说明&quot;,&quot;url&quot;:&quot;readme.html&quot;}],&quot;outline&quot;:[{&quot;ez.core&quot;:{&quot;Overview&quot;:&quot;./index&quot;,&quot;全局设置&quot;:&quot;_ez_core_&quot;,&quot;基本类型&quot;:&quot;_commontypes_.ez&quot;,&quot;基础功能&quot;:&quot;_ezgame_.ez&quot;,&quot;Audio&quot;:&quot;_audio_.ez&quot;,&quot;Renderer&quot;:&quot;_renderer_.ez&quot;,&quot;Texture&quot;:&quot;_texture_.ez&quot;,&quot;Visual&quot;:&quot;_visual_.ez&quot;,&quot;Resource&quot;:&quot;_resource_.ez&quot;,&quot;GUI&quot;:&quot;_gui_.ez.ui&quot;,&quot;Animation&quot;:&quot;_animation_.ez&quot;},&quot;ez.3d&quot;:{&quot;3d render&quot;:&quot;_ez_3d_.ez&quot;,&quot;Stage3D&quot;:&quot;classes/_ez_3d_.ez.stage3dsprite&quot;,&quot;model&quot;:&quot;_model_.ez&quot;,&quot;material&quot;:&quot;_material_.ez&quot;},&quot;ez.ext&quot;:{&quot;Highlight Effect&quot;:&quot;_highlighteffect_.ez.effect&quot;,&quot;Fan Effect&quot;:&quot;_faneffect_.ez.effect&quot;,&quot;ui.Hyperlink&quot;:&quot;classes/_hyperlink_.ez.ui.hyperlink&quot;,&quot;ui.BlurGroup&quot;:&quot;classes/_blureffect_.ez.ui.blurgroup&quot;,&quot;BMFontLabel&quot;:&quot;_bmfontlabel_.ez&quot;,&quot;Spine&quot;:&quot;classes/_spine_.ez.spinesprite&quot;,&quot;Inspector&quot;:&quot;_inspector_.inspector&quot;,&quot;Protocol&quot;:&quot;_protocol_.easygame&quot;}}],&quot;search&quot;:[]}-->
+		</div>
+		<!--
+        <div class="col-2 col-menu secondary-menu">
+            <nav class="tsd-navigation secondary menu-sticky">
+                <ul class="before-current">
+                        <li class=" tsd-kind-enum tsd-parent-kind-namespace root">
+    <a href="../enums/_commontypes_.ez.alignmode.html" class="tsd-kind-icon">Align<wbr>Mode</a>
+</li>
+                        <li class=" tsd-kind-enum tsd-parent-kind-namespace root">
+    <a href="../enums/_commontypes_.ez.blendmode.html" class="tsd-kind-icon">Blend<wbr>Mode</a>
+</li>
+                        <li class=" tsd-kind-enum tsd-parent-kind-namespace root">
+    <a href="../enums/_commontypes_.ez.collectionchangetype.html" class="tsd-kind-icon">Collection<wbr>Change<wbr>Type</a>
+</li>
+                        <li class=" tsd-kind-enum tsd-parent-kind-namespace root">
+    <a href="../enums/_commontypes_.ez.mediastate.html" class="tsd-kind-icon">Media<wbr>State</a>
+</li>
+                        <li class=" tsd-kind-enum tsd-parent-kind-namespace root">
+    <a href="../enums/_commontypes_.ez.textformat.html" class="tsd-kind-icon">Text<wbr>Format</a>
+</li>
+                        <li class=" tsd-kind-class tsd-parent-kind-namespace root">
+    <a href="_commontypes_.ez.color.html" class="tsd-kind-icon">Color</a>
+</li>
+                        <li class=" tsd-kind-class tsd-parent-kind-namespace root">
+    <a href="_commontypes_.ez.datacollection.html" class="tsd-kind-icon">Data<wbr>Collection</a>
+</li>
+                            </ul>
+    <ul class="current">
+<li class="current tsd-kind-class tsd-parent-kind-namespace root">
+    <a href="_commontypes_.ez.datamodel.html" class="tsd-kind-icon">Data<wbr>Model</a>
+        <ul>
+                <li class=" tsd-kind-constructor tsd-parent-kind-class">
+    <a href="_commontypes_.ez.datamodel.html#constructor" class="tsd-kind-icon">constructor</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_commontypes_.ez.datamodel.html#disposed" class="tsd-kind-icon">disposed</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_commontypes_.ez.datamodel.html#ondispose" class="tsd-kind-icon">on<wbr>Dispose</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_commontypes_.ez.datamodel.html#addobserver" class="tsd-kind-icon">add<wbr>Observer</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_commontypes_.ez.datamodel.html#bind" class="tsd-kind-icon">bind</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_commontypes_.ez.datamodel.html#bind2way" class="tsd-kind-icon">bind2way</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_commontypes_.ez.datamodel.html#clearobserver" class="tsd-kind-icon">clear<wbr>Observer</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_commontypes_.ez.datamodel.html#dispose" class="tsd-kind-icon">dispose</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_commontypes_.ez.datamodel.html#getprop" class="tsd-kind-icon">get<wbr>Prop</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_commontypes_.ez.datamodel.html#hasprop" class="tsd-kind-icon">has<wbr>Prop</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_commontypes_.ez.datamodel.html#removeprop" class="tsd-kind-icon">remove<wbr>Prop</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_commontypes_.ez.datamodel.html#setdata" class="tsd-kind-icon">set<wbr>Data</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_commontypes_.ez.datamodel.html#setdefaults" class="tsd-kind-icon">set<wbr>Defaults</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_commontypes_.ez.datamodel.html#setprop" class="tsd-kind-icon">set<wbr>Prop</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_commontypes_.ez.datamodel.html#setpropconverters" class="tsd-kind-icon">set<wbr>Prop<wbr>Converters</a>
+</li>
+        </ul>
+</li>
+    </ul>
+    <ul class="after-current">
+                        <li class=" tsd-kind-class tsd-parent-kind-namespace root">
+    <a href="_commontypes_.ez.dimension.html" class="tsd-kind-icon">Dimension</a>
+</li>
+                        <li class=" tsd-kind-class tsd-parent-kind-namespace root">
+    <a href="_commontypes_.ez.matrix.html" class="tsd-kind-icon">Matrix</a>
+</li>
+                        <li class=" tsd-kind-class tsd-parent-kind-namespace root">
+    <a href="_commontypes_.ez.point.html" class="tsd-kind-icon">Point</a>
+</li>
+                        <li class=" tsd-kind-class tsd-parent-kind-namespace root">
+    <a href="_commontypes_.ez.rect.html" class="tsd-kind-icon">Rect</a>
+</li>
+                        <li class=" tsd-kind-interface tsd-parent-kind-namespace root">
+    <a href="../interfaces/_commontypes_.ez.gradientfill.html" class="tsd-kind-icon">Gradient<wbr>Fill</a>
+</li>
+                        <li class=" tsd-kind-interface tsd-parent-kind-namespace root">
+    <a href="../interfaces/_commontypes_.ez.idispose.html" class="tsd-kind-icon">IDispose</a>
+</li>
+                        <li class=" tsd-kind-interface tsd-parent-kind-namespace root">
+    <a href="../interfaces/_commontypes_.ez.strokestyle.html" class="tsd-kind-icon">Stroke<wbr>Style</a>
+</li>
+                        <li class=" tsd-kind-interface tsd-parent-kind-namespace root">
+    <a href="../interfaces/_commontypes_.ez.touchdata.html" class="tsd-kind-icon">Touch<wbr>Data</a>
+</li>
+                        <li class=" tsd-kind-type-alias tsd-parent-kind-namespace tsd-has-type-parameter root">
+    <a href="../modules/_commontypes_.ez.html#dictionary" class="tsd-kind-icon">Dictionary</a>
+</li>
+                        <li class=" tsd-kind-type-alias tsd-parent-kind-namespace root">
+    <a href="../modules/_commontypes_.ez.html#number2" class="tsd-kind-icon">Number2</a>
+</li>
+                        <li class=" tsd-kind-type-alias tsd-parent-kind-namespace root">
+    <a href="../modules/_commontypes_.ez.html#number3" class="tsd-kind-icon">Number3</a>
+</li>
+                        <li class=" tsd-kind-type-alias tsd-parent-kind-namespace root">
+    <a href="../modules/_commontypes_.ez.html#number4" class="tsd-kind-icon">Number4</a>
+</li>
+                </ul>
+            </nav>
+        </div>-->
+	</div>
+</div>
+<footer>
+</footer>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

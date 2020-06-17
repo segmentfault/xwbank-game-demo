@@ -1,0 +1,32 @@
+{
+  "name": "ezgame",
+  "version": "1.0.1",
+  "description": "EasyGame engine for HTML5",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [
+    "EasyGame",
+    "HTML5",
+    "Game Engine"
+  ],
+  "bin": {
+    "ez-cli": "./bin/ez-cli"
+  },
+  "author": "Qiao Jie",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "express": "^4.17.1",
+    "express-ws": "^4.0.0",
+    "glob": "^7.1.6",
+    "hjson": "^3.2.1",
+    "image-size": "^0.8.3",
+    "inquirer": "^7.1.0",
+    "md5": "^2.2.1",
+    "sourcemap-codec": "^1.4.8",
+    "terser": "^4.7.0",
+    "typescript": "^3.x",
+    "watch": "^1.0.2",
+    "yargs": "^15.3.1"
+  }
+}

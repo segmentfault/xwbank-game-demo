@@ -1,0 +1,1099 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>EventHandlerBase | EasyGame API手册 - v1.0.1</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<ul class="results-priority" style="display:none">
+					</ul>
+					<a href="../index.html" class="title">EasyGame API手册 - v1.0.1</a>
+					&emsp;<a href="readme.html" class="title">引擎使用说明</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules/_gui_.html">GUI</a>
+				</li>
+				<li>
+					<a href="../modules/_gui_.ez.html">ez</a>
+				</li>
+				<li>
+					<a href="../modules/_gui_.ez.ui.html">ui</a>
+				</li>
+				<li>
+					<a href="_gui_.ez.ui.eventhandlerbase.html">EventHandlerBase</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-3 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation outline primary">
+				<a style="margin-left:0em" href="../globals.html">Globals</a>
+				<ul style="display:none">
+					{&quot;ez.core&quot;:{&quot;Overview&quot;:&quot;./index&quot;,&quot;全局设置&quot;:&quot;_ez_core_&quot;,&quot;基本类型&quot;:&quot;_commontypes_.ez&quot;,&quot;基础功能&quot;:&quot;_ezgame_.ez&quot;,&quot;Audio&quot;:&quot;_audio_.ez&quot;,&quot;Renderer&quot;:&quot;_renderer_.ez&quot;,&quot;Texture&quot;:&quot;_texture_.ez&quot;,&quot;Visual&quot;:&quot;_visual_.ez&quot;,&quot;Resource&quot;:&quot;_resource_.ez&quot;,&quot;GUI&quot;:&quot;_gui_.ez.ui&quot;,&quot;Animation&quot;:&quot;_animation_.ez&quot;},&quot;ez.3d&quot;:{&quot;3d render&quot;:&quot;_ez_3d_.ez&quot;,&quot;Stage3D&quot;:&quot;classes/_ez_3d_.ez.stage3dsprite&quot;,&quot;model&quot;:&quot;_model_.ez&quot;,&quot;material&quot;:&quot;_material_.ez&quot;},&quot;ez.ext&quot;:{&quot;Highlight Effect&quot;:&quot;_highlighteffect_.ez.effect&quot;,&quot;Fan Effect&quot;:&quot;_faneffect_.ez.effect&quot;,&quot;ui.Hyperlink&quot;:&quot;classes/_hyperlink_.ez.ui.hyperlink&quot;,&quot;ui.BlurGroup&quot;:&quot;classes/_blureffect_.ez.ui.blurgroup&quot;,&quot;BMFontLabel&quot;:&quot;_bmfontlabel_.ez&quot;,&quot;Spine&quot;:&quot;classes/_spine_.ez.spinesprite&quot;,&quot;Inspector&quot;:&quot;_inspector_.inspector&quot;,&quot;Protocol&quot;:&quot;_protocol_.easygame&quot;}}
+				</ul>
+			</nav>
+		</div>
+		<div class="col-7 offset-3 col-content">
+			<h1>Class EventHandlerBase</h1>
+			<section class="tsd-panel tsd-comment"><div class="tsd-comment tsd-typography tsd-comment-shorttext">
+					<div class="lead">
+						<p>触摸事件处理基类
+							控件的触摸事件处理使用mixins方式混入控件类中，使一个触摸事件处理行为可以复用到多个控件类中。例如，
+						我们有多种Button控件类，都混入同一个Button事件处理类，使得这些Button控件类都具备Button的行为</p>
+			</div></div></section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">EventHandlerBase</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implements</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../interfaces/_gui_.ez.touchhandler.html" class="tsd-signature-type">TouchHandler</a></li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<table style="display:inline-table;" width="100%">
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#anchorx"
+												class="tsd-kind-icon">anchorX</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#anchorx" class="tsd-kind-icon">anchorX</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#anchory"
+												class="tsd-kind-icon">anchorY</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#anchory" class="tsd-kind-icon">anchorY</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#angle"
+												class="tsd-kind-icon">angle</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#angle" class="tsd-kind-icon">angle</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#batchmode"
+												class="tsd-kind-icon">batchMode</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#batchmode" class="tsd-kind-icon">batchMode</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#bottom"
+												class="tsd-kind-icon">bottom</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#bottom" class="tsd-kind-icon">bottom</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#class"
+												class="tsd-kind-icon">class</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#class" class="tsd-kind-icon">class</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#clip"
+												class="tsd-kind-icon">clip</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#clip" class="tsd-kind-icon">clip</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#culling"
+												class="tsd-kind-icon">culling</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#culling" class="tsd-kind-icon">culling</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#disposed"
+												class="tsd-kind-icon">disposed</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#disposed" class="tsd-kind-icon">disposed</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#drawcache"
+												class="tsd-kind-icon">drawCache</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#drawcache" class="tsd-kind-icon">drawCache</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#findcontrols"
+												class="tsd-kind-icon">findControls</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#findcontrols" class="tsd-kind-icon">findControls</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#fireevent"
+												class="tsd-kind-icon">fireEvent</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#fireevent" class="tsd-kind-icon">fireEvent</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#height"
+												class="tsd-kind-icon">height</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#height" class="tsd-kind-icon">height</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#id"
+												class="tsd-kind-icon">id</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#id" class="tsd-kind-icon">id</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#left"
+												class="tsd-kind-icon">left</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#left" class="tsd-kind-icon">left</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#measurebound"
+												class="tsd-kind-icon">measureBound</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#measurebound" class="tsd-kind-icon">measureBound</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#opacity"
+												class="tsd-kind-icon">opacity</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#opacity" class="tsd-kind-icon">opacity</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#ownerbuffer"
+												class="tsd-kind-icon">ownerBuffer</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#ownerbuffer" class="tsd-kind-icon">ownerBuffer</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#parent"
+												class="tsd-kind-icon">parent</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#parent" class="tsd-kind-icon">parent</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#right"
+												class="tsd-kind-icon">right</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#right" class="tsd-kind-icon">right</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#scale"
+												class="tsd-kind-icon">scale</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#scale" class="tsd-kind-icon">scale</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#scalex"
+												class="tsd-kind-icon">scaleX</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#scalex" class="tsd-kind-icon">scaleX</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#scaley"
+												class="tsd-kind-icon">scaleY</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#scaley" class="tsd-kind-icon">scaleY</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#state"
+												class="tsd-kind-icon">state</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#state" class="tsd-kind-icon">state</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#style"
+												class="tsd-kind-icon">style</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#style" class="tsd-kind-icon">style</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#textstyle"
+												class="tsd-kind-icon">textStyle</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#textstyle" class="tsd-kind-icon">textStyle</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#top"
+												class="tsd-kind-icon">top</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#top" class="tsd-kind-icon">top</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#touchable"
+												class="tsd-kind-icon">touchable</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#touchable" class="tsd-kind-icon">touchable</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#visible"
+												class="tsd-kind-icon">visible</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#visible" class="tsd-kind-icon">visible</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#width"
+												class="tsd-kind-icon">width</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#width" class="tsd-kind-icon">width</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#x"
+												class="tsd-kind-icon">x</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#x" class="tsd-kind-icon">x</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#y"
+												class="tsd-kind-icon">y</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#y" class="tsd-kind-icon">y</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#zindex"
+												class="tsd-kind-icon">zIndex</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#zindex" class="tsd-kind-icon">zIndex</a></li> -->
+								</table>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<table style="display:inline-table;" width="100%">
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#ontouchbegin"
+												class="tsd-kind-icon">onTouchBegin</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#ontouchbegin" class="tsd-kind-icon">onTouchBegin</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#ontouchcancel"
+												class="tsd-kind-icon">onTouchCancel</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#ontouchcancel" class="tsd-kind-icon">onTouchCancel</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#ontouchend"
+												class="tsd-kind-icon">onTouchEnd</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#ontouchend" class="tsd-kind-icon">onTouchEnd</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#ontouchmove"
+												class="tsd-kind-icon">onTouchMove</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_gui_.ez.ui.eventhandlerbase.html#ontouchmove" class="tsd-kind-icon">onTouchMove</a></li> -->
+								</table>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="anchorx" class="tsd-anchor"></a>
+					<h3>anchorX</h3>
+					<div class="tsd-signature tsd-kind-icon">anchorX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="anchory" class="tsd-anchor"></a>
+					<h3>anchorY</h3>
+					<div class="tsd-signature tsd-kind-icon">anchorY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="angle" class="tsd-anchor"></a>
+					<h3>angle</h3>
+					<div class="tsd-signature tsd-kind-icon">angle<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="batchmode" class="tsd-anchor"></a>
+					<h3>batch<wbr>Mode</h3>
+					<div class="tsd-signature tsd-kind-icon">batch<wbr>Mode<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="bottom" class="tsd-anchor"></a>
+					<h3>bottom</h3>
+					<div class="tsd-signature tsd-kind-icon">bottom<span class="tsd-signature-symbol">:</span> <a href="_commontypes_.ez.dimension.html" class="tsd-signature-type">Dimension</a></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="class" class="tsd-anchor"></a>
+					<h3>class</h3>
+					<div class="tsd-signature tsd-kind-icon">class<span class="tsd-signature-symbol">:</span> <a href="../interfaces/_gui_.ez.ui.uiclassdata.html" class="tsd-signature-type">UIClassData</a></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="clip" class="tsd-anchor"></a>
+					<h3>clip</h3>
+					<div class="tsd-signature tsd-kind-icon">clip<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="culling" class="tsd-anchor"></a>
+					<h3>culling</h3>
+					<div class="tsd-signature tsd-kind-icon">culling<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="disposed" class="tsd-anchor"></a>
+					<h3>disposed</h3>
+					<div class="tsd-signature tsd-kind-icon">disposed<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<p>Implementation of <a href="../interfaces/_gui_.ez.touchhandler.html">TouchHandler</a>.<a href="../interfaces/_gui_.ez.touchhandler.html#disposed">disposed</a></p>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="drawcache" class="tsd-anchor"></a>
+					<h3>draw<wbr>Cache</h3>
+					<div class="tsd-signature tsd-kind-icon">draw<wbr>Cache<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="findcontrols" class="tsd-anchor"></a>
+					<h3>find<wbr>Controls</h3>
+					<div class="tsd-signature tsd-kind-icon">find<wbr>Controls<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_gui_.ez.ui.control.html" class="tsd-signature-type">Control</a><span class="tsd-signature-symbol">[]</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>x: <span class="tsd-signature-type">number</span></h5>
+											</li>
+											<li>
+												<h5>y: <span class="tsd-signature-type">number</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <a href="_gui_.ez.ui.control.html" class="tsd-signature-type">Control</a><span class="tsd-signature-symbol">[]</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="fireevent" class="tsd-anchor"></a>
+					<h3>fire<wbr>Event</h3>
+					<div class="tsd-signature tsd-kind-icon">fire<wbr>Event<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>event<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, arg<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, bubble<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>event: <span class="tsd-signature-type">string</span></h5>
+											</li>
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> arg: <span class="tsd-signature-type">any</span></h5>
+											</li>
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> bubble: <span class="tsd-signature-type">boolean</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="height" class="tsd-anchor"></a>
+					<h3>height</h3>
+					<div class="tsd-signature tsd-kind-icon">height<span class="tsd-signature-symbol">:</span> <a href="_commontypes_.ez.dimension.html" class="tsd-signature-type">Dimension</a></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="id" class="tsd-anchor"></a>
+					<h3>id</h3>
+					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="left" class="tsd-anchor"></a>
+					<h3>left</h3>
+					<div class="tsd-signature tsd-kind-icon">left<span class="tsd-signature-symbol">:</span> <a href="_commontypes_.ez.dimension.html" class="tsd-signature-type">Dimension</a></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="measurebound" class="tsd-anchor"></a>
+					<h3>measure<wbr>Bound</h3>
+					<div class="tsd-signature tsd-kind-icon">measure<wbr>Bound<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">function</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-type-declaration">
+						<h4>Type declaration</h4>
+						<ul class="tsd-parameters">
+							<li class="tsd-parameter-siganture">
+								<ul class="tsd-signatures tsd-kind-type-literal tsd-parent-kind-property">
+									<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>w<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, h<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, force<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+								</ul>
+								<ul class="tsd-descriptions">
+									<li class="tsd-description">
+										<h4 class="tsd-parameters-title">Parameters</h4>
+										<ul class="tsd-parameters">
+											<li>
+												<h5>w: <span class="tsd-signature-type">number</span></h5>
+											</li>
+											<li>
+												<h5>h: <span class="tsd-signature-type">number</span></h5>
+											</li>
+											<li>
+												<h5><span class="tsd-flag ts-flagOptional">Optional</span> force: <span class="tsd-signature-type">boolean</span></h5>
+											</li>
+										</ul>
+										<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="opacity" class="tsd-anchor"></a>
+					<h3>opacity</h3>
+					<div class="tsd-signature tsd-kind-icon">opacity<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="ownerbuffer" class="tsd-anchor"></a>
+					<h3>owner<wbr>Buffer</h3>
+					<div class="tsd-signature tsd-kind-icon">owner<wbr>Buffer<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="parent" class="tsd-anchor"></a>
+					<h3>parent</h3>
+					<div class="tsd-signature tsd-kind-icon">parent<span class="tsd-signature-symbol">:</span> <a href="_gui_.ez.ui.container.html" class="tsd-signature-type">Container</a></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="right" class="tsd-anchor"></a>
+					<h3>right</h3>
+					<div class="tsd-signature tsd-kind-icon">right<span class="tsd-signature-symbol">:</span> <a href="_commontypes_.ez.dimension.html" class="tsd-signature-type">Dimension</a></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="scale" class="tsd-anchor"></a>
+					<h3>scale</h3>
+					<div class="tsd-signature tsd-kind-icon">scale<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="scalex" class="tsd-anchor"></a>
+					<h3>scaleX</h3>
+					<div class="tsd-signature tsd-kind-icon">scaleX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="scaley" class="tsd-anchor"></a>
+					<h3>scaleY</h3>
+					<div class="tsd-signature tsd-kind-icon">scaleY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="state" class="tsd-anchor"></a>
+					<h3>state</h3>
+					<div class="tsd-signature tsd-kind-icon">state<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="style" class="tsd-anchor"></a>
+					<h3>style</h3>
+					<div class="tsd-signature tsd-kind-icon">style<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="textstyle" class="tsd-anchor"></a>
+					<h3>text<wbr>Style</h3>
+					<div class="tsd-signature tsd-kind-icon">text<wbr>Style<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="top" class="tsd-anchor"></a>
+					<h3>top</h3>
+					<div class="tsd-signature tsd-kind-icon">top<span class="tsd-signature-symbol">:</span> <a href="_commontypes_.ez.dimension.html" class="tsd-signature-type">Dimension</a></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="touchable" class="tsd-anchor"></a>
+					<h3>touchable</h3>
+					<div class="tsd-signature tsd-kind-icon">touchable<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="visible" class="tsd-anchor"></a>
+					<h3>visible</h3>
+					<div class="tsd-signature tsd-kind-icon">visible<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="width" class="tsd-anchor"></a>
+					<h3>width</h3>
+					<div class="tsd-signature tsd-kind-icon">width<span class="tsd-signature-symbol">:</span> <a href="_commontypes_.ez.dimension.html" class="tsd-signature-type">Dimension</a></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="x" class="tsd-anchor"></a>
+					<h3>x</h3>
+					<div class="tsd-signature tsd-kind-icon">x<span class="tsd-signature-symbol">:</span> <a href="_commontypes_.ez.dimension.html" class="tsd-signature-type">Dimension</a></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="y" class="tsd-anchor"></a>
+					<h3>y</h3>
+					<div class="tsd-signature tsd-kind-icon">y<span class="tsd-signature-symbol">:</span> <a href="_commontypes_.ez.dimension.html" class="tsd-signature-type">Dimension</a></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="zindex" class="tsd-anchor"></a>
+					<h3>z<wbr>Index</h3>
+					<div class="tsd-signature tsd-kind-icon">z<wbr>Index<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="ontouchbegin" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> on<wbr>Touch<wbr>Begin</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Touch<wbr>Begin<span class="tsd-signature-symbol">(</span>d<span class="tsd-signature-symbol">: </span><a href="../interfaces/_commontypes_.ez.touchdata.html" class="tsd-signature-type">TouchData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>d: <a href="../interfaces/_commontypes_.ez.touchdata.html" class="tsd-signature-type">TouchData</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="ontouchcancel" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> on<wbr>Touch<wbr>Cancel</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Touch<wbr>Cancel<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="ontouchend" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> on<wbr>Touch<wbr>End</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Touch<wbr>End<span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/_commontypes_.ez.touchdata.html" class="tsd-signature-type">TouchData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>e: <a href="../interfaces/_commontypes_.ez.touchdata.html" class="tsd-signature-type">TouchData</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="ontouchmove" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagAbstract">Abstract</span> on<wbr>Touch<wbr>Move</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">on<wbr>Touch<wbr>Move<span class="tsd-signature-symbol">(</span>e<span class="tsd-signature-symbol">: </span><a href="../interfaces/_commontypes_.ez.touchdata.html" class="tsd-signature-type">TouchData</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>e: <a href="../interfaces/_commontypes_.ez.touchdata.html" class="tsd-signature-type">TouchData</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<!--{&quot;options&quot;:&quot;D:\\projects\\EZ\\EasyGame-client&quot;,&quot;tsconfig&quot;:&quot;D:\\projects\\EZ\\EasyGame-client&quot;,&quot;inputFiles&quot;:[],&quot;mode&quot;:1,&quot;includeDeclarations&quot;:false,&quot;entryPoint&quot;:&quot;&quot;,&quot;exclude&quot;:[],&quot;externalPattern&quot;:[],&quot;excludeExternals&quot;:true,&quot;excludeNotExported&quot;:true,&quot;excludeNotDocumented&quot;:false,&quot;excludePrivate&quot;:true,&quot;excludeProtected&quot;:true,&quot;ignoreCompilerErrors&quot;:true,&quot;disableSources&quot;:true,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;src/doc/media&quot;,&quot;out&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;,&quot;theme&quot;:&quot;typedoc-neo-theme/bin/default&quot;,&quot;name&quot;:&quot;EasyGame API手册&quot;,&quot;includeVersion&quot;:true,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;src/doc/ezgame API.md&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:true,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:true,&quot;help&quot;:false,&quot;version&quot;:false,&quot;plugin&quot;:[&quot;typedoc-neo-theme&quot;],&quot;listInvalidSymbolLinks&quot;:false,&quot;links&quot;:[{&quot;label&quot;:&quot;引擎使用说明&quot;,&quot;url&quot;:&quot;readme.html&quot;}],&quot;outline&quot;:[{&quot;ez.core&quot;:{&quot;Overview&quot;:&quot;./index&quot;,&quot;全局设置&quot;:&quot;_ez_core_&quot;,&quot;基本类型&quot;:&quot;_commontypes_.ez&quot;,&quot;基础功能&quot;:&quot;_ezgame_.ez&quot;,&quot;Audio&quot;:&quot;_audio_.ez&quot;,&quot;Renderer&quot;:&quot;_renderer_.ez&quot;,&quot;Texture&quot;:&quot;_texture_.ez&quot;,&quot;Visual&quot;:&quot;_visual_.ez&quot;,&quot;Resource&quot;:&quot;_resource_.ez&quot;,&quot;GUI&quot;:&quot;_gui_.ez.ui&quot;,&quot;Animation&quot;:&quot;_animation_.ez&quot;},&quot;ez.3d&quot;:{&quot;3d render&quot;:&quot;_ez_3d_.ez&quot;,&quot;Stage3D&quot;:&quot;classes/_ez_3d_.ez.stage3dsprite&quot;,&quot;model&quot;:&quot;_model_.ez&quot;,&quot;material&quot;:&quot;_material_.ez&quot;},&quot;ez.ext&quot;:{&quot;Highlight Effect&quot;:&quot;_highlighteffect_.ez.effect&quot;,&quot;Fan Effect&quot;:&quot;_faneffect_.ez.effect&quot;,&quot;ui.Hyperlink&quot;:&quot;classes/_hyperlink_.ez.ui.hyperlink&quot;,&quot;ui.BlurGroup&quot;:&quot;classes/_blureffect_.ez.ui.blurgroup&quot;,&quot;BMFontLabel&quot;:&quot;_bmfontlabel_.ez&quot;,&quot;Spine&quot;:&quot;classes/_spine_.ez.spinesprite&quot;,&quot;Inspector&quot;:&quot;_inspector_.inspector&quot;,&quot;Protocol&quot;:&quot;_protocol_.easygame&quot;}}],&quot;search&quot;:[]}-->
+		</div>
+		<!--
+        <div class="col-2 col-menu secondary-menu">
+            <nav class="tsd-navigation secondary menu-sticky">
+                <ul class="before-current">
+                            </ul>
+    <ul class="current">
+<li class="current tsd-kind-class tsd-parent-kind-namespace root">
+    <a href="_gui_.ez.ui.eventhandlerbase.html" class="tsd-kind-icon">Event<wbr>Handler<wbr>Base</a>
+        <ul>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#anchorx" class="tsd-kind-icon">anchorX</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#anchory" class="tsd-kind-icon">anchorY</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#angle" class="tsd-kind-icon">angle</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#batchmode" class="tsd-kind-icon">batch<wbr>Mode</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#bottom" class="tsd-kind-icon">bottom</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#class" class="tsd-kind-icon">class</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#clip" class="tsd-kind-icon">clip</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#culling" class="tsd-kind-icon">culling</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#disposed" class="tsd-kind-icon">disposed</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#drawcache" class="tsd-kind-icon">draw<wbr>Cache</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#findcontrols" class="tsd-kind-icon">find<wbr>Controls</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#fireevent" class="tsd-kind-icon">fire<wbr>Event</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#height" class="tsd-kind-icon">height</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#id" class="tsd-kind-icon">id</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#left" class="tsd-kind-icon">left</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#measurebound" class="tsd-kind-icon">measure<wbr>Bound</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#opacity" class="tsd-kind-icon">opacity</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#ownerbuffer" class="tsd-kind-icon">owner<wbr>Buffer</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#parent" class="tsd-kind-icon">parent</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#right" class="tsd-kind-icon">right</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#scale" class="tsd-kind-icon">scale</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#scalex" class="tsd-kind-icon">scaleX</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#scaley" class="tsd-kind-icon">scaleY</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#state" class="tsd-kind-icon">state</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#style" class="tsd-kind-icon">style</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#textstyle" class="tsd-kind-icon">text<wbr>Style</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#top" class="tsd-kind-icon">top</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#touchable" class="tsd-kind-icon">touchable</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#visible" class="tsd-kind-icon">visible</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#width" class="tsd-kind-icon">width</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#x" class="tsd-kind-icon">x</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#y" class="tsd-kind-icon">y</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#zindex" class="tsd-kind-icon">z<wbr>Index</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#ontouchbegin" class="tsd-kind-icon">on<wbr>Touch<wbr>Begin</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#ontouchcancel" class="tsd-kind-icon">on<wbr>Touch<wbr>Cancel</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#ontouchend" class="tsd-kind-icon">on<wbr>Touch<wbr>End</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_gui_.ez.ui.eventhandlerbase.html#ontouchmove" class="tsd-kind-icon">on<wbr>Touch<wbr>Move</a>
+</li>
+        </ul>
+</li>
+    </ul>
+    <ul class="after-current">
+                </ul>
+            </nav>
+        </div>-->
+	</div>
+</div>
+<footer>
+</footer>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

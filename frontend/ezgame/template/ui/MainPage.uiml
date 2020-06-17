@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root module='{module}'>
+	<MainPage width=100% height=100%>
+		<children>
+			<RectFill gradient="{ y1: 1280, colors:['#010036', '#4e004f'] }" width=100% height=100% />
+			<Image id=logo src=logo x=50% y=50% />
+		</children>
+	</MainPage>
+</root>

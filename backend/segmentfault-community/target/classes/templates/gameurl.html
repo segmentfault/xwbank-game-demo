@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+	<title>新网银行 ·朱望仔大战蝙蝠侠</title>
+	<script src="/js/jquery.min.js"></script>
+</head>
+
+<style>
+	body { padding: 0; border: 0; margin: 0; height: 100%; }
+	html { overflow: hidden;  }
+	.button {
+		position:absolute;
+		display:block;
+		width:80px;
+		height:30px;
+		line-height:30px;
+		right: 20px;
+		top: 20px;
+		text-align: center;
+		color: #fff;
+		background:#d77;
+		border-style: solid;
+		border-width: 2;
+		border-radius: 10px;
+		background:#4d7df9;
+		
+	}
+	.button:active  {
+		transition: transform 0.5s;
+		transform: scale(0.8,0.8);
+	}
+	.fullscreen {
+		position:absolute;
+		left:0px;
+		top:0px;
+		width:100%;
+		height:100%;
+	}
+</style>
+<body>
+	<input type="hidden" th:value="${session.user.nickname}" name="nickname" id="nickname"/>
+	<iframe id=game src="https://xwfintech.qingke.io:18001/game/index.html" style="position: absolute;top:0px"
+	width=100% height=100% frameborder=0 scrolling=no marginheight=0 marginwidth=0></iframe>
+	<div id="float" class="fullscreen" style="display:none;z-index:10000;">
+		<img id="logo" class="fullscreen" />
+		<a class="button" onclick="backGame()">返回</a>
+	</div>
+<!-- 微信jssdk必须引用的权限 -->
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+		var shaare_title="新网银行 ·朱望仔大战蝙蝠侠";
+		var shaare_link="https://xwfintech.qingke.io/openapi/wechat/h5index";
+		var shaare_imgUrl="https://xwfintech.qingke.io/img/share.png";// 分享图标
+		var shaare_desc="快来冲榜挑战！";
+		var openid='[[${session.user.openid}]]';
+		var nickname=$("#nickname").val();
+		//nickname=encodeURIComponent(nickname);
+		//if(null!=nickname&&"undefined"!=nickname){
+		//转化全部的空格 %20——空格
+		//nickname=decodeURI(nickname);
+		//nickname=nickname.replace(/%20/g," ");
+		//}
+		function backGame(){
+			$("#float").css("display", "none");
+			document.getElementById("game").contentWindow.postMessage({
+				msg: "back"
+			}, "*");
+		}
+
+		var headimgurl='[[${session.user.headimgurl}]]';
+		var userjson={};
+		userjson["openid"]=openid;
+		userjson["nickname"]=nickname;
+		userjson["headimgurl"]=headimgurl;
+		var user=JSON.stringify(userjson);
+		$(function(){
+		  initjssdk();
+		});
+		window.onmessage = function (e) {
+            switch(e.data.msg) {
+            case "login":
+                sendMsg(user);
+                break;
+			case 'show':
+				$("#float").css("display", "block");
+				$("#logo").attr("src", e.data.src);
+				break;
+            case "gamestart":
+                //游戏开始事件
+                break;
+            case "gameend":
+                //游戏结束事件
+                break;
+            case "data":
+                //数据上报
+                break;
+            }
+        }
+		function sendMsg(user) {
+			document.getElementById("game").contentWindow.postMessage({
+				msg: "login",
+				//这里传送登录信息
+				info: user
+			}, "*");
+		}
+		
+	
+	/**
+	 *初始化JS-SDK参数
+	 */
+	function  initjssdk(){
+		var url=location.href;
+		$.ajax({	
+			type:"POST",
+			url:"/openapi/wechat/signature",
+			data:{url:url},
+			success:function(data){
+				if(data.code==0){
+				var jssdk=data.jssdk;
+				console.info(jssdk);
+				wx.config({
+				    debug: false, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+				    appId:jssdk.appid, // 必填，公众号的唯一标识
+				    timestamp:jssdk.timestamp, // 必填，生成签名的时间戳
+				    nonceStr:jssdk.noncestr, // 必填，生成签名的随机串
+				    signature:jssdk.signature,// 必填，签名，见附录1
+				    jsApiList:jssdk.jsApiList // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+					});
+				}
+			}
+		});		
+	}
+	
+	wx.ready(function(){
+	//朋友
+ 	wx.onMenuShareAppMessage({
+	  title:shaare_title, // 分享标题
+	  desc:shaare_desc, // 分享描述
+	  link: shaare_link, // 分享链接，该链接域名或路径必须与当前页面对应的公众号JS安全域名一致
+	  imgUrl: shaare_imgUrl, // 分享图标
+	  type: '', // 分享类型,music、video或link，不填默认为link
+	  dataUrl: '', // 如果type是music或video，则要提供数据链接，默认为空
+	  success: function () {
+	    // 用户点击了分享后执行的回调函数
+	  }
+	});
+	//朋友圈
+	wx.onMenuShareTimeline({
+		title:shaare_title, // 分享标题
+		link: shaare_link, // 分享链接
+		imgUrl: shaare_imgUrl, // 分享图标
+		success: function () {
+		},
+		cancel: function () {
+		    // 用户取消分享后执行的回调函数
+		}
+        });
+	});
+</script>
+</body>
+</html>

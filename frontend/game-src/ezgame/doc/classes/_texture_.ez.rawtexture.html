@@ -1,0 +1,1526 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>RawTexture | EasyGame API手册 - v1.0.1</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<ul class="results-priority" style="display:none">
+					</ul>
+					<a href="../index.html" class="title">EasyGame API手册 - v1.0.1</a>
+					&emsp;<a href="readme.html" class="title">引擎使用说明</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules/_texture_.html">Texture</a>
+				</li>
+				<li>
+					<a href="../modules/_texture_.ez.html">ez</a>
+				</li>
+				<li>
+					<a href="_texture_.ez.rawtexture.html">RawTexture</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-3 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation outline primary">
+				<a style="margin-left:0em" href="../globals.html">Globals</a>
+				<ul style="display:none">
+					{&quot;ez.core&quot;:{&quot;Overview&quot;:&quot;./index&quot;,&quot;全局设置&quot;:&quot;_ez_core_&quot;,&quot;基本类型&quot;:&quot;_commontypes_.ez&quot;,&quot;基础功能&quot;:&quot;_ezgame_.ez&quot;,&quot;Audio&quot;:&quot;_audio_.ez&quot;,&quot;Renderer&quot;:&quot;_renderer_.ez&quot;,&quot;Texture&quot;:&quot;_texture_.ez&quot;,&quot;Visual&quot;:&quot;_visual_.ez&quot;,&quot;Resource&quot;:&quot;_resource_.ez&quot;,&quot;GUI&quot;:&quot;_gui_.ez.ui&quot;,&quot;Animation&quot;:&quot;_animation_.ez&quot;},&quot;ez.3d&quot;:{&quot;3d render&quot;:&quot;_ez_3d_.ez&quot;,&quot;Stage3D&quot;:&quot;classes/_ez_3d_.ez.stage3dsprite&quot;,&quot;model&quot;:&quot;_model_.ez&quot;,&quot;material&quot;:&quot;_material_.ez&quot;},&quot;ez.ext&quot;:{&quot;Highlight Effect&quot;:&quot;_highlighteffect_.ez.effect&quot;,&quot;Fan Effect&quot;:&quot;_faneffect_.ez.effect&quot;,&quot;ui.Hyperlink&quot;:&quot;classes/_hyperlink_.ez.ui.hyperlink&quot;,&quot;ui.BlurGroup&quot;:&quot;classes/_blureffect_.ez.ui.blurgroup&quot;,&quot;BMFontLabel&quot;:&quot;_bmfontlabel_.ez&quot;,&quot;Spine&quot;:&quot;classes/_spine_.ez.spinesprite&quot;,&quot;Inspector&quot;:&quot;_inspector_.inspector&quot;,&quot;Protocol&quot;:&quot;_protocol_.easygame&quot;}}
+				</ul>
+			</nav>
+		</div>
+		<div class="col-7 offset-3 col-content">
+			<h1>Class RawTexture</h1>
+			<section class="tsd-panel tsd-comment"><div class="tsd-comment tsd-typography tsd-comment-shorttext">
+					<div class="lead">
+						<p>原生WebGL纹理</p>
+			</div></div></section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<a href="_texture_.ez.texture.html" class="tsd-signature-type">Texture</a>
+						<ul class="tsd-hierarchy">
+							<li>
+								<span class="target">RawTexture</span>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<table style="display:inline-table;" width="100%">
+									<tr class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+										<td width=200>
+											<li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="_texture_.ez.rawtexture.html#constructor"
+												class="tsd-kind-icon">constructor</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite"><a href="_texture_.ez.rawtexture.html#constructor" class="tsd-kind-icon">constructor</a></li> -->
+								</table>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<table style="display:inline-table;" width="100%">
+									<tr class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#empty"
+												class="tsd-kind-icon">empty</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#empty">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												是否为空白纹理
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#empty" class="tsd-kind-icon">empty</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#format"
+												class="tsd-kind-icon">format</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#format">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												像素格式
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#format" class="tsd-kind-icon">format</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_texture_.ez.rawtexture.html#gltex"
+												class="tsd-kind-icon">glTex</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												webGL纹理
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_texture_.ez.rawtexture.html#gltex" class="tsd-kind-icon">glTex</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#height"
+												class="tsd-kind-icon">height</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#height">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												纹理高度
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#height" class="tsd-kind-icon">height</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#id"
+												class="tsd-kind-icon">id</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#id">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												资源id
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#id" class="tsd-kind-icon">id</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#image"
+												class="tsd-kind-icon">image</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#image">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												获取Image对象
+												仅在canvas渲染模式下有效
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#image" class="tsd-kind-icon">image</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#iscube"
+												class="tsd-kind-icon">isCube</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#iscube">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												是否为Cube map
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#iscube" class="tsd-kind-icon">isCube</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#margin"
+												class="tsd-kind-icon">margin</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#margin">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												空白边距
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#margin" class="tsd-kind-icon">margin</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#memsize"
+												class="tsd-kind-icon">memSize</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#memsize">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												内存占用大小
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#memsize" class="tsd-kind-icon">memSize</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#name"
+												class="tsd-kind-icon">name</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#name">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												资源名
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#name" class="tsd-kind-icon">name</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#ready"
+												class="tsd-kind-icon">ready</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#ready">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												纹理是否已加载
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#ready" class="tsd-kind-icon">ready</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#s9"
+												class="tsd-kind-icon">s9</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#s9">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												9宫格拉伸
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#s9" class="tsd-kind-icon">s9</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#scalex"
+												class="tsd-kind-icon">scaleX</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#scalex">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												水平缩放
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#scalex" class="tsd-kind-icon">scaleX</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#scaley"
+												class="tsd-kind-icon">scaleY</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#scaley">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												垂直缩放
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#scaley" class="tsd-kind-icon">scaleY</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#subrect"
+												class="tsd-kind-icon">subRect</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#subrect">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												子区域
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#subrect" class="tsd-kind-icon">subRect</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#transpose"
+												class="tsd-kind-icon">transpose</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#transpose">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												是否在纹理atlas中旋转90°存放
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#transpose" class="tsd-kind-icon">transpose</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#width"
+												class="tsd-kind-icon">width</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#width">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												纹理宽度
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#width" class="tsd-kind-icon">width</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#compresstexturetype"
+												class="tsd-kind-icon">CompressTextureType</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#compresstexturetype">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#compresstexturetype" class="tsd-kind-icon">CompressTextureType</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#texture_max_anisotropy_ext"
+												class="tsd-kind-icon">TEXTURE_MAX_ANISOTROPY_EXT</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#texture_max_anisotropy_ext">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#texture_max_anisotropy_ext" class="tsd-kind-icon">TEXTURE_MAX_ANISOTROPY_EXT</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#anisotropicmax"
+												class="tsd-kind-icon">anisotropicMax</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#anisotropicmax">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#anisotropicmax" class="tsd-kind-icon">anisotropicMax</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#compressformat"
+												class="tsd-kind-icon">compressFormat</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#compressformat">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#compressformat" class="tsd-kind-icon">compressFormat</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#errorfallback"
+												class="tsd-kind-icon">errorFallback</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#errorfallback">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#errorfallback" class="tsd-kind-icon">errorFallback</a></li> -->
+								</table>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<table style="display:inline-table;" width="100%">
+									<tr class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#createsubtexture"
+												class="tsd-kind-icon">createSubTexture</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#createsubtexture">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												创建子图
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#createsubtexture" class="tsd-kind-icon">createSubTexture</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#load"
+												class="tsd-kind-icon">load</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#load">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												加载纹理到内存
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited"><a href="_texture_.ez.rawtexture.html#load" class="tsd-kind-icon">load</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_texture_.ez.rawtexture.html#release"
+												class="tsd-kind-icon">release</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												释放纹理
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-overwrite"><a href="_texture_.ez.rawtexture.html#release" class="tsd-kind-icon">release</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#addtextureage"
+												class="tsd-kind-icon">addTextureAge</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#addtextureage">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#addtextureage" class="tsd-kind-icon">addTextureAge</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#addtexturedata"
+												class="tsd-kind-icon">addTextureData</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#addtexturedata">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#addtexturedata" class="tsd-kind-icon">addTextureData</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class tsd-is-static">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_texture_.ez.rawtexture.html#create"
+												class="tsd-kind-icon">create</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												创建webGL纹理
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_texture_.ez.rawtexture.html#create" class="tsd-kind-icon">create</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#createcompresscubetexture"
+												class="tsd-kind-icon">createCompressCubeTexture</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#createcompresscubetexture">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#createcompresscubetexture" class="tsd-kind-icon">createCompressCubeTexture</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#createcompresstexture"
+												class="tsd-kind-icon">createCompressTexture</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#createcompresstexture">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#createcompresstexture" class="tsd-kind-icon">createCompressTexture</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#createcubetexturefromimage"
+												class="tsd-kind-icon">createCubeTextureFromImage</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#createcubetexturefromimage">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#createcubetexturefromimage" class="tsd-kind-icon">createCubeTextureFromImage</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#createfromimage"
+												class="tsd-kind-icon">createFromImage</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#createfromimage">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												从image/canvascanvas元素创建Texture
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#createfromimage" class="tsd-kind-icon">createFromImage</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#creategltexture"
+												class="tsd-kind-icon">createGLTexture</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#creategltexture">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#creategltexture" class="tsd-kind-icon">createGLTexture</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#creategltexturefromimage"
+												class="tsd-kind-icon">createGLTextureFromImage</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#creategltexturefromimage">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#creategltexturefromimage" class="tsd-kind-icon">createGLTextureFromImage</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#init"
+												class="tsd-kind-icon">init</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#init">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#init" class="tsd-kind-icon">init</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#profile"
+												class="tsd-kind-icon">profile</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#profile">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												获取纹理使用统计数据
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#profile" class="tsd-kind-icon">profile</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#releaseunusedtexture"
+												class="tsd-kind-icon">releaseUnusedTexture</a>
+												<span>Inherited from <a href="_texture_.ez.texture.html#releaseunusedtexture">Texture</a></span>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												释放长期未使用的WGL纹理
+												在当前加载的纹理中，每帧未被使用的age会加1，被使用的age设为0
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static"><a href="_texture_.ez.rawtexture.html#releaseunusedtexture" class="tsd-kind-icon">releaseUnusedTexture</a></li> -->
+								</table>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Raw<wbr>Texture<span class="tsd-signature-symbol">(</span>data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TextureData</span>, width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_texture_.ez.rawtexture.html" class="tsd-signature-type">RawTexture</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#constructor">constructor</a></p>
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>data: <span class="tsd-signature-type">TextureData</span></h5>
+								</li>
+								<li>
+									<h5>width: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>height: <span class="tsd-signature-type">number</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_texture_.ez.rawtexture.html" class="tsd-signature-type">RawTexture</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="empty" class="tsd-anchor"></a>
+					<h3>empty</h3>
+					<div class="tsd-signature tsd-kind-icon">empty<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#empty">empty</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>是否为空白纹理</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="format" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> format</h3>
+					<div class="tsd-signature tsd-kind-icon">format<span class="tsd-signature-symbol">:</span> <a href="../enums/_texture_.ez.textureformat.html" class="tsd-signature-type">TextureFormat</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#format">format</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>像素格式</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="gltex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> gl<wbr>Tex</h3>
+					<div class="tsd-signature tsd-kind-icon">gl<wbr>Tex<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">WebGLTexture</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>webGL纹理</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="height" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> height</h3>
+					<div class="tsd-signature tsd-kind-icon">height<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#height">height</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>纹理高度</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="id" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> id</h3>
+					<div class="tsd-signature tsd-kind-icon">id<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#id">id</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>资源id</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="image" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> image</h3>
+					<div class="tsd-signature tsd-kind-icon">image<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">HTMLImageElement</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#image">image</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>获取Image对象
+							仅在canvas渲染模式下有效</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="iscube" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> is<wbr>Cube</h3>
+					<div class="tsd-signature tsd-kind-icon">is<wbr>Cube<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#iscube">isCube</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>是否为Cube map</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="margin" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> margin</h3>
+					<div class="tsd-signature tsd-kind-icon">margin<span class="tsd-signature-symbol">:</span> <a href="../modules/_commontypes_.ez.html#number4" class="tsd-signature-type">Number4</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#margin">margin</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>空白边距</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="memsize" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> mem<wbr>Size</h3>
+					<div class="tsd-signature tsd-kind-icon">mem<wbr>Size<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#memsize">memSize</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>内存占用大小</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="name" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> name</h3>
+					<div class="tsd-signature tsd-kind-icon">name<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">string</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#name">name</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>资源名</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="ready" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> ready</h3>
+					<div class="tsd-signature tsd-kind-icon">ready<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#ready">ready</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>纹理是否已加载</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="s9" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> s9</h3>
+					<div class="tsd-signature tsd-kind-icon">s9<span class="tsd-signature-symbol">:</span> <a href="../modules/_commontypes_.ez.html#number4" class="tsd-signature-type">Number4</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#s9">s9</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>9宫格拉伸</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="scalex" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> scaleX</h3>
+					<div class="tsd-signature tsd-kind-icon">scaleX<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#scalex">scaleX</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>水平缩放</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="scaley" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> scaleY</h3>
+					<div class="tsd-signature tsd-kind-icon">scaleY<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#scaley">scaleY</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>垂直缩放</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="subrect" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagOptional">Optional</span> sub<wbr>Rect</h3>
+					<div class="tsd-signature tsd-kind-icon">sub<wbr>Rect<span class="tsd-signature-symbol">:</span> <a href="_commontypes_.ez.rect.html" class="tsd-signature-type">Rect</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#subrect">subRect</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>子区域</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="transpose" class="tsd-anchor"></a>
+					<h3>transpose</h3>
+					<div class="tsd-signature tsd-kind-icon">transpose<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#transpose">transpose</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>是否在纹理atlas中旋转90°存放</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+					<a name="width" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> width</h3>
+					<div class="tsd-signature tsd-kind-icon">width<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#width">width</a></p>
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>纹理宽度</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="compresstexturetype" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> Compress<wbr>Texture<wbr>Type</h3>
+					<div class="tsd-signature tsd-kind-icon">Compress<wbr>Texture<wbr>Type<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">any</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#compresstexturetype">CompressTextureType</a></p>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="texture_max_anisotropy_ext" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> TEXTURE_<wbr>MAX_<wbr>ANISOTROPY_<wbr>EXT</h3>
+					<div class="tsd-signature tsd-kind-icon">TEXTURE_<wbr>MAX_<wbr>ANISOTROPY_<wbr>EXT<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#texture_max_anisotropy_ext">TEXTURE_MAX_ANISOTROPY_EXT</a></p>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="anisotropicmax" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> anisotropic<wbr>Max</h3>
+					<div class="tsd-signature tsd-kind-icon">anisotropic<wbr>Max<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#anisotropicmax">anisotropicMax</a></p>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="compressformat" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> compress<wbr>Format</h3>
+					<div class="tsd-signature tsd-kind-icon">compress<wbr>Format<span class="tsd-signature-symbol">:</span> <a href="../enums/_texture_.ez.textureformat.html" class="tsd-signature-type">TextureFormat</a></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#compressformat">compressFormat</a></p>
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="errorfallback" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> error<wbr>Fallback</h3>
+					<div class="tsd-signature tsd-kind-icon">error<wbr>Fallback<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">TextureData</span></div>
+					<aside class="tsd-sources">
+						<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#errorfallback">errorFallback</a></p>
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="createsubtexture" class="tsd-anchor"></a>
+					<h3>create<wbr>Sub<wbr>Texture</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Sub<wbr>Texture<span class="tsd-signature-symbol">(</span>rect<span class="tsd-signature-symbol">: </span><a href="_commontypes_.ez.rect.html" class="tsd-signature-type">Rect</a>, w<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span>, h<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_texture_.ez.texture.html" class="tsd-signature-type">Texture</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#createsubtexture">createSubTexture</a></p>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>创建子图</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>rect: <a href="_commontypes_.ez.rect.html" class="tsd-signature-type">Rect</a></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>子图区域</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> w: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>子图宽度</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> h: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>子图高度</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_texture_.ez.texture.html" class="tsd-signature-type">Texture</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+					<a name="load" class="tsd-anchor"></a>
+					<h3>load</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+						<li class="tsd-signature tsd-kind-icon">load<span class="tsd-signature-symbol">(</span>onload<span class="tsd-signature-symbol">?: </span><a href="../interfaces/_inspector_.inspector.testcase.html#function" class="tsd-signature-type">Function</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#load">load</a></p>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>加载纹理到内存</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> onload: <a href="../interfaces/_inspector_.inspector.testcase.html#function" class="tsd-signature-type">Function</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+					<a name="release" class="tsd-anchor"></a>
+					<h3>release</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+						<li class="tsd-signature tsd-kind-icon">release<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Overrides <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#release">release</a></p>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>释放纹理</p>
+							</div></div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="addtextureage" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> add<wbr>Texture<wbr>Age</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Texture<wbr>Age<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#addtextureage">addTextureAge</a></p>
+							</aside>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="addtexturedata" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> add<wbr>Texture<wbr>Data</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Texture<wbr>Data<span class="tsd-signature-symbol">(</span>t<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">TextureData</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#addtexturedata">addTextureData</a></p>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags">
+									<!--<dt>inernal</dt>-->
+								<dd></dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>t: <span class="tsd-signature-type">TextureData</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="create" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> create</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">create<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span>, width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, pixFormat<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, wrapMode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, filterMode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, data<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ArrayBufferView</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_texture_.ez.rawtexture.html" class="tsd-signature-type">RawTexture</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p> 创建webGL纹理</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <span class="tsd-signature-type">string</span></h5>
+								</li>
+								<li>
+									<h5>width: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>height: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>pixFormat: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>wrapMode: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>filterMode: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>data: <span class="tsd-signature-type">ArrayBufferView</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_texture_.ez.rawtexture.html" class="tsd-signature-type">RawTexture</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="createcompresscubetexture" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> create<wbr>Compress<wbr>Cube<wbr>Texture</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Compress<wbr>Cube<wbr>Texture<span class="tsd-signature-symbol">(</span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, compressFormat<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, filterMode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, cubes<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ArrayBufferView</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLTexture</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#createcompresscubetexture">createCompressCubeTexture</a></p>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags">
+									<!--<dt>inernal</dt>-->
+								<dd></dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>width: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>height: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>compressFormat: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>filterMode: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>cubes: <span class="tsd-signature-type">ArrayBufferView</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">WebGLTexture</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="createcompresstexture" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> create<wbr>Compress<wbr>Texture</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Compress<wbr>Texture<span class="tsd-signature-symbol">(</span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, compressFormat<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, wrapMode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, filterMode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, mipmaps<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ArrayBufferView</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLTexture</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#createcompresstexture">createCompressTexture</a></p>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags">
+									<!--<dt>inernal</dt>-->
+								<dd></dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>width: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>height: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>compressFormat: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>wrapMode: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>filterMode: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>mipmaps: <span class="tsd-signature-type">ArrayBufferView</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">WebGLTexture</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="createcubetexturefromimage" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> create<wbr>Cube<wbr>Texture<wbr>From<wbr>Image</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>Cube<wbr>Texture<wbr>From<wbr>Image<span class="tsd-signature-symbol">(</span>imgs<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLImageElement</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLCanvasElement</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ImageData</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLTexture</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#createcubetexturefromimage">createCubeTextureFromImage</a></p>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags">
+									<!--<dt>inernal</dt>-->
+								<dd></dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>imgs: <span class="tsd-signature-type">HTMLImageElement</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLCanvasElement</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ImageData</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">WebGLTexture</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="createfromimage" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> create<wbr>From<wbr>Image</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">create<wbr>From<wbr>Image<span class="tsd-signature-symbol">(</span>img<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLImageElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLCanvasElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ImageData</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_texture_.ez.texture.html" class="tsd-signature-type">Texture</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#createfromimage">createFromImage</a></p>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>从image/canvascanvas元素创建Texture</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>img: <span class="tsd-signature-type">HTMLImageElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLCanvasElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ImageData</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>图片元素</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_texture_.ez.texture.html" class="tsd-signature-type">Texture</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="creategltexture" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> createGLTexture</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">createGLTexture<span class="tsd-signature-symbol">(</span>width<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, height<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, format<span class="tsd-signature-symbol">: </span><a href="../enums/_texture_.ez.textureformat.html" class="tsd-signature-type">TextureFormat</a>, wrapMode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, filterMode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, mulAlpha<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, genMipmap<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span>, pixels<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">ArrayBufferView</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLTexture</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#creategltexture">createGLTexture</a></p>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags">
+									<!--<dt>inernal</dt>-->
+								<dd></dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>width: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>height: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>format: <a href="../enums/_texture_.ez.textureformat.html" class="tsd-signature-type">TextureFormat</a></h5>
+								</li>
+								<li>
+									<h5>wrapMode: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>filterMode: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>mulAlpha: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
+									<h5>genMipmap: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+								<li>
+									<h5>pixels: <span class="tsd-signature-type">ArrayBufferView</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">WebGLTexture</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="creategltexturefromimage" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> createGLTexture<wbr>From<wbr>Image</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">createGLTexture<wbr>From<wbr>Image<span class="tsd-signature-symbol">(</span>img<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">HTMLImageElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLCanvasElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ImageData</span>, wrapMode<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, mipmap<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">WebGLTexture</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#creategltexturefromimage">createGLTextureFromImage</a></p>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags">
+									<!--<dt>inernal</dt>-->
+								<dd></dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>img: <span class="tsd-signature-type">HTMLImageElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">HTMLCanvasElement</span><span class="tsd-signature-symbol"> | </span><span class="tsd-signature-type">ImageData</span></h5>
+								</li>
+								<li>
+									<h5>wrapMode: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>mipmap: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">WebGLTexture</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="init" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> init</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">init<span class="tsd-signature-symbol">(</span>wgl<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#init">init</a></p>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags">
+									<!--<dt>inernal</dt>-->
+								<dd></dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>wgl: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="profile" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> profile</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">profile<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../interfaces/_texture_.ez.textureprofile.html" class="tsd-signature-type">TextureProfile</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#profile">profile</a></p>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>获取纹理使用统计数据</p>
+							</div></div>
+							<h4 class="tsd-returns-title">Returns <a href="../interfaces/_texture_.ez.textureprofile.html" class="tsd-signature-type">TextureProfile</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+					<a name="releaseunusedtexture" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> release<wbr>Unused<wbr>Texture</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">release<wbr>Unused<wbr>Texture<span class="tsd-signature-symbol">(</span>maxAge<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+								<p>Inherited from <a href="_texture_.ez.texture.html">Texture</a>.<a href="_texture_.ez.texture.html#releaseunusedtexture">releaseUnusedTexture</a></p>
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>释放长期未使用的WGL纹理
+									在当前加载的纹理中，每帧未被使用的age会加1，被使用的age设为0</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>maxAge: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>超过maxAge的纹理释放</p>
+										<pre><code><span class="hljs-comment">//设置全局资源管理策略，每秒检测并释放掉60帧内没有被使用过的纹理</span>
+set<span class="hljs-constructor">Interval(()</span> =&gt; egl.<span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Texture</span>.</span></span>release<span class="hljs-constructor">UnusedTexture(60)</span>, <span class="hljs-number">1000</span>);</code></pre>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<!--{&quot;options&quot;:&quot;D:\\projects\\EZ\\EasyGame-client&quot;,&quot;tsconfig&quot;:&quot;D:\\projects\\EZ\\EasyGame-client&quot;,&quot;inputFiles&quot;:[],&quot;mode&quot;:1,&quot;includeDeclarations&quot;:false,&quot;entryPoint&quot;:&quot;&quot;,&quot;exclude&quot;:[],&quot;externalPattern&quot;:[],&quot;excludeExternals&quot;:true,&quot;excludeNotExported&quot;:true,&quot;excludeNotDocumented&quot;:false,&quot;excludePrivate&quot;:true,&quot;excludeProtected&quot;:true,&quot;ignoreCompilerErrors&quot;:true,&quot;disableSources&quot;:true,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;src/doc/media&quot;,&quot;out&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;,&quot;theme&quot;:&quot;typedoc-neo-theme/bin/default&quot;,&quot;name&quot;:&quot;EasyGame API手册&quot;,&quot;includeVersion&quot;:true,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;src/doc/ezgame API.md&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:true,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:true,&quot;help&quot;:false,&quot;version&quot;:false,&quot;plugin&quot;:[&quot;typedoc-neo-theme&quot;],&quot;listInvalidSymbolLinks&quot;:false,&quot;links&quot;:[{&quot;label&quot;:&quot;引擎使用说明&quot;,&quot;url&quot;:&quot;readme.html&quot;}],&quot;outline&quot;:[{&quot;ez.core&quot;:{&quot;Overview&quot;:&quot;./index&quot;,&quot;全局设置&quot;:&quot;_ez_core_&quot;,&quot;基本类型&quot;:&quot;_commontypes_.ez&quot;,&quot;基础功能&quot;:&quot;_ezgame_.ez&quot;,&quot;Audio&quot;:&quot;_audio_.ez&quot;,&quot;Renderer&quot;:&quot;_renderer_.ez&quot;,&quot;Texture&quot;:&quot;_texture_.ez&quot;,&quot;Visual&quot;:&quot;_visual_.ez&quot;,&quot;Resource&quot;:&quot;_resource_.ez&quot;,&quot;GUI&quot;:&quot;_gui_.ez.ui&quot;,&quot;Animation&quot;:&quot;_animation_.ez&quot;},&quot;ez.3d&quot;:{&quot;3d render&quot;:&quot;_ez_3d_.ez&quot;,&quot;Stage3D&quot;:&quot;classes/_ez_3d_.ez.stage3dsprite&quot;,&quot;model&quot;:&quot;_model_.ez&quot;,&quot;material&quot;:&quot;_material_.ez&quot;},&quot;ez.ext&quot;:{&quot;Highlight Effect&quot;:&quot;_highlighteffect_.ez.effect&quot;,&quot;Fan Effect&quot;:&quot;_faneffect_.ez.effect&quot;,&quot;ui.Hyperlink&quot;:&quot;classes/_hyperlink_.ez.ui.hyperlink&quot;,&quot;ui.BlurGroup&quot;:&quot;classes/_blureffect_.ez.ui.blurgroup&quot;,&quot;BMFontLabel&quot;:&quot;_bmfontlabel_.ez&quot;,&quot;Spine&quot;:&quot;classes/_spine_.ez.spinesprite&quot;,&quot;Inspector&quot;:&quot;_inspector_.inspector&quot;,&quot;Protocol&quot;:&quot;_protocol_.easygame&quot;}}],&quot;search&quot;:[]}-->
+		</div>
+		<!--
+        <div class="col-2 col-menu secondary-menu">
+            <nav class="tsd-navigation secondary menu-sticky">
+                <ul class="before-current">
+                        <li class=" tsd-kind-enum tsd-parent-kind-namespace root">
+    <a href="../enums/_texture_.ez.textureformat.html" class="tsd-kind-icon">Texture<wbr>Format</a>
+</li>
+                            </ul>
+    <ul class="current">
+<li class="current tsd-kind-class tsd-parent-kind-namespace root">
+    <a href="_texture_.ez.rawtexture.html" class="tsd-kind-icon">Raw<wbr>Texture</a>
+        <ul>
+                <li class=" tsd-kind-constructor tsd-parent-kind-class tsd-is-overwrite">
+    <a href="_texture_.ez.rawtexture.html#constructor" class="tsd-kind-icon">constructor</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+    <a href="_texture_.ez.rawtexture.html#empty" class="tsd-kind-icon">empty</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+    <a href="_texture_.ez.rawtexture.html#format" class="tsd-kind-icon">format</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_texture_.ez.rawtexture.html#gltex" class="tsd-kind-icon">gl<wbr>Tex</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+    <a href="_texture_.ez.rawtexture.html#height" class="tsd-kind-icon">height</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+    <a href="_texture_.ez.rawtexture.html#id" class="tsd-kind-icon">id</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+    <a href="_texture_.ez.rawtexture.html#image" class="tsd-kind-icon">image</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+    <a href="_texture_.ez.rawtexture.html#iscube" class="tsd-kind-icon">is<wbr>Cube</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+    <a href="_texture_.ez.rawtexture.html#margin" class="tsd-kind-icon">margin</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+    <a href="_texture_.ez.rawtexture.html#memsize" class="tsd-kind-icon">mem<wbr>Size</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+    <a href="_texture_.ez.rawtexture.html#name" class="tsd-kind-icon">name</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+    <a href="_texture_.ez.rawtexture.html#ready" class="tsd-kind-icon">ready</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+    <a href="_texture_.ez.rawtexture.html#s9" class="tsd-kind-icon">s9</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+    <a href="_texture_.ez.rawtexture.html#scalex" class="tsd-kind-icon">scaleX</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+    <a href="_texture_.ez.rawtexture.html#scaley" class="tsd-kind-icon">scaleY</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+    <a href="_texture_.ez.rawtexture.html#subrect" class="tsd-kind-icon">sub<wbr>Rect</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+    <a href="_texture_.ez.rawtexture.html#transpose" class="tsd-kind-icon">transpose</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited">
+    <a href="_texture_.ez.rawtexture.html#width" class="tsd-kind-icon">width</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+    <a href="_texture_.ez.rawtexture.html#compresstexturetype" class="tsd-kind-icon">Compress<wbr>Texture<wbr>Type</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+    <a href="_texture_.ez.rawtexture.html#texture_max_anisotropy_ext" class="tsd-kind-icon">TEXTURE_<wbr>MAX_<wbr>ANISOTROPY_<wbr>EXT</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+    <a href="_texture_.ez.rawtexture.html#anisotropicmax" class="tsd-kind-icon">anisotropic<wbr>Max</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+    <a href="_texture_.ez.rawtexture.html#compressformat" class="tsd-kind-icon">compress<wbr>Format</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+    <a href="_texture_.ez.rawtexture.html#errorfallback" class="tsd-kind-icon">error<wbr>Fallback</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+    <a href="_texture_.ez.rawtexture.html#createsubtexture" class="tsd-kind-icon">create<wbr>Sub<wbr>Texture</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited">
+    <a href="_texture_.ez.rawtexture.html#load" class="tsd-kind-icon">load</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-overwrite">
+    <a href="_texture_.ez.rawtexture.html#release" class="tsd-kind-icon">release</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+    <a href="_texture_.ez.rawtexture.html#addtextureage" class="tsd-kind-icon">add<wbr>Texture<wbr>Age</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+    <a href="_texture_.ez.rawtexture.html#addtexturedata" class="tsd-kind-icon">add<wbr>Texture<wbr>Data</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+    <a href="_texture_.ez.rawtexture.html#create" class="tsd-kind-icon">create</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+    <a href="_texture_.ez.rawtexture.html#createcompresscubetexture" class="tsd-kind-icon">create<wbr>Compress<wbr>Cube<wbr>Texture</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+    <a href="_texture_.ez.rawtexture.html#createcompresstexture" class="tsd-kind-icon">create<wbr>Compress<wbr>Texture</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+    <a href="_texture_.ez.rawtexture.html#createcubetexturefromimage" class="tsd-kind-icon">create<wbr>Cube<wbr>Texture<wbr>From<wbr>Image</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+    <a href="_texture_.ez.rawtexture.html#createfromimage" class="tsd-kind-icon">create<wbr>From<wbr>Image</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+    <a href="_texture_.ez.rawtexture.html#creategltexture" class="tsd-kind-icon">createGLTexture</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+    <a href="_texture_.ez.rawtexture.html#creategltexturefromimage" class="tsd-kind-icon">createGLTexture<wbr>From<wbr>Image</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+    <a href="_texture_.ez.rawtexture.html#init" class="tsd-kind-icon">init</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+    <a href="_texture_.ez.rawtexture.html#profile" class="tsd-kind-icon">profile</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-inherited tsd-is-static">
+    <a href="_texture_.ez.rawtexture.html#releaseunusedtexture" class="tsd-kind-icon">release<wbr>Unused<wbr>Texture</a>
+</li>
+        </ul>
+</li>
+    </ul>
+    <ul class="after-current">
+                        <li class=" tsd-kind-class tsd-parent-kind-namespace root">
+    <a href="_texture_.ez.rendertexture.html" class="tsd-kind-icon">Render<wbr>Texture</a>
+</li>
+                        <li class=" tsd-kind-class tsd-parent-kind-namespace root">
+    <a href="_texture_.ez.texture.html" class="tsd-kind-icon">Texture</a>
+</li>
+                        <li class=" tsd-kind-interface tsd-parent-kind-namespace root">
+    <a href="../interfaces/_texture_.ez.textureprofile.html" class="tsd-kind-icon">Texture<wbr>Profile</a>
+</li>
+                </ul>
+            </nav>
+        </div>-->
+	</div>
+</div>
+<footer>
+</footer>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

@@ -1,0 +1,714 @@
+[
+  {
+    "name": "Element",
+    "typeName": "ui.Element",
+    "baseclass": "",
+    "desc": "UI基类，提供基础UI属性，数据绑定， 布局计算",
+    "properties": [
+      {
+        "name": "x",
+        "type": "number|string|Dimension",
+        "comment": "基于anchor点的x位置，当left和right都未设置时由x确定控件位置",
+        "validate": "dimension"
+      },
+      {
+        "name": "y",
+        "type": "number|string|Dimension",
+        "comment": "基于anchor点的y位置",
+        "validate": "dimension"
+      },
+      {
+        "name": "left",
+        "type": "number|string|Dimension",
+        "comment": "左边位置，set可以是number,string,Dimension类型，get时为Dimension类型，下同",
+        "validate": "dimension"
+      },
+      {
+        "name": "top",
+        "type": "number|string|Dimension",
+        "comment": "上边位置",
+        "validate": "dimension"
+      },
+      {
+        "name": "right",
+        "type": "number|string|Dimension",
+        "comment": "右边位置。设置右边位置属性使得控件的右边自动跟随父控件的右边对齐",
+        "validate": "dimension"
+      },
+      {
+        "name": "bottom",
+        "type": "number|string|Dimension",
+        "comment": "底边位置。设置底边位置属性使得控件的底边自动跟随父控件的底边对齐",
+        "validate": "dimension"
+      },
+      {
+        "name": "width",
+        "type": "number|string|Dimension",
+        "comment": "宽度",
+        "validate": "dimension"
+      },
+      {
+        "name": "height",
+        "type": "number|string|Dimension",
+        "comment": "高度",
+        "validate": "dimension"
+      },
+      {
+        "name": "opacity",
+        "type": "number",
+        "comment": "透明度，0~1",
+        "default": 1,
+        "validate": "opacity"
+      },
+      {
+        "name": "visible",
+        "type": "boolean",
+        "comment": "可见性",
+        "default": true
+      },
+      {
+        "name": "scaleX",
+        "type": "number",
+        "comment": "水平缩放倍率\nremark: 缩放和旋转仅改变UI元素的显示，但不会影响到UI的边界和布局",
+        "default": 1,
+        "validate": "scale"
+      },
+      {
+        "name": "scaleY",
+        "type": "number",
+        "comment": "垂直缩放倍率",
+        "default": 1,
+        "validate": "scale"
+      },
+      {
+        "name": "scale",
+        "type": "number",
+        "comment": "缩放倍率",
+        "default": 1,
+        "validate": "scale"
+      },
+      {
+        "name": "angle",
+        "type": "number",
+        "comment": "旋转角度",
+        "default": 0,
+        "validate": "angle"
+      },
+      {
+        "name": "anchorX",
+        "type": "number",
+        "comment": "控件中心点水平位置，0~1",
+        "default": 0.5,
+        "validate": "float"
+      },
+      {
+        "name": "anchorY",
+        "type": "number",
+        "comment": "控件中心点垂直位置，0~1",
+        "default": 0.5,
+        "validate": "float"
+      },
+      {
+        "name": "zIndex",
+        "type": "number",
+        "comment": "z排序值",
+        "default": 0,
+        "validate": "int"
+      },
+      {
+        "name": "touchable",
+        "type": "boolean",
+        "comment": "是否可触控，若设置为不可触控则点击判断会穿过该控件",
+        "default": true
+      }
+    ]
+  },
+  {
+    "name": "Container",
+    "typeName": "ui.Container",
+    "baseclass": "Element",
+    "desc": "UI容器基类，从Container继承的类中可以包含子元素",
+    "properties": [
+      {
+        "name": "culling",
+        "type": "boolean",
+        "comment": "是否在渲染前预先剔除超出边界范围的物体，默认为false",
+        "default": false
+      },
+      {
+        "name": "clip",
+        "type": "boolean",
+        "comment": "是否显示超出边界的子元素，默认为false",
+        "default": false
+      },
+      {
+        "name": "drawCache",
+        "type": "boolean",
+        "comment": "是否在渲染前预先剔除超出边界范围的物体，默认为false",
+        "default": false
+      },
+      {
+        "name": "batchMode",
+        "type": "boolean",
+        "comment": "跨stage的自动合批模式，打开改选项可以将该容器下的所有子元素按照渲染状态进行重新排序，以尽可能有利于合批提高渲染性能（但也可能造成前后次序错误，谨慎使用）",
+        "default": false
+      },
+      {
+        "name": "ownerBuffer",
+        "type": "boolean",
+        "comment": "是否自带显示缓冲区，默认为false",
+        "default": false
+      },
+      {
+        "name": "textStyle",
+        "type": "string",
+        "comment": "文本样式，（Label子控件会逐级向父容器请求文本样式）",
+        "validate": "textStyle"
+      }
+    ]
+  },
+  {
+    "name": "Group",
+    "typeName": "ui.Group",
+    "baseclass": "Container",
+    "desc": "简单的UI容器类，用于包含多个子元素",
+    "hasChildElements": true,
+    "properties": []
+  },
+  {
+    "name": "Control",
+    "typeName": "ui.Control",
+    "baseclass": "Container",
+    "desc": "控件基类，控件可以接收和处理触摸事件，控件类可以定义状态表",
+    "properties": [
+      {
+        "name": "state",
+        "type": "string",
+        "comment": "当前状态",
+        "default": null
+      },
+      {
+        "name": "hittable",
+        "type": "boolean",
+        "comment": "当Control设置为hittable时，Control区域内默认都可被点中，否则将调用Control内子元素的hitTest方法"
+      }
+    ]
+  },
+  {
+    "name": "ScrollView",
+    "typeName": "ui.ScrollView",
+    "baseclass": "Control",
+    "desc": "可滚动的视图容器，支持子元素在视图里的滚动显示",
+    "hasChildElements": true,
+    "properties": [
+      {
+        "name": "xScroll",
+        "type": "number",
+        "comment": "水平滚动位置",
+        "default": 0,
+        "validate": "float"
+      },
+      {
+        "name": "yScroll",
+        "type": "number",
+        "comment": "垂直滚动位置",
+        "default": 0,
+        "validate": "float"
+      },
+      {
+        "name": "scrollWidth",
+        "type": "number",
+        "comment": "水平滚动范围",
+        "default": 0,
+        "validate": "float"
+      },
+      {
+        "name": "scrollHeight",
+        "type": "number",
+        "comment": "垂直滚动范围",
+        "default": 0,
+        "validate": "float"
+      },
+      {
+        "name": "scrollMode",
+        "type": "ScrollMode",
+        "comment": "滚动方向",
+        "default": 3
+      }
+    ]
+  },
+  {
+    "name": "ScaleScrollView",
+    "typeName": "ui.ScaleScrollView",
+    "baseclass": "ScrollView",
+    "desc": "带缩放的卷动视图容器",
+    "hasChildElements": true,
+    "properties": [
+      {
+        "name": "scaleRange",
+        "type": "Number2",
+        "comment": "scaleRange",
+        "default": [
+          1,
+          2
+        ],
+        "validate": "int2"
+      },
+      {
+        "name": "scaleRamp",
+        "type": "number",
+        "comment": "scaleRamp",
+        "default": 0.1,
+        "validate": "float"
+      }
+    ]
+  },
+  {
+    "name": "ListView",
+    "typeName": "ui.ListView",
+    "baseclass": "Container",
+    "desc": "列表视图，用于在视图内放置一组item元素，item的排列支持横向、纵向、换行三种排列方式",
+    "properties": [
+      {
+        "name": "itemClass",
+        "type": "string",
+        "comment": "item元素的UI类，列表根据指定的UI类来创建item所对应的UI子元素",
+        "default": ""
+      },
+      {
+        "name": "layoutMode",
+        "type": "LayoutMode",
+        "comment": "布局模式",
+        "default": 1
+      },
+      {
+        "name": "itemPadding",
+        "type": "Number4",
+        "comment": "item之间的间距",
+        "validate": "int4"
+      },
+      {
+        "name": "item",
+        "type": "Object",
+        "comment": "item属性设置（设置一组属性值，用于初始化item元素的属性）"
+      }
+    ]
+  },
+  {
+    "name": "StackView",
+    "typeName": "ui.StackView",
+    "baseclass": "Container",
+    "desc": "用于包含多个标签页显示的视图",
+    "hasChildElements": true,
+    "properties": [
+      {
+        "name": "activePage",
+        "type": "number",
+        "comment": "当前显示页面的index",
+        "default": 0,
+        "validate": "int"
+      }
+    ]
+  },
+  {
+    "name": "Visual",
+    "typeName": "ui.Visual",
+    "baseclass": "Element",
+    "desc": "用于包装sprite可视元素，实现UI对象的可视化，Visual是叶节点，不可包含UI子元素",
+    "properties": [
+      {
+        "name": "effect",
+        "type": "string",
+        "comment": "shader特效",
+        "default": null
+      },
+      {
+        "name": "effectParams",
+        "type": "Object",
+        "comment": "shader特效参数",
+        "default": null
+      },
+      {
+        "name": "blendMode",
+        "type": "BlendMode",
+        "comment": "混合模式",
+        "default": 0
+      },
+      {
+        "name": "mirrorH",
+        "type": "boolean",
+        "comment": "水平镜像",
+        "default": false
+      },
+      {
+        "name": "mirrorV",
+        "type": "boolean",
+        "comment": "垂直镜像",
+        "default": false
+      }
+    ]
+  },
+  {
+    "name": "RectFill",
+    "typeName": "ui.RectFill",
+    "baseclass": "Visual",
+    "desc": "矩形填充元素，包装RectFillSprite",
+    "properties": [
+      {
+        "name": "color",
+        "type": "string",
+        "comment": "颜色填充",
+        "default": "#000000",
+        "validate": "color"
+      },
+      {
+        "name": "gradient",
+        "type": "GradientFill",
+        "comment": "渐变填充",
+        "default": null,
+        "validate": "GradientFill"
+      }
+    ]
+  },
+  {
+    "name": "Image",
+    "typeName": "ui.Image",
+    "baseclass": "Visual",
+    "desc": "图像元素",
+    "properties": [
+      {
+        "name": "src",
+        "type": "string|ImageRes",
+        "comment": "图片资源",
+        "default": null,
+        "validate": "resource"
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "comment": "颜色相乘",
+        "default": "#ffffff",
+        "validate": "color"
+      },
+      {
+        "name": "pattern",
+        "type": "string",
+        "comment": "平铺模式",
+        "default": null,
+        "validate": "pattern"
+      }
+    ]
+  },
+  {
+    "name": "SeqFrame",
+    "typeName": "ui.SeqFrame",
+    "baseclass": "Visual",
+    "desc": "序列帧动画元素",
+    "properties": [
+      {
+        "name": "frames",
+        "type": "SeqFrameDesc",
+        "comment": "序列帧定义",
+        "default": null,
+        "validate": "SeqFrameDesc"
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "comment": "颜色相乘",
+        "default": "#ffffff",
+        "validate": "color"
+      },
+      {
+        "name": "loop",
+        "type": "boolean",
+        "comment": "循环播放",
+        "default": false
+      },
+      {
+        "name": "autoPlay",
+        "type": "boolean",
+        "comment": "载入后自动播放",
+        "default": false
+      },
+      {
+        "name": "fps",
+        "type": "number",
+        "comment": "播放帧率",
+        "default": 30,
+        "validate": "float"
+      }
+    ]
+  },
+  {
+    "name": "UIStage",
+    "typeName": "ui.UIStage",
+    "baseclass": "Visual",
+    "desc": "SubStage元素，包装SubStageSprite。通过在UI里添加UIStage元素，用户就可以在该元素里获得Stage容器，从而向这个Stage添加sprites，构造轻量级的可视树",
+    "hasChildElements": true,
+    "properties": [
+      {
+        "name": "clip",
+        "type": "boolean",
+        "comment": "clip",
+        "default": false
+      }
+    ]
+  },
+  {
+    "name": "Label",
+    "typeName": "ui.Label",
+    "baseclass": "Visual",
+    "desc": "文本元素，包装LabelSprite",
+    "properties": [
+      {
+        "name": "text",
+        "type": "string",
+        "comment": "文本内容",
+        "default": ""
+      },
+      {
+        "name": "font",
+        "type": "string",
+        "comment": "文本字体",
+        "validate": "font"
+      },
+      {
+        "name": "format",
+        "type": "TextFormat",
+        "comment": "文本格式"
+      },
+      {
+        "name": "strokeColor",
+        "type": "string",
+        "comment": "描边颜色",
+        "validate": "color"
+      },
+      {
+        "name": "strokeWidth",
+        "type": "number",
+        "comment": "描边宽度",
+        "validate": "int"
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "comment": "文本颜色",
+        "validate": "color"
+      },
+      {
+        "name": "bkColor",
+        "type": "string",
+        "comment": "文本背景色",
+        "validate": "color"
+      },
+      {
+        "name": "lineHeight",
+        "type": "number",
+        "comment": "行高",
+        "validate": "int"
+      },
+      {
+        "name": "align",
+        "type": "AlignMode",
+        "comment": "文本对齐模式"
+      },
+      {
+        "name": "margin",
+        "type": "Number4",
+        "comment": "文本边距",
+        "validate": "int4"
+      },
+      {
+        "name": "textStyle",
+        "type": "string",
+        "comment": "文本样式"
+      },
+      {
+        "name": "gradient",
+        "type": "GradientFill",
+        "comment": "文本渐变填充",
+        "default": null,
+        "validate": "GradientFill"
+      }
+    ]
+  },
+  {
+    "name": "RichTextWithHyperlink",
+    "typeName": "ui.RichTextWithHyperlink",
+    "baseclass": "Control",
+    "desc": "含超链接的富文本",
+    "properties": [
+      {
+        "name": "text",
+        "type": "string",
+        "comment": "text",
+        "default": ""
+      },
+      {
+        "name": "font",
+        "type": "string",
+        "comment": "文本字体"
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "comment": "color"
+      },
+      {
+        "name": "lineHeight",
+        "type": "number",
+        "comment": "lineHeight"
+      }
+    ]
+  },
+  {
+    "name": "BMFontLabel",
+    "typeName": "ui.BMFontLabel",
+    "baseclass": "Visual",
+    "desc": "图片文本元素，包装BMFontLabelSprite",
+    "properties": [
+      {
+        "name": "text",
+        "type": "string",
+        "comment": "text",
+        "default": ""
+      },
+      {
+        "name": "font",
+        "type": "string",
+        "comment": "font"
+      },
+      {
+        "name": "format",
+        "type": "TextFormat",
+        "comment": "format"
+      },
+      {
+        "name": "lineHeight",
+        "type": "number",
+        "comment": "lineHeight"
+      },
+      {
+        "name": "align",
+        "type": "AlignMode",
+        "comment": "align"
+      },
+      {
+        "name": "margin",
+        "type": "Number4",
+        "comment": "margin"
+      }
+    ]
+  },
+  {
+    "name": "TextInput",
+    "typeName": "ui.TextInput",
+    "baseclass": "Control",
+    "desc": "文本输入控件，使用html标签实现的输入控件",
+    "properties": [
+      {
+        "name": "text",
+        "type": "string",
+        "comment": "text",
+        "default": ""
+      },
+      {
+        "name": "font",
+        "type": "string",
+        "comment": "font",
+        "validate": "font"
+      },
+      {
+        "name": "color",
+        "type": "string",
+        "comment": "color",
+        "validate": "color"
+      },
+      {
+        "name": "bkColor",
+        "type": "string",
+        "comment": "bkColor",
+        "validate": "color"
+      },
+      {
+        "name": "lineHeight",
+        "type": "number",
+        "comment": "lineHeight",
+        "validate": "int"
+      },
+      {
+        "name": "multiLine",
+        "type": "boolean",
+        "comment": "multiLine"
+      },
+      {
+        "name": "submitOnReturn",
+        "type": "boolean",
+        "comment": "是否在按回车时完成输入"
+      },
+      {
+        "name": "margin",
+        "type": "Number4",
+        "comment": "margin",
+        "validate": "int4"
+      },
+      {
+        "name": "maxLength",
+        "type": "number",
+        "comment": "最大可输入的字符数",
+        "validate": "int"
+      },
+      {
+        "name": "type",
+        "type": "string",
+        "comment": "输入类型：text,number,password",
+        "default": "text"
+      }
+    ]
+  },
+  {
+    "name": "TabGroup",
+    "typeName": "ui.TabGroup",
+    "baseclass": "Container",
+    "desc": "标签页头，与StackView组合使用可以实现完整的标签视图",
+    "hasChildElements": true,
+    "properties": [
+      {
+        "name": "activeIndex",
+        "type": "number",
+        "comment": "设置当前标签页index",
+        "default": -1,
+        "validate": "int"
+      }
+    ]
+  },
+  {
+    "name": "Stage3D",
+    "typeName": "ui.Stage3D",
+    "baseclass": "Visual",
+    "properties": [
+      {
+        "name": "ownerBuffer",
+        "type": "boolean",
+        "comment": "ownerBuffer",
+        "default": false
+      }
+    ]
+  },
+  {
+    "name": "BlurGroup",
+    "typeName": "ui.BlurGroup",
+    "baseclass": "Container",
+    "desc": "带模糊特效的Group",
+    "hasChildElements": true,
+    "properties": [
+      {
+        "name": "radius",
+        "type": "number",
+        "comment": "模糊半径",
+        "default": 0
+      }
+    ]
+  }
+]

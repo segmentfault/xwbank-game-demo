@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.segmentfault.openapi.pinball.mapper.PinballMapper">
+    
+    <resultMap type="Pinball" id="PinballResult">
+        <result property="id"    column="id"    />
+        <result property="avatar"    column="avatar"    />
+        <result property="nickname"    column="nickname"    />
+        <result property="createTime"    column="create_time" javaType="java.util.Date"/>
+        <result property="score"    column="score"    />
+        <result property="openid"    column="openid"    />
+    </resultMap>
+
+    <select id="list" resultMap="PinballResult">
+        select id,twu.openid openid,twu.nickname nickname,twu.headimgurl avatar,create_time createTime,score
+        from t_pinball_score tps
+        LEFT JOIN twechat_userinfo twu ON tps.openid = twu.openid
+        <where>
+        	<if test="nickname != null  and nickname != ''"> and from_base64(nickname) like concat('%',#{nickname},'%')</if>
+        </where>
+        ORDER BY CONVERT(score,SIGNED) DESC,create_time ASC
+    </select>
+    
+    <select id="selectOneByOpenid" resultMap= "PinballResult">
+    	select id,create_time createTime,score,tps.openid,twu.nickname nickname
+    	from t_pinball_score tps
+    	LEFT JOIN twechat_userinfo twu ON tps.openid = twu.openid
+    	where tps.openid = #{openid}
+    </select>
+    
+    <update id="updateScore" parameterType="Pinball">
+     	update t_pinball_score set score = #{score},create_time = #{createTime}
+     	where openid = #{openid}
+    </update>
+    
+    <insert id="insertPinball" parameterType="Pinball">
+        insert into t_pinball_score
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="id != null  and id != ''">id,</if>
+            <if test="score != null  and score != ''">score,</if>
+            create_time,
+            <if test="openid != null  and openid != ''">openid,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="id != null  and id != ''">#{id},</if>
+            <if test="score != null  and score != ''">#{score},</if>
+            #{createTime},
+            <if test="openid != null  and openid != ''">#{openid},</if>
+         </trim>
+    </insert>
+
+	<select id="countByScoreNoSelf" resultType="java.lang.Integer" parameterType="java.lang.String">
+		select count(1) from t_pinball_score 
+		where score &lt; CONVERT(#{score},SIGNED) and openid != #{openid} 
+	</select>
+	
+	<select id="countNoSelf" resultType="java.lang.Integer">
+		select count(1) from t_pinball_score 
+		where openid != #{openid}
+	</select>
+
+</mapper>

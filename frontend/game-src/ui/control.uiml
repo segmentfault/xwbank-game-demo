@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root module='game'>
+	<Button baseclass="Control" width="194" height="70" >
+		<properties>
+			<e name="label" type="string" />
+		</properties>
+		<styles>
+			<blue>
+				<bk src="ui/btn/blue" />
+			</blue>
+			<purple>
+				<bk src="ui/btn/purple" />
+			</purple>
+			<yellow>
+				<bk src="ui/btn/yellow" />
+				<label gradient="{ y0:0, y1:30, colors: ['#a54800', '#ce7300'] }" />
+			</yellow>
+		</styles>
+		<children>
+			<Image id="bk" src="ui/btn/blue" width="100%" height="100%" />
+			<Label id="label" font="30px" color="#fff" width="100%" height="30" y="50%" align="Center"  />
+		</children>
+		<dataBinder>
+			<e label.text="this.label" />
+		</dataBinder>
+		<states default="normal">
+			<normal/>
+			<down/>
+		</states>
+		<eventHandler args="0.8">ui.addButtonEventHandler</eventHandler>
+	</Button>
+		
+	<Checkbox baseclass="Control" >
+		<children>
+			<Image id="icon" width="100%" height="100%" />
+			<Image id="checkImg" width="100%" height="100%" />
+		</children>
+		<states default="uncheck">
+			<check>
+				<e target="checkImg" targetProp="visible" value="true"/>
+			</check>
+			<uncheck>
+				<e target="checkImg" targetProp="visible" value="false"/>
+			</uncheck>
+		</states>
+		<eventHandler args="0.8">ui.addCheckboxEventHandler</eventHandler>
+	</Checkbox>
+</root>

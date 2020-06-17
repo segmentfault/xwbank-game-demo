@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root module="game">
+	<TextStyles>
+		<normal font=28px color=#bbadfb />
+		<normalCenter font=28px color=#bbadfb align=Center />
+		<rankPage font=28px color=#757981 />
+		<gameHead font=28px color=#fff />
+	</TextStyles>
+	<RankItem width=530 height=88 baseclass=Container customExt=true >
+		<children>
+			<Label id=name color=#42464d left=217 width=180 top=24 height=25 align="Center" format=Shrink />
+			<Label id=rank color=#42464d left=20 width=50 top=23 height=17 visible=false align="Center" />
+			<Label id=score color=#e04f00 left=409 width=112 top=24 height=25 align="Center"  />
+			<Image id=avatar left=127 width=74 top=7 height=74 effect=mask effectParams="{mask: 'mask'}" />
+			<RectFill color=#F0F0F0 left=0 width=530 top=86 height=2 />
+			<Image id=rankIcon left=27 width=44 top=15 height=48 src=ui/icon/1st />
+		</children>
+	</RankItem>
+	<RankPage width=640 height=1300 left=33 top=0 textStyle=rankPage baseclass=Container >
+		<children>
+			<Image src=ui/img/rectbk left=0 width=640 top=0 height=1300 />
+			<Image src=ui/img/rectwh left=45 width=540 top=219 height=806 />
+			<Button id=closeRank bk.src=ui/btn/close left=566 width=39 top=200 height=38 />
+			<RectFill color=#F2F2F4 left=45 width=540 top=319 height=78 />
+			<Label text=排行 left=74 width=58 top=344 height=28 />
+			<Label text=头像 left=190 width=58 top=344 height=28 />
+			<Label text=昵称 left=334 width=58 top=344 height=28 />
+			<Label text=成绩 left=478 width=58 top=344 height=28 />
+			<Label font=32px text=排行榜TOP100 color=#494b59 left=246 width=220 top=253 height=34 />
+			<Image src=ui/icon/cup left=187 width=44 top=246 height=49 />
+			<ScrollView left=50 width=532 top=402 height=617 scrollMode=Vertical  >
+				<ListView id=rankList width=532 itemClass=game.RankItem culling ></ListView>
+			</ScrollView>
+		</children>
+	</RankPage>
+
+	<StartPage width=100% height=100% baseclass=Container customExt="true" >
+		<children>
+			<Image  src=image/bg 	/>
+			<Group width=100% height=100%  id="mainPage">
+				<UIStage id=stage width=100% height=1280 y=50% >
+					<Image id=蝙蝠侠 src=start/蝙蝠侠	x=515	y=812 anchorX=0.5 anchorY=0.5	/>
+					<Image id=猪 src=start/猪			x=38	y=112	/>
+					<Image src=start/txt蝙蝠侠	x=132	y=538	/>
+					<Image src=start/txt猪望仔	x=103	y=402	/>
+				</UIStage>
+				<Image src=start/logo bottom=10% x=50% width=237 height=34 />
+				<Button id=help bk.src=start/活动规则 bottom=15% left=80 width=218 height=85 />
+				<Button id=start bk.src=start/开始游戏 bottom=15% right=80 width=218 height=85 />
+				<Button id=rank style=yellow 	label=排行榜 left=44 width=146 top=92 height=54 />
+			</Group>
+			<Checkbox id=sound icon.src="ui/btn/喇叭" checkImg.src="ui/btn/喇叭check"  left=570 width=56 top=92 height=59 />
+			<Group id=helpPage width=100% height=100% visible=false >
+				<Image  src=image/活动规则 	x=50% top=160 />				
+				<Group width=100% top=900 bottom=0>
+					<Button id=okBtn label="已知晓" x=50% width=195 height=70 top=30% />
+				</Group>
+			</Group>
+			<RankPage id=rankPage visible=false />
+		</children>
+	</StartPage>
+</root>

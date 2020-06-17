@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.segmentfault.openapi.jsdata.mapper.JsdataMapper">
+
+	<!-- json串中load与errors字段与数据库中字段名不同 -->
+	<insert id="insert" parameterType="com.segmentfault.openapi.jsdata.domain.Jsdata">
+		insert into t_jsdata (
+			id,
+			domain,
+			uid,
+			url,
+			referer,
+			ua,
+			dns,
+			tcp,
+			white,
+			dom,
+			load_time,
+			ready,
+			redirect,
+			unload,
+			request,
+			render,
+			size,
+			errors_time,
+			w,
+			h,
+			pixel,
+			gpu,
+			create_time
+		)
+		values(
+			#{id},
+			#{domain},
+			#{uid},
+			#{url},
+			#{referer},
+			#{ua},
+			#{dns},
+			#{tcp},
+			#{white},
+			#{dom},
+			#{load},
+			#{ready},
+			#{redirect},
+			#{unload},
+			#{request},
+			#{render},
+			#{size},
+			#{errors},
+			#{w},
+			#{h},
+			#{pixel},
+			#{gpu},
+			sysdate()
+		)
+		
+	</insert>
+</mapper>

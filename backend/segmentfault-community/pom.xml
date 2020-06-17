@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>com.segmentfault</groupId>
+    <artifactId>segmentfault</artifactId>
+    <version>4.2.0</version>
+  </parent>
+  <artifactId>segmentfault-community</artifactId>
+  <name>segmentfault-community</name>
+  <url>http://maven.apache.org</url>
+  <properties> 
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+  
+  <description>
+    community业务模块
+  </description>
+  
+  <dependencies>
+  
+    <!-- 通用工具-->
+    <dependency>
+        <groupId>com.segmentfault</groupId>
+        <artifactId>segmentfault-common</artifactId>
+    </dependency>
+	<!-- 核心模块-->
+     <dependency>
+         <groupId>com.segmentfault</groupId>
+         <artifactId>segmentfault-framework</artifactId>
+     </dependency>
+     <!-- 微信相关jar-->
+     <dependency>
+		  <groupId>com.github.binarywang</groupId>
+		  <artifactId>weixin-java-mp</artifactId>
+		  <version>3.7.0</version>
+	</dependency>
+	 <!-- lombok相关jar-->
+	<dependency>
+          <groupId>org.projectlombok</groupId>
+          <artifactId>lombok</artifactId>
+    </dependency>
+    <!-- JSONObject对象依赖的jar包 开始-->
+	<dependency>
+		<groupId>commons-beanutils</groupId>
+		<artifactId>commons-beanutils</artifactId>
+		<version>1.9.3</version>
+	</dependency>
+	<dependency>
+		<groupId>commons-collections</groupId>
+		<artifactId>commons-collections</artifactId>
+		<version>3.2.1</version>
+	</dependency>
+	<dependency>
+		<groupId>commons-lang</groupId>
+		<artifactId>commons-lang</artifactId>
+		<version>2.6</version>
+	</dependency>
+	<dependency>
+		<groupId>commons-logging</groupId>
+		<artifactId>commons-logging</artifactId>
+		<version>1.1.1</version>
+	</dependency>
+	<dependency>
+		<groupId>net.sf.ezmorph</groupId>
+		<artifactId>ezmorph</artifactId>
+		<version>1.0.6</version>
+	</dependency>
+	<dependency>
+		<groupId>net.sf.json-lib</groupId>
+		<artifactId>json-lib</artifactId>
+		<version>2.2.3</version>
+		<classifier>jdk15</classifier><!-- jdk版本 -->
+	</dependency>
+	<!-- Json依赖架包下载结束 -->	
+	<!-- https://mvnrepository.com/artifact/org.bouncycastle/bcprov-jdk15on -->
+	<dependency>
+    	<groupId>org.bouncycastle</groupId>
+    	<artifactId>bcprov-jdk15on</artifactId>
+    	<version>1.65</version>
+	</dependency>
+  </dependencies>
+</project>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root module="game">
+
+	<ResultPage width=100% height=100% baseclass=Container  textStyle=normalCenter >
+		<children>
+			<Image src="ui/img/奖杯" left=198 width=336 top=77 height=322 />
+			<Label text=本局得分 x=50% align=Center width=119 top=462 height=29 />
+			<Label id=score text=1000 x=50% strokeWidth=4 strokeColor=#9b8ddd width=280 top=395 height=58 font="50px" gradient="{y1:50, colors:['#a995ff', '#8670f4']}" />
+			<Label id=info x=50% width=283 top=530 height=32 />
+			<Image src=ui/img/line left=177 width=360 top=503 height=2 />
+			<Image src=ui/img/line left=177 width=360 top=579 height=2 />
+			<Button id=rank label=查看排行榜 style=blue x=50% width=195 top=669 height=70 />
+			<Button id=result label=生成成绩单 style=blue x=50% width=195 top=769 height=70 />
+			<Group top=840 bottom=0 width=100%>
+				<Button id=replay label=再玩一次 style=purple x=50% width=195 y=50% height=70 />
+			</Group>
+			<RankPage id=rankPage visible=false />
+		</children>
+	</ResultPage>
+</root>

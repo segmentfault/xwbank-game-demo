@@ -1,0 +1,188 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>EasyGame API手册 - v1.0.1</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="assets/js/search.js" data-base=".">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<ul class="results-priority" style="display:none">
+					</ul>
+					<a href="index.html" class="title">EasyGame API手册 - v1.0.1</a>
+					&emsp;<a href="readme.html" class="title">引擎使用说明</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+			</ul>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-3 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation outline primary">
+				<a style="margin-left:0em" href="globals.html">Globals</a>
+				<ul style="display:none">
+					{&quot;ez.core&quot;:{&quot;Overview&quot;:&quot;./index&quot;,&quot;全局设置&quot;:&quot;_ez_core_&quot;,&quot;基本类型&quot;:&quot;_commontypes_.ez&quot;,&quot;基础功能&quot;:&quot;_ezgame_.ez&quot;,&quot;Audio&quot;:&quot;_audio_.ez&quot;,&quot;Renderer&quot;:&quot;_renderer_.ez&quot;,&quot;Texture&quot;:&quot;_texture_.ez&quot;,&quot;Visual&quot;:&quot;_visual_.ez&quot;,&quot;Resource&quot;:&quot;_resource_.ez&quot;,&quot;GUI&quot;:&quot;_gui_.ez.ui&quot;,&quot;Animation&quot;:&quot;_animation_.ez&quot;},&quot;ez.3d&quot;:{&quot;3d render&quot;:&quot;_ez_3d_.ez&quot;,&quot;Stage3D&quot;:&quot;classes/_ez_3d_.ez.stage3dsprite&quot;,&quot;model&quot;:&quot;_model_.ez&quot;,&quot;material&quot;:&quot;_material_.ez&quot;},&quot;ez.ext&quot;:{&quot;Highlight Effect&quot;:&quot;_highlighteffect_.ez.effect&quot;,&quot;Fan Effect&quot;:&quot;_faneffect_.ez.effect&quot;,&quot;ui.Hyperlink&quot;:&quot;classes/_hyperlink_.ez.ui.hyperlink&quot;,&quot;ui.BlurGroup&quot;:&quot;classes/_blureffect_.ez.ui.blurgroup&quot;,&quot;BMFontLabel&quot;:&quot;_bmfontlabel_.ez&quot;,&quot;Spine&quot;:&quot;classes/_spine_.ez.spinesprite&quot;,&quot;Inspector&quot;:&quot;_inspector_.inspector&quot;,&quot;Protocol&quot;:&quot;_protocol_.easygame&quot;}}
+				</ul>
+			</nav>
+		</div>
+		<div class="col-7 offset-3 col-content">
+			<h1>EasyGame API手册 - v1.0.1</h1>
+			<div class="tsd-panel tsd-typography">
+				<a href="#引擎系统核心架构图" id="引擎系统核心架构图" style="color: inherit; text-decoration: none;">
+					<h2>引擎系统核心架构图</h2>
+				</a>
+				<p>EasyGame使用了分层架构模块化设计。下图展示了引擎核心层的基本架构设计：</p>
+				<p><img src="media/%E6%9E%B6%E6%9E%84%E5%9B%BE.svg" alt="架构图"></p>
+				<p>核心层主要负责封装系统接口，对外提供一个统一的渲染接口，在渲染层上实现了sprite/stage的2D视觉元素树，stage3D则提供了3D场景的渲染。在视觉树上又实现了UI元素树。用户可以像构建HTML的dom树一样，通过UI模板来构建UI树，在UI树的基础上构建视觉树来呈现游戏场景，stage3D渲染的3D场景可以很容易的和2D元素整合，增强游戏的表现力。</p>
+				<a href="#渲染模块" id="渲染模块" style="color: inherit; text-decoration: none;">
+					<h2>渲染模块</h2>
+				</a>
+				<p>EasyGame的渲染基于WebGL API，同时也兼容了Canvas API，在不支持WebGL的环境下，可以回退到Canvas模式。EasyGame在底层实现了一套高性能的2D/3D渲染引擎，可以帮助用户非常方便的将渲染性能优化到至极。具体的优化技术有：</p>
+				<ol>
+					<li><p><strong>使用WebAssembly技术加速绘图计算</strong> 底层的绘图计算，例如计算坐标、变换矩阵、骨骼动画等等需要消耗CPU大量的数学计算资源，使用JavaScript相比原生代码会有5~20倍的性能损失，利用WebAssembly技术将C++代码编译成wasm字节码，可以获得媲美原生代码的运行性能，从而大幅提升了引擎的计算效率。</p>
+					</li>
+					<li><p><strong>自动化合批处理</strong> 引擎在渲染视觉树时会自动将可以合并在一起渲染的多个对象合并成一个drawcall提交到GPU，无需用户手动干预合批，从而大幅的提高渲染性能。</p>
+					</li>
+					<li><p><strong>对象重排序合批处理</strong> 在stage上打开batchMode开关，就可以让引擎对该stage下所有的元素绘制顺序进行重排序，从而获得最大的合批效率。</p>
+					</li>
+					<li><p><strong>绘制缓存技术</strong> 打开stage上的绘制缓存开关，引擎将会自动缓存这一帧stage下所有元素的drawcall命令，在下一帧渲染时如果stage相对于上一帧没有任何变化，引擎将会直接向GPU提交上次缓存的drawcall命令列表，从而节省了绘制元素时的计算过程。这对于优化大量的静态UI面板非常有帮助。</p>
+					</li>
+					<li><p><strong>字体缓存技术</strong> 引擎对大量的文本绘制做了优化，所有当前帧需要显示的文字都会预先缓存到一张大的纹理图片中，并采用LRU算法管理文字缓存，在绘制文本时可以合批提交多个文本对象。</p>
+					</li>
+					<li><p><strong>计算缓存和延迟计算</strong> 所有的Sprite元素和UI元素都会缓存计算结果（变换矩阵、布局信息等），当属性被逻辑代码修改时不会立刻重新计算结果，而是清除缓存结果并设置dirty标志，在这一帧绘制开始时再重新计算结果并缓存。这样在反复修改属性值时，将计算推迟到真正需要使用时才开始，从而节省了很多无效的计算。</p>
+					</li>
+				</ol>
+				<a href="#引擎支持的2d可视元素" id="引擎支持的2d可视元素" style="color: inherit; text-decoration: none;">
+					<h3>引擎支持的2D可视元素</h3>
+				</a>
+				<ol>
+					<li><p><strong>RectFill</strong> 矩形填充对象，支持单色和渐变填充</p>
+					</li>
+					<li><p><strong>Image</strong> 图片对象</p>
+					</li>
+					<li><p><strong>Label</strong> 文本对象，支持各种文本渲染效果（字体、描边、渐变填充），可以从外部加载矢量字库。支持多行文本测量，支持使用html标签的富文本测量。</p>
+					</li>
+					<li><p><strong>SeqFrame</strong> 序列帧动画对象</p>
+					</li>
+					<li><p><strong>Spine</strong> spine骨骼动画对象</p>
+					</li>
+					<li><p><strong>BMFontLabel</strong> 图片字体文本对象</p>
+					</li>
+				</ol>
+				<a href="#引擎支持的3d渲染元素" id="引擎支持的3d渲染元素" style="color: inherit; text-decoration: none;">
+					<h3>引擎支持的3D渲染元素</h3>
+				</a>
+				<ol>
+					<li><p><strong>Mesh</strong> 3D模型，可以从gltf或者自定义的model格式加载模型，支持骨骼动画和层次动画。</p>
+					</li>
+					<li><p><strong>Billboard</strong> 公告板</p>
+					</li>
+				</ol>
+				<a href="#动画支持" id="动画支持" style="color: inherit; text-decoration: none;">
+					<h3>动画支持</h3>
+				</a>
+				<ol>
+					<li><p><strong>tween</strong> 缓动动画</p>
+					</li>
+					<li><p><strong>KeyFrame</strong> 关键帧层次动画</p>
+					</li>
+					<li><p><strong>Particle</strong> 粒子特效动画</p>
+					</li>
+					<li><p><strong>Spine/DragonBone</strong> 2D骨骼动画</p>
+					</li>
+					<li><p><strong>Skin</strong> 3D骨骼动画</p>
+					</li>
+				</ol>
+				<a href="#ui模块" id="ui模块" style="color: inherit; text-decoration: none;">
+					<h2>UI模块</h2>
+				</a>
+				<p>EasyGame实现了一套精简的高度可定制可扩展的UI框架。类似于HTML的DOM树，EasyGame在保留DOM基本特征的基础上进行了大幅精简，构建了一套UI元素树(UI Element)，提供了基本的对象树、属性、数据绑定、布局计算、样式、模板、事件等特性。基本的UI元素分为Visual和Container两大类，Visual为UI元素树的叶子节点，提供了可视的外观，后者为UI元素树的逻辑节点，从中可以派生出各类面板和控件，拼装组合出复杂的UI树。</p>
+				<p>类似于HTML，EasyGame使用了一套自定的UI描述语言(UIML)来定义UI模板。UIML在语法上高度接近XML，但是比XML更为宽松和精简，主要区别在属性值不需要添加引号，还可以使用无值的属性。用户可以通过导出插件在Photoshop导出美术设计好的UI来获得所见即所得的UI样式和布局。然后在vscode中进一步完善UI描述，也可以使用可视化的UI编辑插件，对UI模板进一步修改。编辑后的UIML文件会通过工具自动编译转换成TypeScript代码集成到用户的项目中去，在游戏运行期可以完全脱离UIML文件创建UI对象。</p>
+				<p>在引擎的核心代码中只提供了一组基本的UI元素，而不提供具体的UI组件（例如按钮、面板、对话框、滚动条等等），因为游戏用到的UI组件千变万化，而且大量依赖图片元素，引擎如果面面俱到提供了常见的UI组件，会造成核心代码的臃肿，而且让用户难以扩展和定制化。因此引擎将这些常用的组件用UIML描述后放在扩展模块里，提供给用户自行复制和定制。</p>
+				<a href="#声音模块" id="声音模块" style="color: inherit; text-decoration: none;">
+					<h2>声音模块</h2>
+				</a>
+				<p>EasyGame提供了多音轨音乐和音效的播放，支持淡入/淡出效果。音乐格式支持MP3。</p>
+				<a href="#资源管理模块" id="资源管理模块" style="color: inherit; text-decoration: none;">
+					<h2>资源管理模块</h2>
+				</a>
+				<p>EasyGame提供了一套功能强大的资源管理模块，帮助用户轻松的管理各种游戏资源。</p>
+				<p>下图展示了资源文件（图片，动画，模型，声音等等）的生产工作和发布流程：</p>
+				<p><img src="media/%E8%B5%84%E6%BA%90%E7%AE%A1%E7%90%86.svg" alt="资源管理工作流"></p>
+				<p>使用引擎提供的工具和插件，美术设计人员和开发者可以方便的导入资源，给资源添加属性，转换格式等等。最终通过引擎提供的自动化工具，将资源打包发布成最终成品。</p>
+				<p>引擎提供的资源管理特性：</p>
+				<ol>
+					<li>资源包管理 —— 资源包是游戏使用的全部资源的数据集合，包含了每个资源的描述信息和资源文件的URL。</li>
+					<li>资源的异步加载</li>
+					<li>资源组的预加载</li>
+					<li>资源的生命周期管理</li>
+				</ol>
+				<a href="#引擎的扩展模块" id="引擎的扩展模块" style="color: inherit; text-decoration: none;">
+					<h2>引擎的扩展模块</h2>
+				</a>
+				<p>在核心层的基础上，引擎将各个游戏需要的功能模块封装成不同的扩展模块提供给使用者按需引入，使用者只需要引入游戏所需要的模块，而不必引入不必要的模块，同时用户也可以将自己实现的模块添加到扩展模块列表中，为其他项目提供公用的模块，这为用户提供了很大的重用性和灵活性。无论是用来开发轻量级小游戏还是重度的大型游戏，引擎都可以定制化的满足用户的需求。</p>
+				<p>扩展模块的分类：</p>
+				<ol>
+					<li>UI控件库 —— 提供各类样式的UI组件，例如：按钮，下拉框，面板，列表框等等</li>
+					<li>图形特效库 —— 为用户提供各类图形特效</li>
+					<li>扩展的可视元素 —— 例如：Spine动画，DragenBone动画，矢量图形，粒子系统等等</li>
+				</ol>
+			</div>
+			<!--{&quot;options&quot;:&quot;D:\\projects\\EZ\\EasyGame-client&quot;,&quot;tsconfig&quot;:&quot;D:\\projects\\EZ\\EasyGame-client&quot;,&quot;inputFiles&quot;:[],&quot;mode&quot;:1,&quot;includeDeclarations&quot;:false,&quot;entryPoint&quot;:&quot;&quot;,&quot;exclude&quot;:[],&quot;externalPattern&quot;:[],&quot;excludeExternals&quot;:true,&quot;excludeNotExported&quot;:true,&quot;excludeNotDocumented&quot;:false,&quot;excludePrivate&quot;:true,&quot;excludeProtected&quot;:true,&quot;ignoreCompilerErrors&quot;:true,&quot;disableSources&quot;:true,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;src/doc/media&quot;,&quot;out&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;,&quot;theme&quot;:&quot;typedoc-neo-theme/bin/default&quot;,&quot;name&quot;:&quot;EasyGame API手册&quot;,&quot;includeVersion&quot;:true,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;src/doc/ezgame API.md&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:true,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:true,&quot;help&quot;:false,&quot;version&quot;:false,&quot;plugin&quot;:[&quot;typedoc-neo-theme&quot;],&quot;listInvalidSymbolLinks&quot;:false,&quot;links&quot;:[{&quot;label&quot;:&quot;引擎使用说明&quot;,&quot;url&quot;:&quot;readme.html&quot;}],&quot;outline&quot;:[{&quot;ez.core&quot;:{&quot;Overview&quot;:&quot;./index&quot;,&quot;全局设置&quot;:&quot;_ez_core_&quot;,&quot;基本类型&quot;:&quot;_commontypes_.ez&quot;,&quot;基础功能&quot;:&quot;_ezgame_.ez&quot;,&quot;Audio&quot;:&quot;_audio_.ez&quot;,&quot;Renderer&quot;:&quot;_renderer_.ez&quot;,&quot;Texture&quot;:&quot;_texture_.ez&quot;,&quot;Visual&quot;:&quot;_visual_.ez&quot;,&quot;Resource&quot;:&quot;_resource_.ez&quot;,&quot;GUI&quot;:&quot;_gui_.ez.ui&quot;,&quot;Animation&quot;:&quot;_animation_.ez&quot;},&quot;ez.3d&quot;:{&quot;3d render&quot;:&quot;_ez_3d_.ez&quot;,&quot;Stage3D&quot;:&quot;classes/_ez_3d_.ez.stage3dsprite&quot;,&quot;model&quot;:&quot;_model_.ez&quot;,&quot;material&quot;:&quot;_material_.ez&quot;},&quot;ez.ext&quot;:{&quot;Highlight Effect&quot;:&quot;_highlighteffect_.ez.effect&quot;,&quot;Fan Effect&quot;:&quot;_faneffect_.ez.effect&quot;,&quot;ui.Hyperlink&quot;:&quot;classes/_hyperlink_.ez.ui.hyperlink&quot;,&quot;ui.BlurGroup&quot;:&quot;classes/_blureffect_.ez.ui.blurgroup&quot;,&quot;BMFontLabel&quot;:&quot;_bmfontlabel_.ez&quot;,&quot;Spine&quot;:&quot;classes/_spine_.ez.spinesprite&quot;,&quot;Inspector&quot;:&quot;_inspector_.inspector&quot;,&quot;Protocol&quot;:&quot;_protocol_.easygame&quot;}}],&quot;search&quot;:[]}-->
+		</div>
+		<!--
+        <div class="col-2 col-menu secondary-menu">
+            <nav class="tsd-navigation secondary menu-sticky">
+                <ul class="before-current">
+                </ul>
+            </nav>
+        </div>-->
+	</div>
+</div>
+<footer>
+</footer>
+<div class="overlay"></div>
+<script src="assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

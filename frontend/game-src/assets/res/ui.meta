@@ -1,0 +1,17 @@
+{"subImages":[
+	{"name":"ui/img/奖杯","parent":"ui","type":"subimage","width":336,"height":322,"region":"0,0,336,322"},
+	{"name":"ui/btn/喇叭","parent":"ui","type":"subimage","width":56,"height":59,"region":"337,197,56,59"},
+	{"name":"ui/icon/cup","parent":"ui","type":"subimage","width":44,"height":49,"region":"337,0,44,49"},
+	{"name":"ui/icon/1st","parent":"ui","type":"subimage","width":44,"height":48,"region":"337,148,44,48"},
+	{"name":"ui/icon/2nd","parent":"ui","type":"subimage","width":44,"height":48,"region":"337,99,44,48"},
+	{"name":"ui/icon/3rd","parent":"ui","type":"subimage","width":44,"height":48,"region":"337,50,44,48"},
+	{"name":"ui/btn/close","parent":"ui","type":"subimage","width":39,"height":38,"region":"337,257,39,38"},
+	{"name":"ui/btn/yellow","parent":"ui","type":"subimage","width":50,"height":25,"s9":"9,9,10,13","region":"337,296,50,25"},
+	{"name":"ui/btn/blue","parent":"ui","type":"subimage","width":30,"height":35,"s9":"8,13,9,15","region":"382,36,30,35"},
+	{"name":"ui/btn/purple","parent":"ui","type":"subimage","width":30,"height":35,"s9":"8,13,9,15","region":"382,0,30,35"},
+	{"name":"ui/icon/blue","parent":"ui","type":"subimage","width":30,"height":30,"region":"382,72,30,30"},
+	{"name":"ui/img/line","parent":"ui","type":"subimage","width":360,"height":2,"region":"0,323,360,2"},
+	{"name":"ui/img/rectbk","parent":"ui","type":"subimage","width":21,"height":25,"s9":"5,6,5,6","region":"382,103,21,25"},
+	{"name":"ui/img/rectwh","parent":"ui","type":"subimage","width":21,"height":25,"s9":"5,6,5,6","region":"382,129,21,25"},
+	{"name":"ui/btn/喇叭check","parent":"ui","type":"subimage","width":56,"height":59,"margin":"36,12,12,16","region":"404,103,8,31"}
+]}

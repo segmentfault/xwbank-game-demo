@@ -1,0 +1,13 @@
+com\segmentfault\generator\config\GenConfig.class
+com\segmentfault\generator\service\impl\GenTableColumnServiceImpl.class
+com\segmentfault\generator\util\GenUtils.class
+com\segmentfault\generator\mapper\GenTableMapper.class
+com\segmentfault\generator\controller\GenController.class
+com\segmentfault\generator\service\IGenTableColumnService.class
+com\segmentfault\generator\domain\GenTableColumn.class
+com\segmentfault\generator\util\VelocityUtils.class
+com\segmentfault\generator\service\IGenTableService.class
+com\segmentfault\generator\service\impl\GenTableServiceImpl.class
+com\segmentfault\generator\util\VelocityInitializer.class
+com\segmentfault\generator\mapper\GenTableColumnMapper.class
+com\segmentfault\generator\domain\GenTable.class

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root module="game">
+	<SharePage width=100% height=100% baseclass=Container textStyle=normal ownerBuffer >
+		<children>
+			<RectFill id="bg" gradient="{ y1: 1280, colors:['#010036', '#4e004f'] }" width="100%" height="100%"/>			
+			<Image src=share/logo left=64 width=323 top=92 height=46 />
+			<Image src=share/rect left=81 width=522 top=300 height=231 />
+			<Label id=name left=114 width=383 top=337 height=37 text="姓名：" />
+			<Label id=score left=114 width=383 top=387 height=37 text="成绩：10000" />
+			<Label id=info left=114 width=383 top=439 height=37 />
+			<Image src=share/text猪望仔大战蝙蝠侠 left=65 width=477 top=165 height=57 />
+			<Label font=28px color=#bbadfb lineHeight=48 format=MultiLine left=68 width=585 top=575 height=137 text="2020“创青春 交子杯”新网银行金融科技挑战赛\n47万奖金池，最高 10 万奖金等你来拿！\n是时候展现你真正的技术了！" />
+			<Group width=300 top=700 bottom=0 x=50% >
+				<Group height=332 width=300 y=50% >
+					<Image id=share src=share/二维码 height=332 width=300 />
+					<!--<Label text="长按保存图片" color=#fff width=204 height=30 y=230 align=Center />-->
+				</Group>
+			</Group>
+		</children>
+	</SharePage>
+</root>

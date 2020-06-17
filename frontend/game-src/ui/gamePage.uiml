@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<root module="game">
+	<templates>
+		<GamePage>
+			<children>		
+				<UIStage id=game left=0 width=710 top=0 height=1280 >
+					<Image src="image/bg" />
+					<Image src=game/wall2 anchorX=0.5 anchorY=0.5 x=242 y=920.5 />
+					<Image src=game/wall angle=-33 x=738 y=535 anchorX=0.5 anchorY=0.5  />
+					<Image src=game/wall angle=32 x=562 y=95 anchorX=0.5 anchorY=0.5 />
+					<Image src=game/hole anchorX=0.5 anchorY=0.5 x=318 y=578.5 width=246 height=119 />
+				</UIStage>
+				<Control id=touch width=100% height=100% />
+				<Group id=intro width=100% height=100% >
+					<RectFill color=#000 opacity=0.3 width=100% height=100% />
+					<Group width=100% height=600 y=50%>
+						<Image  src=image/说明 	x=50% />
+						<Button id=ok2Btn label="确定" x=50% width=195 height=70 top=400 />
+					</Group>
+				</Group>
+				<Group id=helpPage width=100% height=100% visible=false>
+					<RectFill color=#000 opacity=0.3 width=100% height=100% />
+					<Image  src=image/活动规则 	x=50% top=160 />
+					<Group width=100% top=900 bottom=0>
+						<Button id=okBtn label="已知晓" x=50% width=195 height=70 top=30% />
+					</Group>
+				</Group>
+				<Group id=clock width=66 height=66 x=611 y=127 visible=false >
+					<Image src=game/clock />
+					<Label id=time font=34px color=#fff width=100% height=100% align=Center|VCenter />
+				</Group>
+				<Image id=disk src=game/disk visible=false />
+				<Group width=100% height=70 textStyle=gameHead >
+					<RectFill width=100% height=70 color=#2c296e />
+					<RectFill width=100% top=70 height=2 color=#6854aa />
+					<Image id=avatar left=28 width=50 top=13 height=50 />
+					<Label id=name left=87 width=200 top=24 height=27 format=Shrink />
+					<Label id=score left=290 width=140 top=24 height=27 text="得分 0"  />
+					<Label id=chance left=430 width=120 top=24 height=27 text="机会 5"  />
+					<Button id=help bk.src="" label.color=#5186ff left=510 width=130 top=24 height=30 label=说明 />
+					<Checkbox id=sound icon.src="ui/btn/喇叭" checkImg.src="ui/btn/喇叭check"  left=630 width=56 top=8  />
+				</Group>
+			</children>						
+		</GamePage>	
+	</templates>
+	<GamePage width=100% height=100% customExt=true template=GamePage>
+		<methods><![CDATA[		
+		]]></methods>
+		<children>
+			<UIStage id=game left=0 width=710 top=0 height=1280>
+				<Image src="image/bg" />
+				<Image src=game/wall2 anchorX=0.5 anchorY=0.5 x=242 y=920.5 />
+				<Image src=game/wall angle=-33 x=738 y=535 anchorX=0.5 anchorY=0.5  />
+				<Image src=game/wall angle=32 x=562 y=95 anchorX=0.5 anchorY=0.5 />
+				<Image src=game/hole anchorX=0.5 anchorY=0.5 x=318 y=578.5 width=246 height=119 />
+			</UIStage>
+			<Control id=touch width=100% height=100% />
+			<Group id=intro width=100% height=100% >
+				<RectFill color=#000 opacity=0.3 width=100% height=100% />
+				<Group width=100% height=600 y=50%>
+					<Image  src=image/说明 	x=50% />
+					<Button id=ok2Btn label="确定" x=50% width=195 height=70 top=400 />
+				</Group>
+			</Group>
+			<Group id=helpPage width=100% height=100% visible=false>
+				<RectFill color=#000 opacity=0.3 width=100% height=100% />
+				<Image  src=image/活动规则 	x=50% top=160 />
+				<Group width=100% top=900 bottom=0>
+					<Button id=okBtn label="已知晓" x=50% width=195 height=70 top=30% />
+				</Group>
+			</Group>
+			<Group id=clock width=66 height=66 x=611 y=127 visible=false >
+				<Image src=game/clock />
+				<Label id=time font=34px color=#fff width=100% height=100% align=Center|VCenter />
+			</Group>
+			<Image id=disk src=game/disk visible=false />
+			<Group width=100% height=70 textStyle=gameHead >
+				<RectFill width=100% height=70 color=#2c296e />
+				<RectFill width=100% top=70 height=2 color=#6854aa />
+				<Image id=avatar left=28 width=50 top=13 height=50 />
+				<Label id=name left=87 width=200 top=24 height=27 format=Shrink />
+				<Label id=score left=290 width=140 top=24 height=27 text="得分 0"  />
+				<Label id=chance left=430 width=120 top=24 height=27 text="机会 5"  />
+				<Button id=help bk.src="" label.color=#5186ff left=510 width=130 top=24 height=30 label=说明 />
+				<Checkbox id=sound icon.src="ui/btn/喇叭" checkImg.src="ui/btn/喇叭check"  left=630 width=56 top=8  />
+			</Group>
+		</children>						
+	</GamePage>
+</root>

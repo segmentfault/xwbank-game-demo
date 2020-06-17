@@ -1,0 +1,813 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Stage | EasyGame API手册 - v1.0.1</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<ul class="results-priority" style="display:none">
+					</ul>
+					<a href="../index.html" class="title">EasyGame API手册 - v1.0.1</a>
+					&emsp;<a href="readme.html" class="title">引擎使用说明</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules/_visual_.html">Visual</a>
+				</li>
+				<li>
+					<a href="../modules/_visual_.ez.html">ez</a>
+				</li>
+				<li>
+					<a href="_visual_.ez.stage.html">Stage</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-3 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation outline primary">
+				<a style="margin-left:0em" href="../globals.html">Globals</a>
+				<ul style="display:none">
+					{&quot;ez.core&quot;:{&quot;Overview&quot;:&quot;./index&quot;,&quot;全局设置&quot;:&quot;_ez_core_&quot;,&quot;基本类型&quot;:&quot;_commontypes_.ez&quot;,&quot;基础功能&quot;:&quot;_ezgame_.ez&quot;,&quot;Audio&quot;:&quot;_audio_.ez&quot;,&quot;Renderer&quot;:&quot;_renderer_.ez&quot;,&quot;Texture&quot;:&quot;_texture_.ez&quot;,&quot;Visual&quot;:&quot;_visual_.ez&quot;,&quot;Resource&quot;:&quot;_resource_.ez&quot;,&quot;GUI&quot;:&quot;_gui_.ez.ui&quot;,&quot;Animation&quot;:&quot;_animation_.ez&quot;},&quot;ez.3d&quot;:{&quot;3d render&quot;:&quot;_ez_3d_.ez&quot;,&quot;Stage3D&quot;:&quot;classes/_ez_3d_.ez.stage3dsprite&quot;,&quot;model&quot;:&quot;_model_.ez&quot;,&quot;material&quot;:&quot;_material_.ez&quot;},&quot;ez.ext&quot;:{&quot;Highlight Effect&quot;:&quot;_highlighteffect_.ez.effect&quot;,&quot;Fan Effect&quot;:&quot;_faneffect_.ez.effect&quot;,&quot;ui.Hyperlink&quot;:&quot;classes/_hyperlink_.ez.ui.hyperlink&quot;,&quot;ui.BlurGroup&quot;:&quot;classes/_blureffect_.ez.ui.blurgroup&quot;,&quot;BMFontLabel&quot;:&quot;_bmfontlabel_.ez&quot;,&quot;Spine&quot;:&quot;classes/_spine_.ez.spinesprite&quot;,&quot;Inspector&quot;:&quot;_inspector_.inspector&quot;,&quot;Protocol&quot;:&quot;_protocol_.easygame&quot;}}
+				</ul>
+			</nav>
+		</div>
+		<div class="col-7 offset-3 col-content">
+			<h1>Interface Stage</h1>
+			<section class="tsd-panel tsd-comment"><div class="tsd-comment tsd-typography tsd-comment-shorttext">
+					<div class="lead">
+						<p>舞台对象接口</p>
+					</div></div><div class="tsd-comment tsd-typography tsd-comment-tags">
+					<dl class="tsd-comment-tags">
+						<!--<dt>description</dt>-->
+						<dd><p>舞台是sprite的容器，舞台里可以嵌套子舞台，舞台中的每个sprite继承舞台自身的变换矩阵和透明度设置</p>
+					</dd></dl>
+			</div></section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">Stage</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel">
+				<h3>Implemented by</h3>
+				<ul class="tsd-hierarchy">
+					<li><a href="../classes/_blureffect_.ez.blurstagesprite.html" class="tsd-signature-type">BlurStageSprite</a></li>
+					<li><a href="../classes/_visual_.ez.substagesprite.html" class="tsd-signature-type">SubStageSprite</a></li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<table style="display:inline-table;" width="100%">
+									<tr class="tsd-kind-property tsd-parent-kind-interface">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#count"
+												class="tsd-kind-icon">count</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												子元素数量
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#count" class="tsd-kind-icon">count</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-interface">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#culling"
+												class="tsd-kind-icon">culling</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#culling" class="tsd-kind-icon">culling</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-interface">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#dirty"
+												class="tsd-kind-icon">dirty</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												舞台内子元素是否有发生过变化
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#dirty" class="tsd-kind-icon">dirty</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-interface">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#globaltransform"
+												class="tsd-kind-icon">globalTransform</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#globaltransform" class="tsd-kind-icon">globalTransform</a></li> -->
+								</table>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<table style="display:inline-table;" width="100%">
+									<tr class="tsd-kind-method tsd-parent-kind-interface">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#_remove"
+												class="tsd-kind-icon">_remove</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#_remove" class="tsd-kind-icon">_remove</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-interface">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#addchild"
+												class="tsd-kind-icon">addChild</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#addchild" class="tsd-kind-icon">addChild</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-interface">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#bringtobottom"
+												class="tsd-kind-icon">bringToBottom</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												将子元素的绘制顺序调整到相同zIndex值的最下面
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#bringtobottom" class="tsd-kind-icon">bringToBottom</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-interface">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#bringtotop"
+												class="tsd-kind-icon">bringToTop</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												将子元素的绘制顺序调整到相同zIndex值的最上面
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#bringtotop" class="tsd-kind-icon">bringToTop</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-interface">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#clear"
+												class="tsd-kind-icon">clear</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												清除所有子元素
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#clear" class="tsd-kind-icon">clear</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-interface">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#find"
+												class="tsd-kind-icon">find</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												根据id查找子元素，没有找到的话，会继续递归查找子舞台
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#find" class="tsd-kind-icon">find</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-interface">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#getitem"
+												class="tsd-kind-icon">getItem</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												通过索引获取子元素
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#getitem" class="tsd-kind-icon">getItem</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-interface">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#hitfind"
+												class="tsd-kind-icon">hitFind</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#hitfind" class="tsd-kind-icon">hitFind</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-interface">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#load"
+												class="tsd-kind-icon">load</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												根据sprite对象数据载入一个舞台
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#load" class="tsd-kind-icon">load</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-interface">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#makedirty"
+												class="tsd-kind-icon">makeDirty</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#makedirty" class="tsd-kind-icon">makeDirty</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-interface">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#needprerender"
+												class="tsd-kind-icon">needPreRender</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#needprerender" class="tsd-kind-icon">needPreRender</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-interface">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#remove"
+												class="tsd-kind-icon">remove</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												移除一个子元素
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#remove" class="tsd-kind-icon">remove</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-interface">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#render"
+												class="tsd-kind-icon">render</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-interface"><a href="_visual_.ez.stage.html#render" class="tsd-kind-icon">render</a></li> -->
+								</table>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="count" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> count</h3>
+					<div class="tsd-signature tsd-kind-icon">count<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">number</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>子元素数量</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="culling" class="tsd-anchor"></a>
+					<h3>culling</h3>
+					<div class="tsd-signature tsd-kind-icon">culling<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="dirty" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> dirty</h3>
+					<div class="tsd-signature tsd-kind-icon">dirty<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>舞台内子元素是否有发生过变化</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-interface">
+					<a name="globaltransform" class="tsd-anchor"></a>
+					<h3>global<wbr>Transform</h3>
+					<div class="tsd-signature tsd-kind-icon">global<wbr>Transform<span class="tsd-signature-symbol">:</span> <a href="../classes/_commontypes_.ez.matrix.html" class="tsd-signature-type">Matrix</a></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="_remove" class="tsd-anchor"></a>
+					<h3>_remove</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">_remove<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><a href="../classes/_visual_.ez.sprite.html" class="tsd-signature-type">Sprite</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags">
+									<!--<dt>inernal</dt>-->
+								<dd></dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>item: <a href="../classes/_visual_.ez.sprite.html" class="tsd-signature-type">Sprite</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="addchild" class="tsd-anchor"></a>
+					<h3>add<wbr>Child</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">add<wbr>Child<span class="tsd-signature-symbol">(</span>item<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags">
+									<!--<dt>inernal</dt>-->
+								<dd></dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>item: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5>id: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="bringtobottom" class="tsd-anchor"></a>
+					<h3>bring<wbr>ToBottom</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">bring<wbr>ToBottom<span class="tsd-signature-symbol">(</span>sprite<span class="tsd-signature-symbol">: </span><a href="../classes/_visual_.ez.sprite.html" class="tsd-signature-type">Sprite</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>将子元素的绘制顺序调整到相同zIndex值的最下面</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>sprite: <a href="../classes/_visual_.ez.sprite.html" class="tsd-signature-type">Sprite</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="bringtotop" class="tsd-anchor"></a>
+					<h3>bring<wbr>ToTop</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">bring<wbr>ToTop<span class="tsd-signature-symbol">(</span>sprite<span class="tsd-signature-symbol">: </span><a href="../classes/_visual_.ez.sprite.html" class="tsd-signature-type">Sprite</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>将子元素的绘制顺序调整到相同zIndex值的最上面</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>sprite: <a href="../classes/_visual_.ez.sprite.html" class="tsd-signature-type">Sprite</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="clear" class="tsd-anchor"></a>
+					<h3>clear</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">clear<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>清除所有子元素</p>
+							</div></div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="find" class="tsd-anchor"></a>
+					<h3>find</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">find<span class="tsd-signature-symbol">(</span>id<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">string</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_visual_.ez.sprite.html" class="tsd-signature-type">Sprite</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>根据id查找子元素，没有找到的话，会继续递归查找子舞台</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>id: <span class="tsd-signature-type">string</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_visual_.ez.sprite.html" class="tsd-signature-type">Sprite</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="getitem" class="tsd-anchor"></a>
+					<h3>get<wbr>Item</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">get<wbr>Item<span class="tsd-signature-symbol">(</span>index<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_visual_.ez.sprite.html" class="tsd-signature-type">Sprite</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>通过索引获取子元素</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>index: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_visual_.ez.sprite.html" class="tsd-signature-type">Sprite</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="hitfind" class="tsd-anchor"></a>
+					<h3>hit<wbr>Find</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">hit<wbr>Find<span class="tsd-signature-symbol">(</span>x<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, y<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, allHitTargets<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_visual_.ez.sprite.html" class="tsd-signature-type">Sprite</a><span class="tsd-signature-symbol"> | </span><a href="../classes/_visual_.ez.sprite.html" class="tsd-signature-type">Sprite</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>x: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5>y: <span class="tsd-signature-type">number</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> allHitTargets: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_visual_.ez.sprite.html" class="tsd-signature-type">Sprite</a>
+								<span class="tsd-signature-symbol"> | </span>
+								<a href="../classes/_visual_.ez.sprite.html" class="tsd-signature-type">Sprite</a><span class="tsd-signature-symbol">[]</span>
+							</h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="load" class="tsd-anchor"></a>
+					<h3>load</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">load<span class="tsd-signature-symbol">(</span>items<span class="tsd-signature-symbol">: </span><a href="_visual_.ez.spritedata.html" class="tsd-signature-type">SpriteData</a><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="../classes/_visual_.ez.sprite.html" class="tsd-signature-type">Sprite</a><span class="tsd-signature-symbol">[]</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>根据sprite对象数据载入一个舞台</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>items: <a href="_visual_.ez.spritedata.html" class="tsd-signature-type">SpriteData</a><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="../classes/_visual_.ez.sprite.html" class="tsd-signature-type">Sprite</a><span class="tsd-signature-symbol">[]</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="makedirty" class="tsd-anchor"></a>
+					<h3>make<wbr>Dirty</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">make<wbr>Dirty<span class="tsd-signature-symbol">(</span>needSort<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">boolean</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags">
+									<!--<dt>inernal</dt>-->
+								<dd></dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>needSort: <span class="tsd-signature-type">boolean</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="needprerender" class="tsd-anchor"></a>
+					<h3>need<wbr>Pre<wbr>Render</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">need<wbr>Pre<wbr>Render<span class="tsd-signature-symbol">(</span>node<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">IPreRender</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags">
+									<!--<dt>inernal</dt>-->
+								<dd></dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>node: <span class="tsd-signature-type">IPreRender</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">any</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="remove" class="tsd-anchor"></a>
+					<h3>remove</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">remove<span class="tsd-signature-symbol">(</span>sprite<span class="tsd-signature-symbol">: </span><a href="../classes/_visual_.ez.sprite.html" class="tsd-signature-type">Sprite</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>移除一个子元素</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>sprite: <a href="../classes/_visual_.ez.sprite.html" class="tsd-signature-type">Sprite</a></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-interface">
+					<a name="render" class="tsd-anchor"></a>
+					<h3>render</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-interface">
+						<li class="tsd-signature tsd-kind-icon">render<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><a href="../classes/_texture_.ez.rendertexture.html" class="tsd-signature-type">RenderTexture</a>, profile<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags">
+									<!--<dt>inernal</dt>-->
+								<dd></dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>target: <a href="../classes/_texture_.ez.rendertexture.html" class="tsd-signature-type">RenderTexture</a></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> profile: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<!--{&quot;options&quot;:&quot;D:\\projects\\EZ\\EasyGame-client&quot;,&quot;tsconfig&quot;:&quot;D:\\projects\\EZ\\EasyGame-client&quot;,&quot;inputFiles&quot;:[],&quot;mode&quot;:1,&quot;includeDeclarations&quot;:false,&quot;entryPoint&quot;:&quot;&quot;,&quot;exclude&quot;:[],&quot;externalPattern&quot;:[],&quot;excludeExternals&quot;:true,&quot;excludeNotExported&quot;:true,&quot;excludeNotDocumented&quot;:false,&quot;excludePrivate&quot;:true,&quot;excludeProtected&quot;:true,&quot;ignoreCompilerErrors&quot;:true,&quot;disableSources&quot;:true,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;src/doc/media&quot;,&quot;out&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;,&quot;theme&quot;:&quot;typedoc-neo-theme/bin/default&quot;,&quot;name&quot;:&quot;EasyGame API手册&quot;,&quot;includeVersion&quot;:true,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;src/doc/ezgame API.md&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:true,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:true,&quot;help&quot;:false,&quot;version&quot;:false,&quot;plugin&quot;:[&quot;typedoc-neo-theme&quot;],&quot;listInvalidSymbolLinks&quot;:false,&quot;links&quot;:[{&quot;label&quot;:&quot;引擎使用说明&quot;,&quot;url&quot;:&quot;readme.html&quot;}],&quot;outline&quot;:[{&quot;ez.core&quot;:{&quot;Overview&quot;:&quot;./index&quot;,&quot;全局设置&quot;:&quot;_ez_core_&quot;,&quot;基本类型&quot;:&quot;_commontypes_.ez&quot;,&quot;基础功能&quot;:&quot;_ezgame_.ez&quot;,&quot;Audio&quot;:&quot;_audio_.ez&quot;,&quot;Renderer&quot;:&quot;_renderer_.ez&quot;,&quot;Texture&quot;:&quot;_texture_.ez&quot;,&quot;Visual&quot;:&quot;_visual_.ez&quot;,&quot;Resource&quot;:&quot;_resource_.ez&quot;,&quot;GUI&quot;:&quot;_gui_.ez.ui&quot;,&quot;Animation&quot;:&quot;_animation_.ez&quot;},&quot;ez.3d&quot;:{&quot;3d render&quot;:&quot;_ez_3d_.ez&quot;,&quot;Stage3D&quot;:&quot;classes/_ez_3d_.ez.stage3dsprite&quot;,&quot;model&quot;:&quot;_model_.ez&quot;,&quot;material&quot;:&quot;_material_.ez&quot;},&quot;ez.ext&quot;:{&quot;Highlight Effect&quot;:&quot;_highlighteffect_.ez.effect&quot;,&quot;Fan Effect&quot;:&quot;_faneffect_.ez.effect&quot;,&quot;ui.Hyperlink&quot;:&quot;classes/_hyperlink_.ez.ui.hyperlink&quot;,&quot;ui.BlurGroup&quot;:&quot;classes/_blureffect_.ez.ui.blurgroup&quot;,&quot;BMFontLabel&quot;:&quot;_bmfontlabel_.ez&quot;,&quot;Spine&quot;:&quot;classes/_spine_.ez.spinesprite&quot;,&quot;Inspector&quot;:&quot;_inspector_.inspector&quot;,&quot;Protocol&quot;:&quot;_protocol_.easygame&quot;}}],&quot;search&quot;:[]}-->
+		</div>
+		<!--
+        <div class="col-2 col-menu secondary-menu">
+            <nav class="tsd-navigation secondary menu-sticky">
+                <ul class="before-current">
+                        <li class=" tsd-kind-enum tsd-parent-kind-namespace root">
+    <a href="../enums/_visual_.ez.hittestmode.html" class="tsd-kind-icon">Hit<wbr>Test<wbr>Mode</a>
+</li>
+                        <li class=" tsd-kind-class tsd-parent-kind-namespace root">
+    <a href="../classes/_visual_.ez.imagesprite.html" class="tsd-kind-icon">Image<wbr>Sprite</a>
+</li>
+                        <li class=" tsd-kind-class tsd-parent-kind-namespace root">
+    <a href="../classes/_visual_.ez.labelsprite.html" class="tsd-kind-icon">Label<wbr>Sprite</a>
+</li>
+                        <li class=" tsd-kind-class tsd-parent-kind-namespace root">
+    <a href="../classes/_visual_.ez.rectfillsprite.html" class="tsd-kind-icon">Rect<wbr>Fill<wbr>Sprite</a>
+</li>
+                        <li class=" tsd-kind-class tsd-parent-kind-namespace root">
+    <a href="../classes/_visual_.ez.seqframesprite.html" class="tsd-kind-icon">Seq<wbr>Frame<wbr>Sprite</a>
+</li>
+                        <li class=" tsd-kind-class tsd-parent-kind-namespace root">
+    <a href="../classes/_visual_.ez.sprite.html" class="tsd-kind-icon">Sprite</a>
+</li>
+                        <li class=" tsd-kind-class tsd-parent-kind-namespace root">
+    <a href="../classes/_visual_.ez.substagesprite.html" class="tsd-kind-icon">Sub<wbr>Stage<wbr>Sprite</a>
+</li>
+                        <li class=" tsd-kind-interface tsd-parent-kind-namespace root">
+    <a href="_visual_.ez.seqframedesc.html" class="tsd-kind-icon">Seq<wbr>Frame<wbr>Desc</a>
+</li>
+                        <li class=" tsd-kind-interface tsd-parent-kind-namespace root">
+    <a href="_visual_.ez.spritedata.html" class="tsd-kind-icon">Sprite<wbr>Data</a>
+</li>
+                            </ul>
+    <ul class="current">
+<li class="current tsd-kind-interface tsd-parent-kind-namespace root">
+    <a href="_visual_.ez.stage.html" class="tsd-kind-icon">Stage</a>
+        <ul>
+                <li class=" tsd-kind-property tsd-parent-kind-interface">
+    <a href="_visual_.ez.stage.html#count" class="tsd-kind-icon">count</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-interface">
+    <a href="_visual_.ez.stage.html#culling" class="tsd-kind-icon">culling</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-interface">
+    <a href="_visual_.ez.stage.html#dirty" class="tsd-kind-icon">dirty</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-interface">
+    <a href="_visual_.ez.stage.html#globaltransform" class="tsd-kind-icon">global<wbr>Transform</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-interface">
+    <a href="_visual_.ez.stage.html#_remove" class="tsd-kind-icon">_remove</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-interface">
+    <a href="_visual_.ez.stage.html#addchild" class="tsd-kind-icon">add<wbr>Child</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-interface">
+    <a href="_visual_.ez.stage.html#bringtobottom" class="tsd-kind-icon">bring<wbr>ToBottom</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-interface">
+    <a href="_visual_.ez.stage.html#bringtotop" class="tsd-kind-icon">bring<wbr>ToTop</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-interface">
+    <a href="_visual_.ez.stage.html#clear" class="tsd-kind-icon">clear</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-interface">
+    <a href="_visual_.ez.stage.html#find" class="tsd-kind-icon">find</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-interface">
+    <a href="_visual_.ez.stage.html#getitem" class="tsd-kind-icon">get<wbr>Item</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-interface">
+    <a href="_visual_.ez.stage.html#hitfind" class="tsd-kind-icon">hit<wbr>Find</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-interface">
+    <a href="_visual_.ez.stage.html#load" class="tsd-kind-icon">load</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-interface">
+    <a href="_visual_.ez.stage.html#makedirty" class="tsd-kind-icon">make<wbr>Dirty</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-interface">
+    <a href="_visual_.ez.stage.html#needprerender" class="tsd-kind-icon">need<wbr>Pre<wbr>Render</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-interface">
+    <a href="_visual_.ez.stage.html#remove" class="tsd-kind-icon">remove</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-interface">
+    <a href="_visual_.ez.stage.html#render" class="tsd-kind-icon">render</a>
+</li>
+        </ul>
+</li>
+    </ul>
+    <ul class="after-current">
+                        <li class=" tsd-kind-function tsd-parent-kind-namespace root">
+    <a href="../modules/_visual_.ez.html#createstage" class="tsd-kind-icon">create<wbr>Stage</a>
+</li>
+                        <li class=" tsd-kind-function tsd-parent-kind-namespace root">
+    <a href="../modules/_visual_.ez.html#outputfonttext" class="tsd-kind-icon">output<wbr>Font<wbr>Text</a>
+</li>
+                        <li class=" tsd-kind-function tsd-parent-kind-namespace root">
+    <a href="../modules/_visual_.ez.html#scanfonttext" class="tsd-kind-icon">scan<wbr>Font<wbr>Text</a>
+</li>
+                </ul>
+            </nav>
+        </div>-->
+	</div>
+</div>
+<footer>
+</footer>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

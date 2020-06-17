@@ -1,0 +1,1096 @@
+<!doctype html>
+<html class="default no-js">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Tween | EasyGame API手册 - v1.0.1</title>
+	<meta name="description" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../assets/css/main.css">
+</head>
+<body>
+<header>
+	<div class="tsd-page-toolbar">
+		<div class="container">
+			<div class="table-wrap">
+				<div class="table-cell" id="tsd-search" data-index="../assets/js/search.js" data-base="..">
+					<div class="field">
+						<label for="tsd-search-field" class="tsd-widget search no-caption">Search</label>
+						<input id="tsd-search-field" type="text" />
+					</div>
+					<ul class="results">
+						<li class="state loading">Preparing search index...</li>
+						<li class="state failure">The search index is not available</li>
+					</ul>
+					<ul class="results-priority" style="display:none">
+					</ul>
+					<a href="../index.html" class="title">EasyGame API手册 - v1.0.1</a>
+					&emsp;<a href="readme.html" class="title">引擎使用说明</a>
+				</div>
+				<div class="table-cell" id="tsd-widgets">
+					<div id="tsd-filter">
+						<a href="#" class="tsd-widget options no-caption" data-toggle="options">Options</a>
+						<div class="tsd-filter-group">
+							<div class="tsd-select" id="tsd-filter-visibility">
+								<span class="tsd-select-label">All</span>
+								<ul class="tsd-select-list">
+									<li data-value="public">Public</li>
+									<li data-value="protected">Public/Protected</li>
+									<li data-value="private" class="selected">All</li>
+								</ul>
+							</div>
+							<input type="checkbox" id="tsd-filter-inherited" checked />
+							<label class="tsd-widget" for="tsd-filter-inherited">Inherited</label>
+						</div>
+					</div>
+					<a href="#" class="tsd-widget menu no-caption" data-toggle="menu">Menu</a>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="tsd-page-title">
+		<div class="container">
+			<ul class="tsd-breadcrumb">
+				<li>
+					<a href="../modules/_animation_.html">Animation</a>
+				</li>
+				<li>
+					<a href="../modules/_animation_.ez.html">ez</a>
+				</li>
+				<li>
+					<a href="_animation_.ez.tween.html">Tween</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</header>
+<div class="container container-main">
+	<div class="row">
+		<div class="col-3 col-menu menu-sticky-wrap menu-highlight">
+			<nav class="tsd-navigation outline primary">
+				<a style="margin-left:0em" href="../globals.html">Globals</a>
+				<ul style="display:none">
+					{&quot;ez.core&quot;:{&quot;Overview&quot;:&quot;./index&quot;,&quot;全局设置&quot;:&quot;_ez_core_&quot;,&quot;基本类型&quot;:&quot;_commontypes_.ez&quot;,&quot;基础功能&quot;:&quot;_ezgame_.ez&quot;,&quot;Audio&quot;:&quot;_audio_.ez&quot;,&quot;Renderer&quot;:&quot;_renderer_.ez&quot;,&quot;Texture&quot;:&quot;_texture_.ez&quot;,&quot;Visual&quot;:&quot;_visual_.ez&quot;,&quot;Resource&quot;:&quot;_resource_.ez&quot;,&quot;GUI&quot;:&quot;_gui_.ez.ui&quot;,&quot;Animation&quot;:&quot;_animation_.ez&quot;},&quot;ez.3d&quot;:{&quot;3d render&quot;:&quot;_ez_3d_.ez&quot;,&quot;Stage3D&quot;:&quot;classes/_ez_3d_.ez.stage3dsprite&quot;,&quot;model&quot;:&quot;_model_.ez&quot;,&quot;material&quot;:&quot;_material_.ez&quot;},&quot;ez.ext&quot;:{&quot;Highlight Effect&quot;:&quot;_highlighteffect_.ez.effect&quot;,&quot;Fan Effect&quot;:&quot;_faneffect_.ez.effect&quot;,&quot;ui.Hyperlink&quot;:&quot;classes/_hyperlink_.ez.ui.hyperlink&quot;,&quot;ui.BlurGroup&quot;:&quot;classes/_blureffect_.ez.ui.blurgroup&quot;,&quot;BMFontLabel&quot;:&quot;_bmfontlabel_.ez&quot;,&quot;Spine&quot;:&quot;classes/_spine_.ez.spinesprite&quot;,&quot;Inspector&quot;:&quot;_inspector_.inspector&quot;,&quot;Protocol&quot;:&quot;_protocol_.easygame&quot;}}
+				</ul>
+			</nav>
+		</div>
+		<div class="col-7 offset-3 col-content">
+			<h1>Class Tween</h1>
+			<section class="tsd-panel tsd-comment"><div class="tsd-comment tsd-typography tsd-comment-shorttext">
+					<div class="lead">
+						<p>缓动动画</p>
+					</div></div><div class="tsd-comment tsd-typography tsd-comment-tags">
+					<dl class="tsd-comment-tags"><span>example</span>
+						<!--<dt>example</dt>-->
+						<dd><pre><code class="language-javascript"><span class="hljs-comment">//json模式</span>
+<span class="hljs-keyword">var</span> tween = <span class="hljs-keyword">new</span> Tween(<span class="hljs-keyword">this</span>.icon, [
+    { <span class="hljs-attr">move</span>: [ { <span class="hljs-attr">x</span>: [<span class="hljs-number">10</span>, <span class="hljs-number">100</span>], <span class="hljs-attr">y</span>: [<span class="hljs-number">30</span>, <span class="hljs-number">300</span>] }, <span class="hljs-number">1000</span>] },
+    { <span class="hljs-attr">to</span>: [ { <span class="hljs-attr">x</span>: <span class="hljs-number">30</span> , <span class="hljs-attr">y</span>: <span class="hljs-number">0</span> } , <span class="hljs-number">500</span>] },
+    { <span class="hljs-attr">wait</span>: <span class="hljs-number">500</span> },
+    { <span class="hljs-attr">set</span>: { <span class="hljs-attr">x</span>: <span class="hljs-number">10</span>,  <span class="hljs-attr">y</span>: <span class="hljs-number">30</span> } },
+    { <span class="hljs-attr">call</span>: [<span class="hljs-keyword">this</span>.onFinish, <span class="hljs-keyword">this</span>] },
+    { <span class="hljs-attr">target</span>: target }
+])
+<span class="hljs-comment">//调用链模式</span>
+<span class="hljs-keyword">var</span> tween = <span class="hljs-keyword">new</span> egl.Tween(icon)
+    .move({ <span class="hljs-attr">x</span>: [<span class="hljs-number">10</span>, <span class="hljs-number">100</span>], <span class="hljs-attr">y</span>: [<span class="hljs-number">30</span>, <span class="hljs-number">300</span>] }, <span class="hljs-number">1000</span>)
+    .to({ <span class="hljs-attr">x</span>: <span class="hljs-number">30</span>, <span class="hljs-attr">y</span>: <span class="hljs-number">0</span> }, <span class="hljs-number">500</span>)
+    .wait(<span class="hljs-number">500</span>)
+    .set({ <span class="hljs-attr">x</span>: <span class="hljs-number">10</span>, <span class="hljs-attr">y</span>: <span class="hljs-number">30</span> })
+    .call(onFinish).play();</code></pre>
+					</dd></dl>
+			</div></section>
+			<section class="tsd-panel tsd-hierarchy">
+				<h3>Hierarchy</h3>
+				<ul class="tsd-hierarchy">
+					<li>
+						<span class="target">Tween</span>
+					</li>
+				</ul>
+			</section>
+			<section class="tsd-panel-group tsd-index-group">
+				<section class="tsd-panel tsd-index-panel">
+					<div class="tsd-index-content">
+						<section class="tsd-index-section ">
+							<h3>Constructors</h3>
+							<ul class="tsd-index-list">
+								<table style="display:inline-table;" width="100%">
+									<tr class="tsd-kind-constructor tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_animation_.ez.tween.html#constructor"
+												class="tsd-kind-icon">constructor</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-constructor tsd-parent-kind-class"><a href="_animation_.ez.tween.html#constructor" class="tsd-kind-icon">constructor</a></li> -->
+								</table>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Properties</h3>
+							<ul class="tsd-index-list">
+								<table style="display:inline-table;" width="100%">
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_animation_.ez.tween.html#loop"
+												class="tsd-kind-icon">loop</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												是否循环播放
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_animation_.ez.tween.html#loop" class="tsd-kind-icon">loop</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class"><a href="_animation_.ez.tween.html#state"
+												class="tsd-kind-icon">state</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												播放状态
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class"><a href="_animation_.ez.tween.html#state" class="tsd-kind-icon">state</a></li> -->
+									<tr class="tsd-kind-property tsd-parent-kind-class tsd-is-static">
+										<td width=200>
+											<li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_animation_.ez.tween.html#defaultease"
+												class="tsd-kind-icon">defaultEase</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-property tsd-parent-kind-class tsd-is-static"><a href="_animation_.ez.tween.html#defaultease" class="tsd-kind-icon">defaultEase</a></li> -->
+								</table>
+							</ul>
+						</section>
+						<section class="tsd-index-section ">
+							<h3>Methods</h3>
+							<ul class="tsd-index-list">
+								<table style="display:inline-table;" width="100%">
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#advance"
+												class="tsd-kind-icon">advance</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												前进一段时间
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#advance" class="tsd-kind-icon">advance</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#append"
+												class="tsd-kind-icon">append</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												连接另一个tween动画到当前动画后面
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#append" class="tsd-kind-icon">append</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#call"
+												class="tsd-kind-icon">call</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												调用一个事件回调
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#call" class="tsd-kind-icon">call</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#config"
+												class="tsd-kind-icon">config</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												设置tween属性
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#config" class="tsd-kind-icon">config</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#disposetarget"
+												class="tsd-kind-icon">disposeTarget</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												销毁target
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#disposetarget" class="tsd-kind-icon">disposeTarget</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#func"
+												class="tsd-kind-icon">func</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												用自定义函数设置动画
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#func" class="tsd-kind-icon">func</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#move"
+												class="tsd-kind-icon">move</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												移动目标属性
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#move" class="tsd-kind-icon">move</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#pause"
+												class="tsd-kind-icon">pause</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												暂停播放
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#pause" class="tsd-kind-icon">pause</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#play"
+												class="tsd-kind-icon">play</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												开始播放
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#play" class="tsd-kind-icon">play</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#set"
+												class="tsd-kind-icon">set</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												设置目标属性
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#set" class="tsd-kind-icon">set</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#stop"
+												class="tsd-kind-icon">stop</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												停止播放
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#stop" class="tsd-kind-icon">stop</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#target"
+												class="tsd-kind-icon">target</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												重新设置动画作用的目标对象
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#target" class="tsd-kind-icon">target</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#to"
+												class="tsd-kind-icon">to</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												目标属性从当前值到目标值
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#to" class="tsd-kind-icon">to</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#wait"
+												class="tsd-kind-icon">wait</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												等待一段时间
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#wait" class="tsd-kind-icon">wait</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#waitforend"
+												class="tsd-kind-icon">waitForEnd</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												返回一个Promise用于等待动画结束
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class"><a href="_animation_.ez.tween.html#waitforend" class="tsd-kind-icon">waitForEnd</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class tsd-is-static">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_animation_.ez.tween.html#add"
+												class="tsd-kind-icon">add</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_animation_.ez.tween.html#add" class="tsd-kind-icon">add</a></li> -->
+									<tr class="tsd-kind-method tsd-parent-kind-class tsd-is-static">
+										<td width=200>
+											<li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_animation_.ez.tween.html#stoptweens"
+												class="tsd-kind-icon">stopTweens</a>
+											</li>
+										</td>
+										<td>
+											<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+												清除某个对象上的tween动画
+											</div>
+										</td>
+									</tr>
+									<!--    <li class="tsd-kind-method tsd-parent-kind-class tsd-is-static"><a href="_animation_.ez.tween.html#stoptweens" class="tsd-kind-icon">stopTweens</a></li> -->
+								</table>
+							</ul>
+						</section>
+					</div>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Constructors</h2>
+				<section class="tsd-panel tsd-member tsd-kind-constructor tsd-parent-kind-class">
+					<a name="constructor" class="tsd-anchor"></a>
+					<h3>constructor</h3>
+					<ul class="tsd-signatures tsd-kind-constructor tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">new <wbr>Tween<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span>, steps<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>target: <span class="tsd-signature-type">Object</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> steps: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Properties</h2>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="loop" class="tsd-anchor"></a>
+					<h3>loop</h3>
+					<div class="tsd-signature tsd-kind-icon">loop<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">boolean</span></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>是否循环播放</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class">
+					<a name="state" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagReadonly">Readonly</span> state</h3>
+					<div class="tsd-signature tsd-kind-icon">state<span class="tsd-signature-symbol">:</span> <a href="../enums/_commontypes_.ez.mediastate.html" class="tsd-signature-type">MediaState</a></div>
+					<aside class="tsd-sources">
+					</aside>
+					<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+						<div class="lead">
+							<p>播放状态</p>
+					</div></div>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-property tsd-parent-kind-class tsd-is-static">
+					<a name="defaultease" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> default<wbr>Ease</h3>
+					<div class="tsd-signature tsd-kind-icon">default<wbr>Ease<span class="tsd-signature-symbol">:</span> <span class="tsd-signature-type">typeof linear</span></div>
+					<aside class="tsd-sources">
+					</aside>
+				</section>
+			</section>
+			<section class="tsd-panel-group tsd-member-group ">
+				<h2>Methods</h2>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="advance" class="tsd-anchor"></a>
+					<h3>advance</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">advance<span class="tsd-signature-symbol">(</span>dt<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>前进一段时间</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>dt: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>前进的毫秒数</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="append" class="tsd-anchor"></a>
+					<h3>append</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">append<span class="tsd-signature-symbol">(</span>tween<span class="tsd-signature-symbol">: </span><a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>连接另一个tween动画到当前动画后面</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>tween: <a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="call" class="tsd-anchor"></a>
+					<h3>call</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">call<span class="tsd-signature-symbol">(</span>func<span class="tsd-signature-symbol">: </span><a href="../interfaces/_inspector_.inspector.testcase.html#function" class="tsd-signature-type">Function</a>, thisObj<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>调用一个事件回调</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>func: <a href="../interfaces/_inspector_.inspector.testcase.html#function" class="tsd-signature-type">Function</a></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>回调函数</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisObj: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="config" class="tsd-anchor"></a>
+					<h3>config</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">config<span class="tsd-signature-symbol">(</span>args<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>设置tween属性</p>
+								</div></div><div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><span>example</span>
+									<!--<dt>example</dt>-->
+								<dd><pre><code><span class="hljs-selector-tag">new</span> <span class="hljs-selector-tag">egl</span><span class="hljs-selector-class">.Tween</span>(<span class="hljs-selector-tag">icon</span>)<span class="hljs-selector-class">.move</span>({<span class="hljs-attribute">angle</span>:[<span class="hljs-number">0</span>,<span class="hljs-number">360</span>]}, 1000)<span class="hljs-selector-class">.config</span>({<span class="hljs-attribute">loop</span>:true})<span class="hljs-selector-class">.play</span>();</code></pre></dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>args: <span class="tsd-signature-type">any</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="disposetarget" class="tsd-anchor"></a>
+					<h3>dispose<wbr>Target</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">dispose<wbr>Target<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">this</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>销毁target</p>
+							</div></div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">this</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="func" class="tsd-anchor"></a>
+					<h3>func</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">func<span class="tsd-signature-symbol">(</span>duration<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, func<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">function</span>, thisObj<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span>, ease<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>用自定义函数设置动画</p>
+								</div></div><div class="tsd-comment tsd-typography tsd-comment-tags">
+								<dl class="tsd-comment-tags"><span>example</span>
+									<!--<dt>example</dt>-->
+									<dd><pre><code><span class="hljs-comment">//让目标对象绕圈转动</span>
+<span class="hljs-keyword">new</span> <span class="hljs-constructor">Tween(<span class="hljs-params">arrow</span>)</span>.func(<span class="hljs-number">5000</span>,<span class="hljs-function"> (<span class="hljs-params">target</span>, <span class="hljs-params">t</span>) =&gt;</span> {
+        target.x = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Math</span>.</span></span>cos(t<span class="hljs-operator"> * </span>Math.PI<span class="hljs-operator"> * </span><span class="hljs-number">2</span>)<span class="hljs-operator"> * </span><span class="hljs-number">100</span>;
+        target.y = <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Math</span>.</span></span>sin(t<span class="hljs-operator"> * </span>Math.PI<span class="hljs-operator"> * </span><span class="hljs-number">2</span>)<span class="hljs-operator"> * </span><span class="hljs-number">100</span>;
+        target.angle = t<span class="hljs-operator"> * </span><span class="hljs-number">360</span>;
+}).config({ loop: <span class="hljs-literal">true</span> }).play<span class="hljs-literal">()</span>;</code></pre></dd></dl>
+							</div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>duration: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>动画时间</p>
+									</div>
+								</li>
+								<li>
+									<h5>func: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>自定义动画函数 (target: any, t: number)=&gt;void target为目标对象，t为该动画播放位置，归一化为(0 ~ 1)</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span>, t<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>target: <span class="tsd-signature-type">any</span></h5>
+														</li>
+														<li>
+															<h5>t: <span class="tsd-signature-type">number</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> thisObj: <span class="tsd-signature-type">any</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ease: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>t<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>t: <span class="tsd-signature-type">number</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="move" class="tsd-anchor"></a>
+					<h3>move</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">move<span class="tsd-signature-symbol">(</span>props<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span>, duration<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, ease<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>移动目标属性</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>props: <span class="tsd-signature-type">Object</span></h5>
+								</li>
+								<li>
+									<h5>duration: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>持续时间</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ease: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>插值类型</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>t<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>t: <span class="tsd-signature-type">number</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="pause" class="tsd-anchor"></a>
+					<h3>pause</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">pause<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>暂停播放</p>
+							</div></div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="play" class="tsd-anchor"></a>
+					<h3>play</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">play<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>开始播放</p>
+							</div></div>
+							<h4 class="tsd-returns-title">Returns <a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="set" class="tsd-anchor"></a>
+					<h3>set</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">set<span class="tsd-signature-symbol">(</span>props<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>设置目标属性</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>props: <span class="tsd-signature-type">Object</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="stop" class="tsd-anchor"></a>
+					<h3>stop</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">stop<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>停止播放</p>
+							</div></div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="target" class="tsd-anchor"></a>
+					<h3>target</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">target<span class="tsd-signature-symbol">(</span>t<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>重新设置动画作用的目标对象</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>t: <span class="tsd-signature-type">any</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>目标对象</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="to" class="tsd-anchor"></a>
+					<h3>to</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">to<span class="tsd-signature-symbol">(</span>props<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span>, duration<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span>, ease<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">function</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>目标属性从当前值到目标值</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>props: <span class="tsd-signature-type">Object</span></h5>
+								</li>
+								<li>
+									<h5>duration: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>持续时间</p>
+									</div>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> ease: <span class="tsd-signature-type">function</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>插值类型</p>
+									</div>
+									<ul class="tsd-parameters">
+										<li class="tsd-parameter-siganture">
+											<ul class="tsd-signatures tsd-kind-type-literal">
+												<li class="tsd-signature tsd-kind-icon"><span class="tsd-signature-symbol">(</span>t<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span></li>
+											</ul>
+											<ul class="tsd-descriptions">
+												<li class="tsd-description">
+													<h4 class="tsd-parameters-title">Parameters</h4>
+													<ul class="tsd-parameters">
+														<li>
+															<h5>t: <span class="tsd-signature-type">number</span></h5>
+														</li>
+													</ul>
+													<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">number</span></h4>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="wait" class="tsd-anchor"></a>
+					<h3>wait</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">wait<span class="tsd-signature-symbol">(</span>duration<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">number</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>等待一段时间</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>duration: <span class="tsd-signature-type">number</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+										<p>毫秒数</p>
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class">
+					<a name="waitforend" class="tsd-anchor"></a>
+					<h3>wait<wbr>For<wbr>End</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class">
+						<li class="tsd-signature tsd-kind-icon">wait<wbr>For<wbr>End<span class="tsd-signature-symbol">(</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>返回一个Promise用于等待动画结束</p>
+							</div></div>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">Promise</span><span class="tsd-signature-symbol">&lt;</span><span class="tsd-signature-type">void</span><span class="tsd-signature-symbol">&gt;</span></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="add" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> add</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">add<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span>, steps<span class="tsd-signature-symbol">?: </span><span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>target: <span class="tsd-signature-type">Object</span></h5>
+								</li>
+								<li>
+									<h5><span class="tsd-flag ts-flagOptional">Optional</span> steps: <span class="tsd-signature-type">any</span><span class="tsd-signature-symbol">[]</span></h5>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <a href="_animation_.ez.tween.html" class="tsd-signature-type">Tween</a></h4>
+						</li>
+					</ul>
+				</section>
+				<section class="tsd-panel tsd-member tsd-kind-method tsd-parent-kind-class tsd-is-static">
+					<a name="stoptweens" class="tsd-anchor"></a>
+					<h3><span class="tsd-flag ts-flagStatic">Static</span> stop<wbr>Tweens</h3>
+					<ul class="tsd-signatures tsd-kind-method tsd-parent-kind-class tsd-is-static">
+						<li class="tsd-signature tsd-kind-icon">stop<wbr>Tweens<span class="tsd-signature-symbol">(</span>target<span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">Object</span><span class="tsd-signature-symbol">)</span><span class="tsd-signature-symbol">: </span><span class="tsd-signature-type">void</span></li>
+					</ul>
+					<ul class="tsd-descriptions">
+						<li class="tsd-description">
+							<aside class="tsd-sources">
+							</aside>
+							<div class="tsd-comment tsd-typography tsd-comment-shorttext">
+								<div class="lead">
+									<p>清除某个对象上的tween动画</p>
+							</div></div>
+							<h4 class="tsd-parameters-title">Parameters</h4>
+							<ul class="tsd-parameters">
+								<li>
+									<h5>target: <span class="tsd-signature-type">Object</span></h5>
+									<div class="tsd-comment tsd-typography tsd-comment-text">
+									</div>
+								</li>
+							</ul>
+							<h4 class="tsd-returns-title">Returns <span class="tsd-signature-type">void</span></h4>
+						</li>
+					</ul>
+				</section>
+			</section>
+			<!--{&quot;options&quot;:&quot;D:\\projects\\EZ\\EasyGame-client&quot;,&quot;tsconfig&quot;:&quot;D:\\projects\\EZ\\EasyGame-client&quot;,&quot;inputFiles&quot;:[],&quot;mode&quot;:1,&quot;includeDeclarations&quot;:false,&quot;entryPoint&quot;:&quot;&quot;,&quot;exclude&quot;:[],&quot;externalPattern&quot;:[],&quot;excludeExternals&quot;:true,&quot;excludeNotExported&quot;:true,&quot;excludeNotDocumented&quot;:false,&quot;excludePrivate&quot;:true,&quot;excludeProtected&quot;:true,&quot;ignoreCompilerErrors&quot;:true,&quot;disableSources&quot;:true,&quot;includes&quot;:&quot;&quot;,&quot;media&quot;:&quot;src/doc/media&quot;,&quot;out&quot;:&quot;&quot;,&quot;json&quot;:&quot;&quot;,&quot;theme&quot;:&quot;typedoc-neo-theme/bin/default&quot;,&quot;name&quot;:&quot;EasyGame API手册&quot;,&quot;includeVersion&quot;:true,&quot;excludeTags&quot;:[],&quot;readme&quot;:&quot;src/doc/ezgame API.md&quot;,&quot;defaultCategory&quot;:&quot;Other&quot;,&quot;categoryOrder&quot;:[],&quot;categorizeByGroup&quot;:true,&quot;gitRevision&quot;:&quot;&quot;,&quot;gitRemote&quot;:&quot;origin&quot;,&quot;gaID&quot;:&quot;&quot;,&quot;gaSite&quot;:&quot;auto&quot;,&quot;hideGenerator&quot;:true,&quot;toc&quot;:[],&quot;disableOutputCheck&quot;:true,&quot;help&quot;:false,&quot;version&quot;:false,&quot;plugin&quot;:[&quot;typedoc-neo-theme&quot;],&quot;listInvalidSymbolLinks&quot;:false,&quot;links&quot;:[{&quot;label&quot;:&quot;引擎使用说明&quot;,&quot;url&quot;:&quot;readme.html&quot;}],&quot;outline&quot;:[{&quot;ez.core&quot;:{&quot;Overview&quot;:&quot;./index&quot;,&quot;全局设置&quot;:&quot;_ez_core_&quot;,&quot;基本类型&quot;:&quot;_commontypes_.ez&quot;,&quot;基础功能&quot;:&quot;_ezgame_.ez&quot;,&quot;Audio&quot;:&quot;_audio_.ez&quot;,&quot;Renderer&quot;:&quot;_renderer_.ez&quot;,&quot;Texture&quot;:&quot;_texture_.ez&quot;,&quot;Visual&quot;:&quot;_visual_.ez&quot;,&quot;Resource&quot;:&quot;_resource_.ez&quot;,&quot;GUI&quot;:&quot;_gui_.ez.ui&quot;,&quot;Animation&quot;:&quot;_animation_.ez&quot;},&quot;ez.3d&quot;:{&quot;3d render&quot;:&quot;_ez_3d_.ez&quot;,&quot;Stage3D&quot;:&quot;classes/_ez_3d_.ez.stage3dsprite&quot;,&quot;model&quot;:&quot;_model_.ez&quot;,&quot;material&quot;:&quot;_material_.ez&quot;},&quot;ez.ext&quot;:{&quot;Highlight Effect&quot;:&quot;_highlighteffect_.ez.effect&quot;,&quot;Fan Effect&quot;:&quot;_faneffect_.ez.effect&quot;,&quot;ui.Hyperlink&quot;:&quot;classes/_hyperlink_.ez.ui.hyperlink&quot;,&quot;ui.BlurGroup&quot;:&quot;classes/_blureffect_.ez.ui.blurgroup&quot;,&quot;BMFontLabel&quot;:&quot;_bmfontlabel_.ez&quot;,&quot;Spine&quot;:&quot;classes/_spine_.ez.spinesprite&quot;,&quot;Inspector&quot;:&quot;_inspector_.inspector&quot;,&quot;Protocol&quot;:&quot;_protocol_.easygame&quot;}}],&quot;search&quot;:[]}-->
+		</div>
+		<!--
+        <div class="col-2 col-menu secondary-menu">
+            <nav class="tsd-navigation secondary menu-sticky">
+                <ul class="before-current">
+                        <li class=" tsd-kind-class tsd-parent-kind-namespace root">
+    <a href="_animation_.ez.ease.html" class="tsd-kind-icon">Ease</a>
+</li>
+                        <li class=" tsd-kind-class tsd-parent-kind-namespace root">
+    <a href="_animation_.ez.keyframeanimation.html" class="tsd-kind-icon">Keyframe<wbr>Animation</a>
+</li>
+                            </ul>
+    <ul class="current">
+<li class="current tsd-kind-class tsd-parent-kind-namespace root">
+    <a href="_animation_.ez.tween.html" class="tsd-kind-icon">Tween</a>
+        <ul>
+                <li class=" tsd-kind-constructor tsd-parent-kind-class">
+    <a href="_animation_.ez.tween.html#constructor" class="tsd-kind-icon">constructor</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_animation_.ez.tween.html#loop" class="tsd-kind-icon">loop</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class">
+    <a href="_animation_.ez.tween.html#state" class="tsd-kind-icon">state</a>
+</li>
+                <li class=" tsd-kind-property tsd-parent-kind-class tsd-is-static">
+    <a href="_animation_.ez.tween.html#defaultease" class="tsd-kind-icon">default<wbr>Ease</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_animation_.ez.tween.html#advance" class="tsd-kind-icon">advance</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_animation_.ez.tween.html#append" class="tsd-kind-icon">append</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_animation_.ez.tween.html#call" class="tsd-kind-icon">call</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_animation_.ez.tween.html#config" class="tsd-kind-icon">config</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_animation_.ez.tween.html#disposetarget" class="tsd-kind-icon">dispose<wbr>Target</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_animation_.ez.tween.html#func" class="tsd-kind-icon">func</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_animation_.ez.tween.html#move" class="tsd-kind-icon">move</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_animation_.ez.tween.html#pause" class="tsd-kind-icon">pause</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_animation_.ez.tween.html#play" class="tsd-kind-icon">play</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_animation_.ez.tween.html#set" class="tsd-kind-icon">set</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_animation_.ez.tween.html#stop" class="tsd-kind-icon">stop</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_animation_.ez.tween.html#target" class="tsd-kind-icon">target</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_animation_.ez.tween.html#to" class="tsd-kind-icon">to</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_animation_.ez.tween.html#wait" class="tsd-kind-icon">wait</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class">
+    <a href="_animation_.ez.tween.html#waitforend" class="tsd-kind-icon">wait<wbr>For<wbr>End</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+    <a href="_animation_.ez.tween.html#add" class="tsd-kind-icon">add</a>
+</li>
+                <li class=" tsd-kind-method tsd-parent-kind-class tsd-is-static">
+    <a href="_animation_.ez.tween.html#stoptweens" class="tsd-kind-icon">stop<wbr>Tweens</a>
+</li>
+        </ul>
+</li>
+    </ul>
+    <ul class="after-current">
+                        <li class=" tsd-kind-interface tsd-parent-kind-namespace root">
+    <a href="../interfaces/_animation_.ez.trackdesc.html" class="tsd-kind-icon">Track<wbr>Desc</a>
+</li>
+                </ul>
+            </nav>
+        </div>-->
+	</div>
+</div>
+<footer>
+</footer>
+<div class="overlay"></div>
+<script src="../assets/js/main.js"></script>
+<script>if (location.protocol == 'file:') document.write('<script src="../assets/js/search.js"><' + '/script>');</script>
+</body>
+</html>

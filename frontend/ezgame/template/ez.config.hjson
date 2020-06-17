@@ -1,0 +1,88 @@
+{
+	#全局配置
+	
+	#运行平台 0:Browser 1:基于WebView的手机app 2:微信小游戏
+	PLATFORM: 0
+
+	#是否需要发布
+	PUBLISH: true
+
+	#是否开启调试
+	DEBUG: false
+
+	#是否开启性能统计
+	PROFILING: false
+
+	#将所有js文件打包成单个js文件	
+	pack: true
+	
+	#资源存放目录
+	resPath: assets/res
+
+	#资源描述文件
+	resFile: assets/resource.json
+
+	#资源嵌入到代码用的模板文件
+	resTmplFile: src/res.tmpl
+
+	#ui模板文件所在路径
+	uiTmpl: ui
+
+	#ui模板文件输出文件
+	uiOutput: src/ui.ts
+
+	#是否启用紧凑模式输出ui模板
+	uiCompact: true
+
+	#需要导入的扩展UI模块名 (ui模块定义放在types目录中，以name.d.json存放)
+	uiImports: []
+
+	#游戏加载页面
+	indexPage: index.html
+
+	#将资源清单发布到独立文件中
+	#resPublishFile: 
+
+	#需要加载的模块
+	modules: [
+		{imports}
+	]
+
+	#将JS编译为为es5（默认使用ES6）
+	ES5: true
+
+	#ts编译配置
+	tsconfig: "tsconfig.es5.json"
+
+	#是否在输出的js中自动调用main入口函数
+	autoRun: true
+
+	#构建配置，构建配置会替换全局配置里的设置
+	build: {
+		#开发环境
+		dev:{
+			modules: [
+				{imports}
+				ez.ext/inspector
+			]
+			PUBLISH: false
+			ES5: false
+			tsconfig: "tsconfig.json"
+			DEBUG: true
+			PROFILING: true
+			uiCompact: false
+		}
+
+		#h5浏览器发布
+		h5:{
+			#项目发布目录
+			distPath: dist/h5
+			uiCompact: true			
+			indexPage: publish.html
+			#压缩并混淆输出的js文件
+			minifyJS: true
+			#wrapJS: true
+			#autoRun: false
+		}
+	}
+}

@@ -1,0 +1,15 @@
+{"subImages":[
+	{"name":"game/disk","parent":"game","type":"subimage","width":180,"height":180,"region":"153,0,180,180"},
+	{"name":"game/hole","parent":"game","type":"subimage","width":246,"height":119,"region":"334,76,246,119"},
+	{"name":"game/wall","parent":"game","type":"subimage","width":675,"height":38,"region":"64,250,675,38"},
+	{"name":"game/mask","parent":"game","type":"subimage","width":59,"height":44,"region":"594,0,163,121"},
+	{"name":"game/arrow","parent":"game","type":"subimage","width":94,"height":28,"region":"334,0,259,75"},
+	{"name":"game/player","parent":"game","type":"subimage","width":86,"height":52,"region":"581,122,169,102"},
+	{"name":"game/boom","parent":"game","type":"subimage","width":68,"height":51,"region":"0,91,149,112"},
+	{"name":"game/batman","parent":"game","type":"subimage","width":58,"height":34,"region":"0,0,152,90"},
+	{"name":"game/wall2","parent":"game","type":"subimage","width":244,"height":37,"region":"308,196,244,37"},
+	{"name":"game/playerlight","parent":"game","type":"subimage","width":143,"height":126,"region":"150,181,90,68"},
+	{"name":"game/clock","parent":"game","type":"subimage","width":66,"height":66,"region":"241,181,66,66"},
+	{"name":"game/circle","parent":"game","type":"subimage","width":64,"height":64,"margin":"0,0,1,1","region":"0,204,63,63"},
+	{"name":"game/logo","parent":"game","type":"subimage","width":54,"height":40,"region":"64,204,54,40"}
+]}

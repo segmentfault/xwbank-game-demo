@@ -1,0 +1,26 @@
+(function (filelist){
+	function loadScripts(list, onFinish) {
+		function load() {
+			if (list.length == 0){
+				onFinish();
+				return;
+			}
+			var src = list.shift();
+			var s = document.createElement('script');
+			if (s.hasOwnProperty("async"))
+				s.async = true;
+			s.src = src;
+			s.addEventListener('load', function () {
+				this.removeEventListener('load', arguments.callee, false);
+				load();
+			}, false);
+			document.body.appendChild(s);
+		}
+		load();
+	}
+	loadScripts(filelist, function(){
+		setTimeout(checkRefresh, 1000);;
+		main();
+	});
+})([{IMPORTS}
+]);
