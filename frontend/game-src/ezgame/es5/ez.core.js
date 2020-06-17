@@ -1546,6 +1546,7 @@ var ez;
                 gl.clear(16384);
                 gl.viewport(0, 0, (rtWidth * RC.scale) | 0, (rtHeight * RC.scale) | 0);
                 gl.scissor(0, 0, (rtWidth * RC.scale) | 0, (rtHeight * RC.scale) | 0);
+                currShader = null;
                 currClip = new ez.Rect(0, 0, rtWidth, rtHeight);
                 currTex = [];
                 currQuad = 0;
@@ -2904,12 +2905,14 @@ var ez;
     function defaultUniform(uniforms) {
         if (!uniforms)
             uniforms = defUniforms;
-        uniforms.quads = defUniforms.quads;
+        else
+            uniforms.quads = defUniforms.quads;
+        return uniforms;
     }
     var Effect = (function (_super) {
         __extends(Effect, _super);
         function Effect(fsCode, uniforms, textures) {
-            return _super.call(this, Effect.DefVS2D, fsCode, ["pos", "quad"], uniforms, textures) || this;
+            return _super.call(this, Effect.DefVS2D, fsCode, ["pos", "quad"], defaultUniform(uniforms), textures) || this;
         }
         Effect.register = function (name, effect) {
             effect.name = name;

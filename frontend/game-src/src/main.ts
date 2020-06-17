@@ -67,7 +67,19 @@ async function main() {
 	}
 	else {
 		await ez.loadJSONPackageAsync("assets/resource.json", "assets/res/");
-		mainFrame = ez.getRoot().createChild(game.MainFrame);
+		ez.loadGroup(["ui", "start", "image/bg"], function (progress, total) {
+			if (progress >= total) {
+				var t = Date.now() - startTime;
+				//ajax(`http://chenshuwei.free.idcfengye.com/openapi/statistics/add?openid=${PlayerInfo.openid}&loadTime=${t}`, function () { });
+				mainFrame = ez.getRoot().createChild(game.MainFrame);
+				var loading = document.getElementById("loading");
+				if (loading)
+					document.body.removeChild(loading);
+				ez.loadGroup(["game", "image/活动规则", "image/说明", "share"]);
+			}
+		});
+
+		//mainFrame = ez.getRoot().createChild(game.MainFrame);
 		//inspector.install();
 	}
 }
