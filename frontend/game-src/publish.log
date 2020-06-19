@@ -1,0 +1,50 @@
+subimage game/disk id:4LVSPIK3B203
+subimage game/hole id:HA8GLOB3BT28
+subimage game/wall id:1EF948RMIQRD
+subimage game/mask id:56UQPADE1Q3L
+subimage game/arrow id:CD2USR5HDCIB
+subimage game/player id:ER7C5K9MCR91
+subimage game/boom id:674HLN92PH6C
+subimage game/batman id:STU2ANJ65A4I
+subimage game/wall2 id:B0LVRU4VENJS
+subimage game/playerlight id:U3D0VPUF90K5
+subimage game/clock id:LAO8Q29LE1TO
+subimage game/circle id:384C1JUD8MIS
+subimage game/logo id:Q3IOEMMM9HV3
+ezm game id:2JS362HMIVJ6 url: BEI5ATEOKD8IRL3K
+ezm mask id:4TR3NPOOD9FC url: SJZTVNDSHTCSEN0K
+subimage share/二维码 id:RGDNTIFOJEJ1
+subimage share/text猪望仔大战蝙蝠侠 id:85GD560O0A62
+subimage share/logo id:307B8VJHSQ38
+subimage share/rect id:O18PU18DTSMO
+ezm share id:3430TB8UBRS5 url: YAR4IF5QCFBT3P0Y
+subimage start/猪 id:F45FD2M7NRMS
+subimage start/txt蝙蝠侠 id:EN6PH70VD7LV
+subimage start/蝙蝠侠 id:MFP4S2F9MF7F
+subimage start/txt猪望仔 id:M3F90V7UJL03
+subimage start/活动规则 id:LMIPDLENLMJG
+subimage start/开始游戏 id:VCP8LGVCL71S
+subimage start/logo id:EJRRQ2IU0JS0
+ezm start id:M33L9BH2LKJ4 url: 33A5CZI9WIQLPWC5
+subimage ui/img/奖杯 id:U7VJ9SGIHTNO
+subimage ui/btn/喇叭 id:S9IQLHG3U700
+subimage ui/icon/cup id:52OMU7AEFJE8
+subimage ui/icon/1st id:5A1F5RDNRR3D
+subimage ui/icon/2nd id:PI6ME5HEHD40
+subimage ui/icon/3rd id:MR7EA6RAGT5R
+subimage ui/btn/close id:UFGMTQLP3H5J
+subimage ui/btn/yellow id:CTDCID13AB9F
+subimage ui/btn/blue id:G503ILGF8S28
+subimage ui/btn/purple id:O123T11GLFK9
+subimage ui/icon/blue id:DQ8AU90MGHMI
+subimage ui/img/line id:P637DGG88RRB
+subimage ui/img/rectbk id:SPMG8J9324MB
+subimage ui/img/rectwh id:6VBE1JLANTMV
+subimage ui/btn/喇叭check id:INH1T34JAHE4
+ezm ui id:EB50KH7ATNKU url: CCUH93QNYUMF4OQ7
+ezm image/bg id:JCF2OQOGMT7O url: DCXNROQW5H6N4QVK
+ezm image/活动规则 id:QJ204MMAGROF url: 9FEVB8H5QOD2EINN
+ezm image/说明 id:4PGJIM7IPCOV url: GKBV7HI7HJNVC69E
+sound sound/add id:1QO2CBOCQIBD url: JA0G81AQV8EXMINP
+sound sound/bgm id:UVOHVF14P3C8 url: NK0L2XPG4EDO1XAQ
+sound sound/lose id:JS4KKPVSP9K1 url: QMN8L7P4QXAI5M47

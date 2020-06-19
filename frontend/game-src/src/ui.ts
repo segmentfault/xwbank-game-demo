@@ -302,7 +302,7 @@ namespace game{
 			[/*Label*/UI[6], /*props:*/ {text: "姓名："}, /*id:*/ "name", /*left:*/ 114, /*top:*/ 337,,, /*width:*/ 383, /*height:*/ 37],
 			[/*Label*/UI[6], /*props:*/ {text: "成绩：10000"}, /*id:*/ "score", /*left:*/ 114, /*top:*/ 387,,, /*width:*/ 383, /*height:*/ 37],
 			[/*Label*/UI[6],, /*id:*/ "info", /*left:*/ 114, /*top:*/ 439,,, /*width:*/ 383, /*height:*/ 37],
-			[/*Image*/UI[4], /*props:*/ {src: /*share/text猪望仔大战蝙蝠侠*/ RES[17]},, /*left:*/ 65, /*top:*/ 165,,, /*width:*/ 477, /*height:*/ 57],
+			[/*Image*/UI[4], /*props:*/ {src: /*share/text猪望仔大战蝙蝠侠*/ RES[17]},, /*left:*/ 65, /*top:*/ 165],
 			[/*Label*/UI[6], /*props:*/ {font: "28px", color: "#bbadfb", lineHeight: 48, format: 2, text: "2020“创青春 交子杯”新网银行金融科技挑战赛\n47万奖金池，最高 10 万奖金等你来拿！\n是时候展现你真正的技术了！"},, /*left:*/ 68, /*top:*/ 575,,, /*width:*/ 585, /*height:*/ 137],
 			[/*Group*/UI[2],,,, /*top:*/ 700,, /*bottom:*/ 0, /*width:*/ 300,, /*x:*/ "50%",,,,,,,,,,,,/*childs*/ [
 				[/*Group*/UI[2],,,,,,, /*width:*/ 300, /*height:*/ 332,, /*y:*/ "50%",,,,,,,,,,,/*childs*/ [

@@ -1,6 +1,6 @@
 {"subImages":[
 	{"name":"share/二维码","parent":"share","type":"subimage","width":300,"height":332,"margin":"0,1,0,0","region":"0,0,300,331"},
-	{"name":"share/text猪望仔大战蝙蝠侠","parent":"share","type":"subimage","width":477,"height":57,"region":"0,332,477,57"},
-	{"name":"share/logo","parent":"share","type":"subimage","width":323,"height":46,"region":"0,390,323,46"},
-	{"name":"share/rect","parent":"share","type":"subimage","width":69,"height":63,"s9":"22,24,23,23","region":"301,0,69,63"}
+	{"name":"share/text猪望仔大战蝙蝠侠","parent":"share","type":"subimage","width":477,"height":57,"region":"0,331,477,57"},
+	{"name":"share/logo","parent":"share","type":"subimage","width":323,"height":46,"region":"0,388,323,46"},
+	{"name":"share/rect","parent":"share","type":"subimage","width":69,"height":63,"s9":"22,24,23,23","region":"300,0,69,63"}
 ]}

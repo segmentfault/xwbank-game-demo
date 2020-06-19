@@ -8,7 +8,7 @@
 			<Label id=name left=114 width=383 top=337 height=37 text="姓名：" />
 			<Label id=score left=114 width=383 top=387 height=37 text="成绩：10000" />
 			<Label id=info left=114 width=383 top=439 height=37 />
-			<Image src=share/text猪望仔大战蝙蝠侠 left=65 width=477 top=165 height=57 />
+			<Image src=share/text猪望仔大战蝙蝠侠 left=65 top=165  />
 			<Label font=28px color=#bbadfb lineHeight=48 format=MultiLine left=68 width=585 top=575 height=137 text="2020“创青春 交子杯”新网银行金融科技挑战赛\n47万奖金池，最高 10 万奖金等你来拿！\n是时候展现你真正的技术了！" />
 			<Group width=300 top=700 bottom=0 x=50% >
 				<Group height=332 width=300 y=50% >

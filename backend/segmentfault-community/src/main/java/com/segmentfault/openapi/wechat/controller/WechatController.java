@@ -126,7 +126,7 @@ public class WechatController extends BaseController
     {	// 获取session中所有的键值  
     	WechatUserinfo wechatUserinfo=(WechatUserinfo) request.getSession().getAttribute("user");   
     	if(wechatUserinfo==null) {
-    		response.sendRedirect("/openapi/wechat/h5index");
+    		response.sendRedirect("https://xwfintech.qingke.io/openapi/wechat/h5index");
     		return null;
     	}
     	return "gameurl";

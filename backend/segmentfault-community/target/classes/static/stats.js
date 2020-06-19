@@ -603,8 +603,11 @@ var Stats = (function () {
             }
         })
     }
-    Stats.prototype.loadReady = function (cb) {
-        var loaded = false;
+    Stats.prototype.loadReady = function (_cb) {
+        var loaded = false,
+            cb = function () {
+                setTimeout(_cb, 1000)
+            };
         if (document.readyState === 'complete') {
             loaded = true;
             cb()

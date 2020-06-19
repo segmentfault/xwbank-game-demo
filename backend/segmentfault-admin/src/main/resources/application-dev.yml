@@ -60,7 +60,7 @@ wechat:
   #cookie时间：单位天
     maxAge: 1
   #uatA环境
-    host : 'https://xwfintech.qingke.io/wxapi' 
+    host : 'https://xwfintech.qingke.io/wxapi'
     #获取access_token：HTTP GET
     gettoken: '/cgi-bin/token'
     #微信网页授权登录

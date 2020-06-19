@@ -1,9 +1,9 @@
 {"subImages":[
 	{"name":"start/猪","parent":"start","type":"subimage","width":314,"height":349,"region":"0,0,314,349"},
-	{"name":"start/txt蝙蝠侠","parent":"start","type":"subimage","width":385,"height":249,"region":"315,0,385,249"},
-	{"name":"start/蝙蝠侠","parent":"start","type":"subimage","width":325,"height":268,"region":"701,0,325,268"},
-	{"name":"start/txt猪望仔","parent":"start","type":"subimage","width":432,"height":168,"region":"534,269,432,168"},
-	{"name":"start/活动规则","parent":"start","type":"subimage","width":218,"height":85,"region":"315,250,218,85"},
-	{"name":"start/开始游戏","parent":"start","type":"subimage","width":218,"height":85,"region":"315,336,218,85"},
-	{"name":"start/logo","parent":"start","type":"subimage","width":237,"height":34,"region":"0,350,237,34"}
+	{"name":"start/txt蝙蝠侠","parent":"start","type":"subimage","width":385,"height":249,"region":"314,0,385,249"},
+	{"name":"start/蝙蝠侠","parent":"start","type":"subimage","width":325,"height":268,"region":"699,0,325,268"},
+	{"name":"start/txt猪望仔","parent":"start","type":"subimage","width":432,"height":168,"region":"532,268,432,168"},
+	{"name":"start/活动规则","parent":"start","type":"subimage","width":218,"height":85,"region":"314,249,218,85"},
+	{"name":"start/开始游戏","parent":"start","type":"subimage","width":218,"height":85,"region":"314,334,218,85"},
+	{"name":"start/logo","parent":"start","type":"subimage","width":237,"height":34,"region":"0,349,237,34"}
 ]}
