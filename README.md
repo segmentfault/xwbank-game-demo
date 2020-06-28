@@ -2,14 +2,15 @@
 
 本项目为 [新网银行金融科技挑战赛](https://www.kesci.com/custom_landing/xwbank) 小游戏赛道的 DEMO。
 
-## 目录说明
+## 文件说明
 
 ```text
-- backend      # 后端源码
-- front        # 前端源码
-  |- ezgame    # 编译引擎，需要用该引擎编译游戏
-  `- game-src
-- database     # 数据库
+目录
+|- backend      # 后端源码
+|- front        # 前端源码
+|  |- ezgame    # 编译引擎，需要用该引擎编译游戏
+|  `- game-src
+`- database     # 数据库
 ```
 
 ## 运行方法
