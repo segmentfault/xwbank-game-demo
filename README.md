@@ -9,7 +9,7 @@
 - front        # 前端源码
   |- ezgame    # 编译引擎，需要用该引擎编译游戏
   `- game-src
-- data         # 数据库
+- database     # 数据库
 ```
 
 ## 运行方法
